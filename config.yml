@@ -1,0 +1,96 @@
+baseURL: 'https://ansulev.com'
+languageCode: 'es'
+defaultContentLanguage: 'es'
+title: 'Angel Georgiev Sulev | Ciberseguridad + IA Agéntica'
+
+# Configuración multiidioma
+languages:
+  es:
+    languageName: 'Español'
+    weight: 1
+    title: 'Angel Georgiev Sulev | Ciberseguridad + IA Agéntica'
+    params:
+      description: 'Especialista senior ciberseguridad e IA Agéntica. 30+ años transformando seguridad en ventaja competitiva.'
+  en:
+    languageName: 'English'
+    weight: 2
+    title: 'Angel Georgiev Sulev | Cybersecurity + Agentic AI'
+    params:
+      description: 'Senior cybersecurity specialist + Agentic AI. 30+ years transforming security into competitive advantage.'
+
+# Parámetros globales
+params:
+  author: 'Angel Georgiev Sulev'
+  description: 'Especialista senior en ciberseguridad e IA Agéntica con 30+ años de experiencia'
+  keywords: ['ciberseguridad', 'IA agéntica', 'custom LLMs', 'MLSecOps', 'fine-tuning', 'ICS/OT security']
+  
+  # Información de contacto
+  email: 'angel.sulev@gmail.com'
+  phone: '+34 633 600 515'
+  location: 'Lleida, España'
+  
+  # Redes sociales
+  social:
+    linkedin: 'https://linkedin.com/in/ansulev'
+    github: 'https://github.com/ansulev'
+    twitter: 'https://twitter.com/ansulev'
+  
+  # Analytics (configurar después)
+  googleAnalytics: ''
+
+# Menú de navegación
+menu:
+  main:
+    - name: 'Inicio'
+      url: '/'
+      weight: 10
+    - name: 'Sobre Mí'
+      url: '/sobre-mi/'
+      weight: 20
+    - name: 'Servicios'
+      url: '/servicios/'
+      weight: 30
+    - name: 'Proyectos'
+      url: '/proyectos/'
+      weight: 40
+    - name: 'Blog'
+      url: '/blog/'
+      weight: 50
+    - name: 'Contacto'
+      url: '/contacto/'
+      weight: 60
+
+# Configuración de markup y SEO
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: 'github'
+    lineNos: true
+
+# Sitemap
+sitemap:
+  changefreq: 'weekly'
+  priority: 0.5
+  filename: 'sitemap.xml'
+
+# Outputs
+outputs:
+  home: ['HTML', 'RSS', 'JSON']
+  page: ['HTML']
+  section: ['HTML', 'RSS']
+
+# Configuración de construcción
+build:
+  writeStats: true
+
+# Minificación
+minify:
+  tdewolff:
+    html:
+      keepDefaultAttrVals: false
+      keepDocumentWhitespace: false
+      keepEndTags: true
+      keepQuotes: false
+
