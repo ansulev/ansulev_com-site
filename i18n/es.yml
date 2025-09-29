@@ -1,0 +1,13 @@
+- id: servicesShortcut
+  translation: "Servicios"
+- id: servicesShortcutDesc
+  translation: "Servicios de ciberseguridad e IA Agéntica"
+- id: contactShortcut
+  translation: "Contacto"
+- id: contactShortcutDesc
+  translation: "Contacta para consulta gratuita"
+- id: blogShortcut
+  translation: "Blog"
+- id: blogShortcutDesc
+  translation: "Últimos artículos técnicos"
+

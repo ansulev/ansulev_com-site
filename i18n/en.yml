@@ -1,0 +1,13 @@
+- id: servicesShortcut
+  translation: "Services"
+- id: servicesShortcutDesc
+  translation: "Cybersecurity and Agentic AI Services"
+- id: contactShortcut
+  translation: "Contact"
+- id: contactShortcutDesc
+  translation: "Contact for a free consultation"
+- id: blogShortcut
+  translation: "Blog"
+- id: blogShortcutDesc
+  translation: "Latest technical articles"
+
