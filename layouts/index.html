@@ -67,11 +67,11 @@
     </div>
 </section>
 
-<!-- Services Section -->
-<section class="py-20 bg-white">
+<!-- Services Section - REORDENADA CON CIBERSEGURIDAD PRIMERO -->
+<section class="py-20 bg-gradient-to-b from-white to-slate-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-            <h2 class="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
+            <h2 class="text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
                 Servicios Especializados
             </h2>
             <p class="text-xl text-slate-600 max-w-3xl mx-auto">
@@ -79,76 +79,158 @@
             </p>
         </div>
         
-        <div class="grid md:grid-cols-3 gap-8">
-            
-            <!-- Service 1 -->
-            <div class="group bg-slate-50 hover:bg-white p-8 rounded-xl border border-slate-200 hover:border-blue-500 transition-all duration-300 hover:shadow-xl">
-                <div class="text-4xl mb-4">🤖</div>
-                <h3 class="text-2xl font-bold text-slate-900 mb-4">IA Agéntica & Custom LLMs</h3>
-                <p class="text-slate-600 mb-6">
-                    Fine-tuning especializado de Llama 2/3, Mistral y Phi-3 para ciberseguridad. 
-                    B2B Agents que automatizan operaciones Red/Blue Team completas.
-                </p>
-                <div class="flex flex-wrap gap-2 mb-6">
-                    <span class="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full">LangChain</span>
-                    <span class="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full">CrewAI</span>
-                    <span class="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full">Ollama</span>
+        <!-- PRIMER BLOQUE: Ciberseguridad Core (3 servicios) -->
+        <div class="mb-12">
+            <h3 class="text-2xl font-bold text-slate-900 mb-8 text-center">
+                🛡️ Ciberseguridad Empresarial
+            </h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Red/Blue Team -->
+                <div class="group bg-white hover:bg-gradient-to-br hover:from-white hover:to-blue-50 p-8 rounded-2xl border-2 border-slate-200 hover:border-blue-500 transition-all duration-300 hover:shadow-2xl hover:transform hover:scale-105">
+                    <div class="text-5xl mb-4">🎯</div>
+                    <h4 class="text-2xl font-bold text-slate-900 mb-4">Red/Blue Team & Pentesting</h4>
+                    <p class="text-slate-600 mb-6">
+                        Pruebas de penetración avanzadas, Red Team operations y Purple Team exercises. 
+                        Testing completo de aplicaciones, infraestructura y APIs con metodologías OWASP.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-3 py-1 bg-red-100 text-red-700 text-sm rounded-full font-semibold">Kali Linux</span>
+                        <span class="px-3 py-1 bg-red-100 text-red-700 text-sm rounded-full font-semibold">Metasploit</span>
+                        <span class="px-3 py-1 bg-red-100 text-red-700 text-sm rounded-full font-semibold">Burp Suite</span>
+                    </div>
+                    <a href="/servicios/#pentesting" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-bold group-hover:translate-x-2 transition-transform">
+                        Saber más
+                        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        </svg>
+                    </a>
                 </div>
-                <a href="/servicios/#custom-llms" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:translate-x-1 transition-transform">
-                    Saber más
-                    <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                    </svg>
-                </a>
-            </div>
-            
-            <!-- Service 2 -->
-            <div class="group bg-slate-50 hover:bg-white p-8 rounded-xl border border-slate-200 hover:border-blue-500 transition-all duration-300 hover:shadow-xl">
-                <div class="text-4xl mb-4">🛡️</div>
-                <h3 class="text-2xl font-bold text-slate-900 mb-4">MLSecOps Enterprise</h3>
-                <p class="text-slate-600 mb-6">
-                    Pipelines seguros desde training hasta deployment. Governance IA con NIST AI RMF 
-                    y arquitecturas RAG con Vector Databases especializados.
-                </p>
-                <div class="flex flex-wrap gap-2 mb-6">
-                    <span class="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full">MLflow</span>
-                    <span class="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full">Chroma</span>
-                    <span class="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full">Pinecone</span>
+                
+                <!-- SIEM & Threat Detection -->
+                <div class="group bg-white hover:bg-gradient-to-br hover:from-white hover:to-blue-50 p-8 rounded-2xl border-2 border-slate-200 hover:border-blue-500 transition-all duration-300 hover:shadow-2xl hover:transform hover:scale-105">
+                    <div class="text-5xl mb-4">🔍</div>
+                    <h4 class="text-2xl font-bold text-slate-900 mb-4">SIEM & Threat Detection</h4>
+                    <p class="text-slate-600 mb-6">
+                        Implementación y optimización de SIEM con correlación avanzada ML. 
+                        Threat hunting proactivo y threat intelligence automatizada con reducción 65% falsos positivos.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full font-semibold">Splunk</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full font-semibold">CrowdStrike</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full font-semibold">MISP</span>
+                    </div>
+                    <a href="/servicios/#siem" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-bold group-hover:translate-x-2 transition-transform">
+                        Saber más
+                        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        </svg>
+                    </a>
                 </div>
-                <a href="/servicios/#mlsecops" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:translate-x-1 transition-transform">
-                    Saber más
-                    <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                    </svg>
-                </a>
-            </div>
-            
-            <!-- Service 3 -->
-            <div class="group bg-slate-50 hover:bg-white p-8 rounded-xl border border-slate-200 hover:border-blue-500 transition-all duration-300 hover:shadow-xl">
-                <div class="text-4xl mb-4">🏭</div>
-                <h3 class="text-2xl font-bold text-slate-900 mb-4">Seguridad ICS/OT</h3>
-                <p class="text-slate-600 mb-6">
-                    Protección infraestructuras críticas industriales. SCADA security hardening 
-                    y compliance ISA/IEC 62443 con 99.95% uptime garantizado.
-                </p>
-                <div class="flex flex-wrap gap-2 mb-6">
-                    <span class="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full">Claroty</span>
-                    <span class="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full">Nozomi</span>
-                    <span class="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full">MITRE ATT&CK</span>
+                
+                <!-- Cloud & Infrastructure Security -->
+                <div class="group bg-white hover:bg-gradient-to-br hover:from-white hover:to-blue-50 p-8 rounded-2xl border-2 border-slate-200 hover:border-blue-500 transition-all duration-300 hover:shadow-2xl hover:transform hover:scale-105">
+                    <div class="text-5xl mb-4">☁️</div>
+                    <h4 class="text-2xl font-bold text-slate-900 mb-4">Cloud & Infrastructure Security</h4>
+                    <p class="text-slate-600 mb-6">
+                        Zero Trust architecture, hardening de sistemas, seguridad multi-cloud (AWS/Azure/GCP). 
+                        Migración segura y compliance automatizado con 99.95% uptime.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 text-sm rounded-full font-semibold">AWS</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 text-sm rounded-full font-semibold">Azure</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 text-sm rounded-full font-semibold">Zero Trust</span>
+                    </div>
+                    <a href="/servicios/#cloud-security" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-bold group-hover:translate-x-2 transition-transform">
+                        Saber más
+                        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        </svg>
+                    </a>
                 </div>
-                <a href="/servicios/#ics-ot" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:translate-x-1 transition-transform">
-                    Saber más
-                    <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                    </svg>
-                </a>
+                
             </div>
-            
         </div>
         
-        <div class="text-center mt-12">
-            <a href="/servicios/" class="inline-flex items-center justify-center px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white font-semibold rounded-lg transition-all duration-200">
+        <!-- SEGUNDO BLOQUE: IA & Tecnologías Avanzadas (3 servicios) -->
+        <div>
+            <h3 class="text-2xl font-bold text-slate-900 mb-8 text-center">
+                🤖 Ciberseguridad Potenciada por IA
+            </h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Custom LLMs -->
+                <div class="group bg-white hover:bg-gradient-to-br hover:from-white hover:to-purple-50 p-8 rounded-2xl border-2 border-slate-200 hover:border-purple-500 transition-all duration-300 hover:shadow-2xl hover:transform hover:scale-105">
+                    <div class="text-5xl mb-4">🧠</div>
+                    <h4 class="text-2xl font-bold text-slate-900 mb-4">IA Agéntica & Custom LLMs</h4>
+                    <p class="text-slate-600 mb-6">
+                        Fine-tuning especializado de Llama 2/3, Mistral y Phi-3 para ciberseguridad. 
+                        B2B Agents que automatizan operaciones Red/Blue Team completas.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 text-sm rounded-full font-semibold">LangChain</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 text-sm rounded-full font-semibold">CrewAI</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 text-sm rounded-full font-semibold">Ollama</span>
+                    </div>
+                    <a href="/servicios/#custom-llms" class="inline-flex items-center text-purple-600 hover:text-purple-700 font-bold group-hover:translate-x-2 transition-transform">
+                        Saber más
+                        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <!-- MLSecOps -->
+                <div class="group bg-white hover:bg-gradient-to-br hover:from-white hover:to-purple-50 p-8 rounded-2xl border-2 border-slate-200 hover:border-purple-500 transition-all duration-300 hover:shadow-2xl hover:transform hover:scale-105">
+                    <div class="text-5xl mb-4">⚙️</div>
+                    <h4 class="text-2xl font-bold text-slate-900 mb-4">MLSecOps Enterprise</h4>
+                    <p class="text-slate-600 mb-6">
+                        Pipelines seguros desde training hasta deployment. Governance IA con NIST AI RMF 
+                        y arquitecturas RAG con Vector Databases especializados.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 text-sm rounded-full font-semibold">MLflow</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 text-sm rounded-full font-semibold">Chroma</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 text-sm rounded-full font-semibold">Pinecone</span>
+                    </div>
+                    <a href="/servicios/#mlsecops" class="inline-flex items-center text-purple-600 hover:text-purple-700 font-bold group-hover:translate-x-2 transition-transform">
+                        Saber más
+                        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <!-- ICS/OT -->
+                <div class="group bg-white hover:bg-gradient-to-br hover:from-white hover:to-orange-50 p-8 rounded-2xl border-2 border-slate-200 hover:border-orange-500 transition-all duration-300 hover:shadow-2xl hover:transform hover:scale-105">
+                    <div class="text-5xl mb-4">🏭</div>
+                    <h4 class="text-2xl font-bold text-slate-900 mb-4">Seguridad ICS/OT Industrial</h4>
+                    <p class="text-slate-600 mb-6">
+                        Protección infraestructuras críticas industriales. SCADA security hardening 
+                        y compliance ISA/IEC 62443 con 99.95% uptime garantizado.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-3 py-1 bg-orange-100 text-orange-700 text-sm rounded-full font-semibold">Claroty</span>
+                        <span class="px-3 py-1 bg-orange-100 text-orange-700 text-sm rounded-full font-semibold">Nozomi</span>
+                        <span class="px-3 py-1 bg-orange-100 text-orange-700 text-sm rounded-full font-semibold">MITRE ATT&CK</span>
+                    </div>
+                    <a href="/servicios/#ics-ot" class="inline-flex items-center text-orange-600 hover:text-orange-700 font-bold group-hover:translate-x-2 transition-transform">
+                        Saber más
+                        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        </svg>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+        
+        <div class="text-center mt-16">
+            <a href="/servicios/" class="inline-flex items-center justify-center px-10 py-5 bg-gradient-to-r from-slate-900 to-blue-900 hover:from-slate-800 hover:to-blue-800 text-white font-bold text-lg rounded-xl transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105">
                 Ver Todos los Servicios
+                <svg class="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                </svg>
             </a>
         </div>
     </div>
