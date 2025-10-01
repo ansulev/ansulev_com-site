@@ -2225,3 +2225,11 @@ No. Todo el blog es completamente gratuito y accesible.
 TODO:
 Falta completar:
 email response.
+ WARN  found no layout file for "html" for kind "taxonomy": You should create a template file   │
+ │    which matches Hugo Layouts Lookup Rules for this combination.                                  │
+ │    WARN  found no layout file for "html" for kind "section": You should create a template file    │
+ │    which matches Hugo Layouts Lookup Rules for this combination.                                  │
+ │    WARN  found no layout file for "json" for layout "home" for kind "home": You should create a   │
+ │    template file which matches Hugo Layouts Lookup Rules for this combination.                    │
+ │    WARN  found no layout file for "json" for kind "home": You should create a template file       │
+ │    which matches Hugo Layouts Lookup Rules for this combination.     

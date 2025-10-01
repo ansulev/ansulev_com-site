@@ -1,9 +1,4 @@
 ---
-
-## 🏠 **PÁGINA INICIO (content/_index.es.md)**
-
-```yaml
----
 title: "Angel Georgiev Sulev | Ciberseguridad + IA Agéntica | 30+ Años Innovando"
 description: "Especialista senior en ciberseguridad e IA Agéntica. 30+ años transformando seguridad en ventaja competitiva con Custom LLMs, MLSecOps y B2B Agents para empresas visionarias."
 keywords: ["ciberseguridad", "IA agéntica", "custom LLMs", "MLSecOps", "fine-tuning", "vector databases", "B2B agents", "ICS/OT security", "ISO 27001", "NIS2", "GDPR"]
