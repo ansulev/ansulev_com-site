@@ -193,3 +193,89 @@ Si buscas:
   </a>
 </div>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Angel Georgiev Sulev",
+  "jobTitle": "Senior Cybersecurity Specialist + Agentic AI",
+  "description": "30+ años transformando ciberseguridad. Especialista en IA Agéntica, Custom LLMs, MLSecOps e ICS/OT Security.",
+  "url": "https://ansulev.com",
+  "email": "angel.sulev@gmail.com",
+  "telephone": "+34633600515",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Lleida",
+    "addressCountry": "ES"
+  },
+  "sameAs": [
+    "https://linkedin.com/in/ansulev",
+    "https://github.com/ansulev"
+  ],
+  "knowsAbout": [
+    "Cybersecurity",
+    "Agentic AI",
+    "Custom LLMs",
+    "MLSecOps",
+    "Fine-tuning",
+    "Vector Databases",
+    "ICS/OT Security"
+  ],
+  "alumniOf": {
+    "@type": "EducationalOrganization",
+    "name": "Universidad de Sofía",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "BG"
+    }
+  },
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "degree",
+      "name": "Ingeniero Superior Informática"
+    }
+  ],
+  "knowsLanguage": [
+    {
+      "@type": "Language",
+      "name": "Español",
+      "alternateName": "es"
+    },
+    {
+      "@type": "Language",
+      "name": "Búlgaro",
+      "alternateName": "bg"
+    },
+    {
+      "@type": "Language",
+      "name": "Inglés",
+      "alternateName": "en"
+    },
+    {
+      "@type": "Language",
+      "name": "Catalán",
+      "alternateName": "ca"
+    },
+    {
+      "@type": "Language",
+      "name": "Ruso",
+      "alternateName": "ru"
+    }
+  ],
+  "worksFor": [
+    {
+      "@type": "Organization",
+      "name": "PROTISEC",
+      "description": "Ciberseguridad IA",
+      "foundingDate": "2021"
+    },
+    {
+      "@type": "Organization",
+      "name": "SEONOVE",
+      "description": "Marketing Digital IA",
+      "foundingDate": "2004"
+    }
+  ]
+}
+</script>

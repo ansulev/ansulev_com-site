@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación Contacto - Angel Georgiev Sulev</title>
+</head>
+<body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 0; background-color: #f4f4f4;">
+    
+    <!-- Header -->
+    <div style="background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); color: white; padding: 40px 20px; text-align: center;">
+        <h1 style="margin: 0; font-size: 28px; font-weight: 700;">¡Gracias por Contactarme!</h1>
+        <p style="margin: 15px 0 0; font-size: 16px; opacity: 0.95;">Tu consulta ha sido recibida correctamente</p>
+    </div>
+    
+    <!-- Content -->
+    <div style="background: #ffffff; padding: 40px 30px;">
+        
+        <p style="font-size: 16px; margin-bottom: 20px;">Hola <strong>{{.Name}}</strong>,</p>
+        
+        <p style="font-size: 16px; line-height: 1.8; margin-bottom: 25px;">
+            He recibido tu solicitud de consulta sobre <strong>{{.ProjectType}}</strong> 
+            y me pondré en contacto contigo dentro de las próximas <strong>24 horas</strong> (días laborables).
+        </p>
+        
+        <div style="background: #f8fafc; padding: 25px; border-radius: 8px; border-left: 4px solid #2563eb; margin: 30px 0;">
+            <h3 style="margin-top: 0; color: #1e293b; font-size: 18px;">Resumen de tu Consulta:</h3>
+            <table style="width: 100%; font-size: 15px;">
+                <tr>
+                    <td style="padding: 8px 0; color: #64748b;"><strong>Tipo de Proyecto:</strong></td>
+                    <td style="padding: 8px 0;">{{.ProjectType}}</td>
+                </tr>
+                {{if .Company}}
+                <tr>
+                    <td style="padding: 8px 0; color: #64748b;"><strong>Empresa:</strong></td>
+                    <td style="padding: 8px 0;">{{.Company}}</td>
+                </tr>
+                {{end}}
+                {{if .Budget}}
+                <tr>
+                    <td style="padding: 8px 0; color: #64748b;"><strong>Presupuesto:</strong></td>
+                    <td style="padding: 8px 0;">{{.Budget}}</td>
+                </tr>
+                {{end}}
+                {{if .Timeline}}
+                <tr>
+                    <td style="padding: 8px 0; color: #64748b;"><strong>Timeline:</strong></td>
+                    <td style="padding: 8px 0;">{{.Timeline}}</td>
+                </tr>
+                {{end}}
+            </table>
+        </div>
+        
+        <h3 style="color: #1e293b; font-size: 20px; margin-top: 35px;">Mientras Tanto...</h3>
+        <p style="font-size: 16px; margin-bottom: 20px;">Te sugiero revisar algunos casos de éxito similares:</p>
+        
+        <div style="margin: 25px 0;">
+            <a href="https://ansulev.com/proyectos/" style="display: inline-block; background: #2563eb; color: white; padding: 14px 28px; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 15px;">
+                🚀 Ver Casos de Éxito
+            </a>
+        </div>
+        
+        <div style="background: #fef3c7; padding: 20px; border-radius: 8px; border-left: 4px solid #f59e0b; margin: 30px 0;">
+            <h4 style="margin-top: 0; color: #92400e; font-size: 17px;">
+                🎯 ¿Necesitas Atención Urgente?
+            </h4>
+            <p style="margin-bottom: 0; font-size: 15px; color: #78350f;">
+                Para consultas urgentes, puedes llamarme directamente al 
+                <strong><a href="tel:+34633600515" style="color: #92400e; text-decoration: none;">+34 633 600 515</a></strong>
+            </p>
+        </div>
+        
+        <p style="font-size: 16px; line-height: 1.8; margin-top: 30px;">
+            ¡Espero poder ayudarte a transformar tu ciberseguridad en ventaja competitiva!
+        </p>
+        
+        <p style="margin: 35px 0 0; font-size: 16px;">
+            Saludos,<br>
+            <strong style="font-size: 17px;">Angel Georgiev Sulev</strong><br>
+            <em style="color: #64748b;">Especialista Senior Ciberseguridad + IA Agéntica</em>
+        </p>
+        
+    </div>
+    
+    <!-- Footer -->
+    <div style="text-align: center; padding: 30px 20px; color: #6b7280; font-size: 14px; background: #f9fafb;">
+        <p style="margin: 0 0 10px;">
+            <strong>Angel Georgiev Sulev</strong><br>
+            Lleida, España
+        </p>
+        
+        <p style="margin: 15px 0;">
+            <a href="mailto:angel.sulev@gmail.com" style="color: #2563eb; text-decoration: none; margin: 0 8px;">📧 Email</a> |
+            <a href="tel:+34633600515" style="color: #2563eb; text-decoration: none; margin: 0 8px;">📞 Teléfono</a> |
+            <a href="https://ansulev.com" style="color: #2563eb; text-decoration: none; margin: 0 8px;">🌐 Web</a>
+        </p>
+        
+        <div style="margin: 20px 0;">
+            <a href="https://linkedin.com/in/ansulev" style="color: #2563eb; margin: 0 12px; text-decoration: none; font-size: 13px
+        
+        TODO: FINISH THIS
