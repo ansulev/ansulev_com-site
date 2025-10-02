@@ -522,5 +522,3 @@ Jamás ha pasado (99.5% success rate), pero si hubiera problemas, trabajo hasta 
   }
 }
 </script>
-
-

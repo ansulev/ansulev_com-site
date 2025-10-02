@@ -1,0 +1,339 @@
+{{ define "main" }}
+
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-24 lg:py-32 overflow-hidden">
+    <div class="absolute inset-0 cyber-grid-bg opacity-20"></div>
+    <div class="absolute top-0 right-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl opacity-20 animate-float"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl opacity-20 animate-float" style="animation-delay: 2s;"></div>
+    
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="animate-slide-up">
+            <h1 class="text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                {{ .Title }}
+            </h1>
+            <p class="text-xl lg:text-2xl text-blue-200 mb-10 max-w-4xl mx-auto leading-relaxed">
+                {{ .Description }}
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="py-16 lg:py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="prose prose-lg prose-primary max-w-none">
+            <h2>Hablemos Sin Compromiso</h2>
+            <p>30 minutos pueden ahorrarte meses de problemas y miles de euros.</p>
+            <p><strong>Sin jerga técnica. Sin presión de venta. Solo claridad.</strong></p>
+            <hr>
+            <h2>📞 Consulta Estratégica Gratuita (30 min)</h2>
+            <h3><strong>¿Qué Incluye?</strong></h3>
+            <ul>
+                <li>✅ <strong>Assessment inicial</strong> de tus necesidades y objetivos</li>
+                <li>✅ <strong>Roadmap preliminar</strong> con recomendaciones específicas</li>
+                <li>✅ <strong>Budget estimate</strong> y timeline aproximado</li>
+                <li>✅ <strong>Q&A session</strong> para resolver tus dudas técnicas y estratégicas</li>
+            </ul>
+            <h3><strong>Ideal Para:</strong></h3>
+            <ul>
+                <li><strong>CTOs/CISOs</strong> evaluando implementación de IA segura</li>
+                <li><strong>Empresas industriales</strong> modernizando security ICS/OT</li>
+                <li><strong>Startups deep tech</strong> necesitando MLSecOps desde día 1</li>
+                <li><strong>Organizaciones</strong> preparando compliance NIS2, AI Act</li>
+                <li><strong>Directivos</strong> buscando second opinion sobre seguridad actual</li>
+            </ul>
+            <div class="cta-box">
+                <a href="https://calendly.com/angelsulev/consulta-estrategica" class="btn-primary" target="_blank">
+                    📅 Reservar Consulta Gratuita
+                </a>
+                <p class="text-sm mt-4">🔒 Conversación confidencial. Elige fecha y hora que te convenga.</p>
+            </div>
+            <hr>
+            <h2>📧 Información de Contacto</h2>
+            <h3><strong>Email</strong></h3>
+            <p><strong>angel.sulev@gmail.com</strong></p>
+            <p>📬 Respuesta garantizada en menos de 24h (días laborables)<br>
+            ⚡ Consultas urgentes: respuesta en menos de 2 horas</p>
+            <h3><strong>Teléfono / WhatsApp</strong></h3>
+            <p><strong>+34 633 600 515</strong></p>
+            <p>📞 L-V: 9:00-18:00 CET<br>
+            🚨 Emergencias 24/7 para clientes activos</p>
+            <h3><strong>Ubicación</strong></h3>
+            <p><strong>Lleida, España</strong></p>
+            <p>🇪🇸 Servicios presenciales: España + Europa<br>
+            🌍 Consultoría remota: Internacional</p>
+            <hr>
+            <h2>🎯 ¿Qué Tipo de Proyecto Tienes?</h2>
+            <div class="service-cards">
+                <h3>🤖 <strong>IA Agéntica Segura</strong></h3>
+                <ul>
+                    <li>Custom LLMs desarrollo</li>
+                    <li>B2B Agents automation</li>
+                    <li>RAG systems</li>
+                    <li>MLSecOps architecture</li>
+                </ul>
+                <p><strong>💰 Inversión típica:</strong> €15K - €50K<br>
+                <strong>⏱️ Duración:</strong> 6-16 semanas</p>
+                <hr>
+                <h3>🛡️ <strong>Ciberseguridad Enterprise</strong></h3>
+                <ul>
+                    <li>Zero Trust architecture</li>
+                    <li>SIEM enhancement ML</li>
+                    <li>Penetration testing</li>
+                    <li>Incident response automation</li>
+                </ul>
+                <p><strong>💰 Inversión típica:</strong> €8K - €30K<br>
+                <strong>⏱️ Duración:</strong> 2-12 semanas</p>
+                <hr>
+                <h3>🏭 <strong>Seguridad Industrial ICS/OT</strong></h3>
+                <ul>
+                    <li>OT networks assessment</li>
+                    <li>SCADA security hardening</li>
+                    <li>ISA/IEC 62443 compliance</li>
+                    <li>Industrial IoT security</li>
+                </ul>
+                <p><strong>💰 Inversión típica:</strong> €20K - €60K<br>
+                <strong>⏱️ Duración:</strong> 6-20 semanas</p>
+                <hr>
+                <h3>📋 <strong>Compliance Automation</strong></h3>
+                <ul>
+                    <li>ISO 27001 automatizado</li>
+                    <li>NIS2 Directive preparation</li>
+                    <li>GDPR + AI solutions</li>
+                    <li>Multi-framework compliance</li>
+                </ul>
+                <p><strong>💰 Inversión típica:</strong> €12K - €40K<br>
+                <strong>⏱️ Duración:</strong> 4-16 semanas</p>
+            </div>
+            <hr>
+        </div>
+
+        <h2>📝 Formulario de Contacto Rápido</h2>
+        <form action="https://formspree.io/f/TU_FORM_ID" method="POST" class="contact-form">
+            <div class="form-group">
+                <label for="name">Nombre Completo *</label>
+                <input type="text" name="name" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Corporativo *</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="company">Empresa</label>
+                <input type="text" name="company" id="company">
+            </div>
+            <div class="form-group">
+                <label for="role">Tu Cargo</label>
+                <select name="role" id="role">
+                    <option value="">Selecciona tu cargo...</option>
+                    <option value="cto">CTO</option>
+                    <option value="ciso">CISO</option>
+                    <option value="it-director">Director TI</option>
+                    <option value="security-manager">Manager Seguridad</option>
+                    <option value="ceo">CEO/Fundador</option>
+                    <option value="other">Otro</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="project-type">Tipo de Proyecto *</label>
+                <select name="project-type" id="project-type" required>
+                    <option value="">Selecciona tipo de proyecto...</option>
+                    <option value="ia-agentica">IA Agéntica Segura</option>
+                    <option value="custom-llms">Custom LLMs</option>
+                    <option value="mlsecops">MLSecOps</option>
+                    <option value="ics-ot">Seguridad ICS/OT</option>
+                    <option value="compliance">Compliance</option>
+                    <option value="pentesting">Pentesting</option>
+                    <option value="consulting">Consultoría Estratégica</option>
+                    <option value="other">Otro</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="budget">Presupuesto Aproximado</label>
+                <select name="budget" id="budget">
+                    <option value="">Selecciona rango...</option>
+                    <option value="5k-15k">€5K - €15K</option>
+                    <option value="15k-30k">€15K - €30K</option>
+                    <option value="30k-50k">€30K - €50K</option>
+                    <option value="50k-100k">€50K - €100K</option>
+                    <option value="100k+">€100K+</option>
+                    <option value="undefined">Por definir</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="timeline">Timeline Deseado</label>
+                <select name="timeline" id="timeline">
+                    <option value="">Selecciona timeline...</option>
+                    <option value="urgent">Urgente (&lt; 2 semanas)</option>
+                    <option value="short">Corto plazo (1-2 meses)</option>
+                    <option value="medium">Medio plazo (3-6 meses)</option>
+                    <option value="long">Largo plazo (6+ meses)</option>
+                    <option value="flexible">Flexible</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message">Cuéntame Sobre Tu Proyecto *</label>
+                <textarea name="message" id="message" rows="6" required placeholder="Describe tu desafío actual, objetivos, y qué tipo de ayuda necesitas..."></textarea>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" name="newsletter" id="newsletter">
+                <label for="newsletter">Me interesa recibir insights sobre ciberseguridad + IA (máx. 1 email/mes)</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" name="privacy" id="privacy" required>
+                <label for="privacy">Acepto la <a href="/privacidad/">política de privacidad</a> *</label>
+            </div>
+            <button type="submit" class="btn-primary">
+                🚀 Enviar Mensaje
+            </button>
+        </form>
+
+        <div class="prose prose-lg prose-primary max-w-none">
+            <hr>
+            <h2>⚡ Garantías de Respuesta</h2>
+            <h3>📧 <strong>Email / Formulario</strong></h3>
+            <ul>
+                <li><strong>&lt; 2 horas</strong> para consultas urgentes (horario laboral)</li>
+                <li><strong>&lt; 24 horas</strong> para consultas generales (días laborables)</li>
+                <li><strong>&lt; 48 horas</strong> para propuestas detalladas complejas</li>
+            </ul>
+            <h3>📞 <strong>Llamada / WhatsApp</strong></h3>
+            <ul>
+                <li><strong>Inmediata</strong> para emergencias de clientes activos (24/7)</li>
+                <li><strong>&lt; 4 horas</strong> para nuevas consultas (horario laboral)</li>
+                <li><strong>Programada</strong> vía Calendly para sesiones estratégicas</li>
+            </ul>
+            <hr>
+            <h2>🌍 Disponibilidad Geográfica</h2>
+            <h3>🇪🇸 <strong>España (Presencial)</strong></h3>
+            <ul>
+                <li>Catalunya: Barcelona, Lleida, Girona, Tarragona</li>
+                <li>Madrid: Región Metropolitana</li>
+                <li>Valencia: Comunidad Valenciana completa</li>
+                <li>Otras regiones: Según proyecto y duración</li>
+            </ul>
+            <h3>🇪🇺 <strong>Europa (Presencial para proyectos +€25K)</strong></h3>
+            <ul>
+                <li>Francia: París, Lyon, Marsella</li>
+                <li>Alemania: Berlín, Munich, Frankfurt</li>
+                <li>Reino Unido: Londres, Manchester</li>
+                <li>Países Nórdicos: Estocolmo, Helsinki, Copenhague</li>
+            </ul>
+            <h3>🌍 <strong>Internacional (Remoto)</strong></h3>
+            <ul>
+                <li>Estados Unidos: Costa Este/Oeste</li>
+                <li>Canadá: Toronto, Vancouver</li>
+                <li>LATAM: México, Colombia, Chile, Argentina</li>
+                <li>Asia-Pacific: Singapur, Australia</li>
+            </ul>
+            <hr>
+            <h2>🔄 Próximos Pasos</h2>
+            <h3><strong>1. Consulta Inicial (Gratuita - 30 min)</strong></h3>
+            <p>📅 <a href="https://calendly.com/angelsulev/consulta-estrategica">Reserva en Calendly</a> para assessment inicial</p>
+            <h3><strong>2. Propuesta Detallada</strong></h3>
+            <p>📋 Scope + timeline + inversión (precio fijo, sin sorpresas)</p>
+            <h3><strong>3. Project Kickoff</strong></h3>
+            <p>🚀 Alineación stakeholders + planificación milestones + métricas éxito</p>
+            <h3><strong>4. Implementación</strong></h3>
+            <p>⚡ Updates semanales + comunicación transparente + deliverables tracking</p>
+            <h3><strong>5. Knowledge Transfer</strong></h3>
+            <p>🎓 Training equipo + documentación completa + soporte continuo</p>
+            <hr>
+            <h2>💼 Clientes Típicos</h2>
+            <ul>
+                <li>✅ <strong>Empresas 50-1000+ empleados</strong> con necesidades complejas de seguridad</li>
+                <li>✅ <strong>Startups deep tech</strong> que necesitan seguridad desde día 1</li>
+                <li>✅ <strong>Industrias críticas</strong> (manufactura, salud, finanzas, utilities)</li>
+                <li>✅ <strong>Organizaciones reguladas</strong> (ISO 27001, NIS2, GDPR, PCI DSS)</li>
+                <li>✅ <strong>Empresas adoptando IA</strong> que necesitan MLSecOps</li>
+            </ul>
+            <hr>
+            <h2>❓ Preguntas Frecuentes</h2>
+            <p><strong>¿Cuánto tiempo toma recibir una respuesta?</strong><br>
+            Menos de 24h para consultas generales. Menos de 2h para urgencias en horario laboral.</p>
+            <p><strong>¿La consulta gratuita tiene compromiso?</strong><br>
+            No. Es para que nos conozcamos y ver si tiene sentido trabajar juntos. Sin presión.</p>
+            <p><strong>¿Trabajas solo o con un equipo?</strong><br>
+            Trabajo directamente en tus proyectos. Para proyectos grandes tengo una red de especialistas de confianza.</p>
+            <p><strong>¿Cuál es el proyecto mínimo que aceptas?</strong><br>
+            No hay mínimo fijo. He trabajado con startups de 5 personas y corporaciones de 1000+. Si hay fit, hay proyecto.</p>
+            <p><strong>¿Ofreces contratos de retainer/soporte continuo?</strong><br>
+            Sí. Muchos clientes empiezan con un proyecto y luego continúan con soporte mensual.</p>
+            <p><strong>¿Puedo empezar con algo pequeño antes de comprometerme?</strong><br>
+            Absolutamente. Un assessment o proyecto piloto es una excelente forma de empezar.</p>
+            <p><strong>¿Trabajas con NDAs?</strong><br>
+            Sí, por supuesto. Toda información es tratada confidencialmente. Puedo firmar tu NDA sin problema.</p>
+            <p><strong>¿Qué pasa si mi industria es muy específica?</strong><br>
+            Mejor. Los proyectos específicos son los más interesantes. He trabajado en manufactura, salud, fintech, educación, y más.</p>
+            <hr>
+            <h2>🔒 Compromiso de Confidencialidad</h2>
+            <ul>
+                <li>✅ Toda conversación es completamente confidencial</li>
+                <li>✅ Puedo firmar NDAs antes de discutir detalles</li>
+                <li>✅ Tu información nunca se comparte con terceros</li>
+                <li>✅ Casos de éxito publicados solo con tu autorización</li>
+            </ul>
+            <hr>
+            <h2>📞 ¿Listo para Hablar?</h2>
+            <div class="cta-final">
+                <h3>No Esperes a Que un Problema Se Convierta en Crisis</h3>
+                <p>30 minutos hoy pueden ahorrarte meses de problemas mañana.</p>
+                <div class="cta-buttons">
+                    <a href="https://calendly.com/angelsulev/consulta-estrategica" class="btn-primary" target="_blank">
+                        📅 Reservar Consulta Gratuita
+                    </a>
+                    <a href="mailto:angel.sulev@gmail.com" class="btn-secondary">
+                        📧 Enviar Email
+                    </a>
+                    <a href="https://wa.me/34633600515" class="btn-secondary" target="_blank">
+                        💬 WhatsApp
+                    </a>
+                </div>
+                <p class="text-sm">🔒 Sin compromiso. Sin presión de venta. Solo claridad.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Experience Timeline -->
+<section class="py-16 lg:py-24 bg-gradient-to-br from-slate-50 to-blue-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 animate-on-scroll">
+            <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                Hablemos
+            </h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Estoy aquí para ayudarte a resolver tus desafíos de seguridad y a convertir tu ciberseguridad en una ventaja competitiva.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 lg:py-24 bg-gradient-to-br from-blue-600 via-blue-500 to-purple-600">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="animate-on-scroll">
+            <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">
+                ¿Listo para Empezar?
+            </h2>
+            <p class="text-xl text-blue-100 mb-10 max-w-2xl mx-auto leading-relaxed">
+                30 minutos pueden ahorrarte meses de problemas y miles de euros. Sin compromiso, sin presión de venta. Solo claridad.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://calendly.com/angelsulev/consulta-estrategica" class="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 font-bold text-lg rounded-xl hover:bg-blue-50 transition-all duration-300 shadow-xl">
+                    <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                    </svg>
+                    Reservar Consulta Gratuita
+                </a>
+                <a href="/servicios/" class="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-bold text-lg rounded-xl hover:bg-white/10 transition-all duration-300">
+                    Ver Servicios
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ end }}

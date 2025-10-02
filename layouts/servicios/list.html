@@ -1,0 +1,584 @@
+{{ define "main" }}
+
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-24 lg:py-32 overflow-hidden">
+    <!-- Decorative elements -->
+    <div class="absolute inset-0 cyber-grid-bg opacity-20"></div>
+    <div class="absolute top-0 right-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl opacity-20 animate-float"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl opacity-20 animate-float" style="animation-delay: 2s;"></div>
+    
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="animate-slide-up">
+            <!-- Badge -->
+            <div class="inline-flex items-center px-4 py-2 bg-blue-500/20 backdrop-blur-sm rounded-full border border-blue-400/30 mb-6">
+                <svg class="w-5 h-5 text-blue-300 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                </svg>
+                <span class="text-blue-300 font-semibold">Resultados Medibles, No Solo Informes</span>
+            </div>
+            
+            <h1 class="text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                {{ .Title }}
+            </h1>
+            
+            <p class="text-xl lg:text-2xl text-blue-200 mb-10 max-w-4xl mx-auto leading-relaxed">
+                {{ .Description }}
+            </p>
+            
+            <!-- Key Metrics -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                    <div class="text-3xl font-bold text-white mb-1">65%</div>
+                    <div class="text-sm text-slate-300">Reducción Falsos Positivos</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                    <div class="text-3xl font-bold text-white mb-1">99.95%</div>
+                    <div class="text-sm text-slate-300">Uptime Garantizado</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                    <div class="text-3xl font-bold text-white mb-1">350%</div>
+                    <div class="text-sm text-slate-300">Incremento ROI</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                    <div class="text-3xl font-bold text-white mb-1">50+</div>
+                    <div class="text-sm text-slate-300">Empresas Transformadas</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-16 lg:py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="prose prose-lg prose-primary max-w-none">
+            <h2>Servicios Que Transforman Seguridad en Resultados</h2>
+            <p>No vendo horas de consultoría. Vendo <strong>problemas resueltos</strong> y <strong>objetivos conseguidos</strong>.</p>
+            <p>Cada servicio está diseñado para entregar resultados medibles en semanas, no en años.</p>
+            <hr>
+            <h2>🤖 IA Agéntica & Custom LLMs</h2>
+            <h3><strong>¿Qué Es Esto en Realidad?</strong></h3>
+            <p>Imagina tener un equipo de analistas de seguridad trabajando 24/7 que:</p>
+            <ul>
+                <li>Nunca se cansan</li>
+                <li>Aprenden de cada amenaza</li>
+                <li>Responden en segundos, no en horas</li>
+                <li>No generan falsos positivos que te hacen perder tiempo</li>
+            </ul>
+            <p><strong>Eso es la IA Agéntica.</strong></p>
+            <h3><strong>¿Qué Incluye?</strong></h3>
+            <h4>🎯 <strong>Custom LLMs para Ciberseguridad</strong></h4>
+            <p>Modelos de IA entrenados específicamente para tu empresa que:</p>
+            <ul>
+                <li>Entienden tu contexto de negocio</li>
+                <li>Hablan tu idioma técnico</li>
+                <li>Se integran con tus sistemas existentes</li>
+                <li>Mejoran continuamente con uso</li>
+            </ul>
+            <p><strong>Ejemplo real:</strong> Un cliente redujo sus falsos positivos de SIEM del 95% al 30% en 6 semanas.</p>
+            <h4>🤝 <strong>B2B Agents Inteligentes</strong></h4>
+            <p>Asistentes virtuales que automatizan:</p>
+            <ul>
+                <li>Análisis de amenazas</li>
+                <li>Respuesta a incidentes</li>
+                <li>Generación de informes de compliance</li>
+                <li>Documentación de seguridad</li>
+            </ul>
+            <p><strong>Ejemplo real:</strong> Lo que antes tomaba 40 horas/semana ahora toma 5 horas.</p>
+            <h4>📊 <strong>RAG Systems (Retrieval-Augmented Generation)</strong></h4>
+            <p>Buscadores inteligentes que:</p>
+            <ul>
+                <li>Encuentran información crítica en segundos</li>
+                <li>Correlacionan amenazas automáticamente</li>
+                <li>Sugieren acciones basadas en tu histórico</li>
+                <li>Aprenden de tus decisiones</li>
+            </ul>
+            <p><strong>Ejemplo real:</strong> Tiempo de respuesta a incidentes reducido un 50%.</p>
+            <h3><strong>¿Para Quién Es Esto?</strong></h3>
+            <ul>
+                <li>✅ Empresas que procesan muchas alertas de seguridad</li>
+                <li>✅ Equipos de seguridad sobrecargados de trabajo</li>
+                <li>✅ Organizaciones que necesitan escalar sin contratar</li>
+                <li>✅ CTOs/CISOs que buscan ventaja competitiva</li>
+            </ul>
+            <h3><strong>Inversión & Tiempo</strong></h3>
+            <p>💰 <strong>Desde €15,000</strong><br>
+            ⏱️ <strong>6-12 semanas</strong> para ver resultados<br>
+            📈 <strong>ROI típico:</strong> Recuperación en 3-6 meses</p>
+            <hr>
+            <h2>🛡️ MLSecOps Enterprise</h2>
+            <h3><strong>¿Qué Es Esto Realmente?</strong></h3>
+            <p>Si estás usando o planeando usar IA en tu empresa, necesitas protegerla.</p>
+            <p><strong>MLSecOps</strong> = Seguridad para todo el ciclo de vida de la IA.</p>
+            <p>Desde que entrenas un modelo hasta que lo usas en producción.</p>
+            <h3><strong>¿Por Qué Lo Necesitas?</strong></h3>
+            <p>Los modelos de IA pueden ser:</p>
+            <ul>
+                <li><strong>Envenenados</strong> con datos maliciosos</li>
+                <li><strong>Engañados</strong> para dar respuestas incorrectas</li>
+                <li><strong>Robados</strong> por competidores</li>
+                <li><strong>Utilizados</strong> para violar regulaciones</li>
+            </ul>
+            <p><strong>El riesgo:</strong> Multas millonarias, pérdida de reputación, ventaja competitiva perdida.</p>
+            <h3><strong>¿Qué Incluye?</strong></h3>
+            <h4>🔒 <strong>Pipelines Seguros</strong></h4>
+            <ul>
+                <li>Protección desde el entrenamiento hasta el deployment</li>
+                <li>Validación automática de modelos</li>
+                <li>Testing de ataques adversariales</li>
+                <li>Monitoreo continuo de comportamiento</li>
+            </ul>
+            <h4>📋 <strong>Governance & Compliance</strong></h4>
+            <ul>
+                <li>NIST AI Risk Management Framework</li>
+                <li>Auditoría de modelos para fairness y bias</li>
+                <li>Documentación automática para auditorías</li>
+                <li>Trazabilidad completa</li>
+            </ul>
+            <h4>🗄️ <strong>Vector Databases & RAG</strong></h4>
+            <ul>
+                <li>Setup optimizado de Chroma, Pinecone, Weaviate</li>
+                <li>Estrategia de embeddings personalizada</li>
+                <li>Búsqueda semántica ajustada a tu negocio</li>
+                <li>Escalabilidad planificada</li>
+            </ul>
+            <h3><strong>¿Para Quién Es Esto?</strong></h3>
+            <ul>
+                <li>✅ Empresas implementando IA/ML en producción</li>
+                <li>✅ Startups deep tech que necesitan protección desde día 1</li>
+                <li>✅ Organizaciones con requisitos de compliance estrictos</li>
+                <li>✅ Equipos que ya tuvieron incidentes con modelos IA</li>
+            </ul>
+            <h3><strong>Inversión & Tiempo</strong></h3>
+            <p>💰 <strong>Desde €25,000</strong><br>
+            ⏱️ <strong>8-16 semanas</strong> para implementación completa<br>
+            📈 <strong>Valor:</strong> Evitas costes de incidentes (típicamente €500K+)</p>
+            <hr>
+            <h2>🏭 Seguridad Industrial (ICS/OT)</h2>
+            <h3><strong>¿Qué Es Esto en Términos Simples?</strong></h3>
+            <p>Si tu empresa fabrica cosas, gestiona infraestructuras o controla procesos industriales…</p>
+            <p><strong>Un ciberataque no solo roba datos. Para tu producción.</strong></p>
+            <p>Cada hora de producción parada = Decenas o cientos de miles de euros perdidos.</p>
+            <h3><strong>¿Qué Protegemos?</strong></h3>
+            <ul>
+                <li>Sistemas SCADA</li>
+                <li>Redes industriales</li>
+                <li>PLCs y HMIs</li>
+                <li>Sensores y actuadores IoT</li>
+                <li>Sistemas de control de procesos</li>
+            </ul>
+            <h3><strong>¿Qué Incluye?</strong></h3>
+            <h4>🔍 <strong>Assessment Completo</strong></h4>
+            <ul>
+                <li>Descubrimiento de todos tus dispositivos OT</li>
+                <li>Análisis de protocolos industriales (Modbus, DNP3, OPC-UA)</li>
+                <li>Evaluación de segmentación de red</li>
+                <li>Compliance ISA/IEC 62443</li>
+            </ul>
+            <h4>🛠️ <strong>Implementación</strong></h4>
+            <ul>
+                <li>Hardening de sistemas SCADA</li>
+                <li>Segmentación de redes OT/IT</li>
+                <li>Monitoreo 24/7 especializado</li>
+                <li>Procedimientos de respuesta a incidentes OT-específicos</li>
+            </ul>
+            <h4>📊 <strong>Herramientas Especializadas</strong></h4>
+            <ul>
+                <li>Claroty, Nozomi Networks</li>
+                <li>MITRE ATT&CK for ICS</li>
+                <li>Dashboards personalizados</li>
+                <li>Alertas tiempo real</li>
+            </ul>
+            <h3><strong>¿Para Quién Es Esto?</strong></h3>
+            <ul>
+                <li>✅ Plantas de manufactura</li>
+                <li>✅ Utilities (agua, energía, gas)</li>
+                <li>✅ Infraestructuras críticas</li>
+                <li>✅ Empresas con sistemas legacy industriales</li>
+            </ul>
+            <h3><strong>Resultados Típicos</strong></h3>
+            <ul>
+                <li><strong>99.95% uptime</strong> garantizado</li>
+                <li><strong>60% reducción</strong> de incidentes de seguridad</li>
+                <li><strong>40% optimización</strong> de costes operativos</li>
+                <li><strong>100% compliance</strong> en auditorías</li>
+            </ul>
+            <h3><strong>Inversión & Tiempo</strong></h3>
+            <p>💰 <strong>Desde €20,000</strong><br>
+            ⏱️ <strong>6-14 semanas</strong> para implementación<br>
+            📈 <strong>ROI:</strong> Un solo incidente evitado paga la inversión</p>
+            <hr>
+            <h2>📋 Compliance Automatizado</h2>
+            <h3><strong>¿El Problema?</strong></h3>
+            <p>Cumplir con ISO 27001, NIS2, GDPR, etc. es:</p>
+            <ul>
+                <li>Tedioso</li>
+                <li>Costoso en tiempo y recursos</li>
+                <li>Genera montañas de documentación</li>
+                <li>Requiere actualización constante</li>
+            </ul>
+            <h3><strong>¿La Solución?</strong></h3>
+            <p><strong>Automatización inteligente</strong> que:</p>
+            <ul>
+                <li>Genera documentación automáticamente</li>
+                <li>Mantiene evidencias actualizadas</li>
+                <li>Te avisa de gaps antes de auditorías</li>
+                <li>Ahorra el 80% del tiempo manual</li>
+            </ul>
+            <h3><strong>¿Qué Frameworks Cubro?</strong></h3>
+            <h4>🏆 <strong>ISO 27001</strong></h4>
+            <ul>
+                <li>Gap assessment automático</li>
+                <li>Documentación de políticas y procedimientos</li>
+                <li>Implementación de controles</li>
+                <li>Preparación de auditorías</li>
+            </ul>
+            <h4>🇪🇺 <strong>NIS2 Directive</strong></h4>
+            <ul>
+                <li>Mapping de requisitos específicos por sector</li>
+                <li>Sistemas de reporte de incidentes</li>
+                <li>Assessment de supply chain</li>
+                <li>Business continuity planning</li>
+            </ul>
+            <h4>🔐 <strong>GDPR + Privacy by Design</strong></h4>
+            <ul>
+                <li>Data mapping automático</li>
+                <li>Privacy Impact Assessments</li>
+                <li>Gestión de consentimientos</li>
+                <li>Workflows de breach notification</li>
+            </ul>
+            <h3><strong>¿Para Quién Es Esto?</strong></h3>
+            <ul>
+                <li>✅ Empresas que necesitan certificarse</li>
+                <li>✅ Organizaciones con auditorías pendientes</li>
+                <li>✅ Equipos pequeños que no pueden dedicar 100% a compliance</li>
+                <li>✅ Empresas que ya tienen compliance pero es un caos</li>
+            </ul>
+            <h3><strong>Inversión & Tiempo</strong></h3>
+            <p>💰 <strong>Desde €12,000</strong><br>
+            ⏱️ <strong>4-10 semanas</strong> hasta certificación<br>
+            📈 <strong>Ahorro típico:</strong> 70-80% vs. proceso manual</p>
+            <hr>
+            <h2>🔴 PENETRATION TESTING + RED TEAM</h2>
+            <h3><strong>¿Qué Es Realmente?</strong></h3>
+            <p>Contrato a alguien para que intente hackear tu empresa de todas las formas posibles. ¿Por qué? Para encontrar agujeros antes de que los encuentren los malos.</p>
+            <h3><strong>Tipos de Tests</strong></h3>
+            <h4>🌐 <strong>Web Application Security</strong></h4>
+            <ul>
+                <li>Testing profundo aplicaciones web, APIs, portales cliente</li>
+                <li>OWASP Top 10 + vulnerabilidades business logic</li>
+                <li>Testing autenticación/autorización avanzado</li>
+                <li>Code review + SAST/DAST integration</li>
+            </ul>
+            <h4>📱 <strong>Mobile App Penetration</strong></h4>
+            <ul>
+                <li>Testing apps iOS/Android completo</li>
+                <li>Reverse engineering + code obfuscation review</li>
+                <li>API móviles + almacenamiento local</li>
+                <li>Certificate pinning + jailbreak detection</li>
+            </ul>
+            <h4>☁️ <strong>Cloud Security Assessment</strong></h4>
+            <ul>
+                <li>AWS, Azure, GCP - configuración completa</li>
+                <li>IAM policies + misconfigurations</li>
+                <li>Storage buckets + databases exposure</li>
+                <li>Network security + serverless functions</li>
+            </ul>
+            <h4>🤖 <strong>AI-Enhanced Pentesting</strong></h4>
+            <ul>
+                <li>Reconocimiento automatizado con IA</li>
+                <li>Vulnerability discovery ML-powered</li>
+                <li>Exploit development asistido GPT</li>
+                <li>Living-off-the-Land automation</li>
+            </ul>
+            <h3><strong>¿Qué Recibes?</strong></h3>
+            <ul>
+                <li>📄 <strong>Executive Summary</strong> para C-level (lenguaje negocio)</li>
+                <li>📊 <strong>Technical Report</strong> detallado con remediation steps</li>
+                <li>🎯 <strong>Risk Scoring</strong> CVSS 3.1 + impacto empresarial real</li>
+                <li>🔁 <strong>Retest Included</strong> validación de fixes implementados</li>
+            </ul>
+            <h3><strong>¿Para Quién Es Esto?</strong></h3>
+            <ul>
+                <li>✅ Empresas que necesitan compliance (PCI DSS, ISO 27001)</li>
+                <li>✅ Antes de lanzar productos/servicios críticos</li>
+                <li>✅ Después de cambios importantes en infraestructura</li>
+                <li>✅ Auditorías anuales de seguridad</li>
+            </ul>
+            <h3><strong>Inversión & Tiempo</strong></h3>
+            <p>💰 <strong>Desde €8,000</strong><br>
+            ⏱️ <strong>2-6 semanas</strong> (assessment + remediation + retest)<br>
+            📈 <strong>Valor:</strong> Un solo breach evitado cubre 10x la inversión</p>
+            <hr>
+            <h2>📈 MARKETING DIGITAL IA-POTENCIADO</h2>
+            <h3><strong>¿Qué Problema Resuelve?</strong></h3>
+            <p>El marketing tradicional es:</p>
+            <ul>
+                <li>Caro (PPC costs subiendo constantemente)</li>
+                <li>Lento (contenido manual toma semanas)</li>
+                <li>Inexacto (targeting basado en suposiciones)</li>
+                <li>Difícil de escalar sin contratar masivamente</li>
+            </ul>
+            <p><strong>La IA lo cambia todo.</strong></p>
+            <h3><strong>¿Qué Incluye?</strong></h3>
+            <h4>🔍 <strong>SEO/SEM Automation</strong></h4>
+            <ul>
+                <li>Keyword research con IA predictiva avanzada</li>
+                <li>Content generation con Custom GPT models</li>
+                <li>Competitor analysis automatizado + intelligence gathering</li>
+                <li>Performance optimization continua ML-driven</li>
+            </ul>
+            <h4>👥 <strong>Customer Intelligence</strong></h4>
+            <ul>
+                <li>Vector-based profiling comportamiento cliente</li>
+                <li>Predictive analytics (lifetime value, churn prediction)</li>
+                <li>Personalization engines (content + ofertas dinámicas)</li>
+                <li>A/B testing automatizado con statistical significance</li>
+            </ul>
+            <h4>📊 <strong>Analytics Avanzado</strong></h4>
+            <ul>
+                <li>Dashboards predictivos en tiempo real</li>
+                <li>Attribution modeling multi-touch</li>
+                <li>Sentiment analysis automatizado</li>
+                <li>ROI tracking granular por canal/campaña</li>
+            </ul>
+            <h3><strong>Resultados Típicos</strong></h3>
+            <ul>
+                <li>✅ <strong>350% incremento ROI</strong> en campañas SEM/PPC</li>
+                <li>✅ <strong>85% más visibilidad</strong> orgánica (SEO)</li>
+                <li>✅ <strong>60% reducción</strong> tiempo generación contenido</li>
+                <li>✅ <strong>25% reducción</strong> customer churn con predictive intervention</li>
+            </ul>
+            <h3><strong>¿Para Quién Es Esto?</strong></h3>
+            <ul>
+                <li>✅ E-commerce buscando escalar sin aumentar costes proporcionalmente</li>
+                <li>✅ SaaS companies con high customer acquisition costs</li>
+                <li>✅ Empresas B2B con ciclos de venta largos</li>
+                <li>✅ Cualquier negocio con presencia digital significativa</li>
+            </ul>
+            <h3><strong>Inversión & Tiempo</strong></h3>
+            <p>💰 <strong>Desde €6,000</strong><br>
+            ⏱️ <strong>3-8 semanas</strong> para implementación + optimización<br>
+            📈 <strong>ROI típico:</strong> 3-5x en 6-12 meses</p>
+            <hr>
+            <h2>🎓 FORMACIÓN & MENTORING</h2>
+            <h3><strong>¿Por Qué Formación Especializada?</strong></h3>
+            <p>La ciberseguridad + IA cambia tan rápido que:</p>
+            <ul>
+                <li>Certificaciones tradicionales quedan obsoletas rápido</li>
+                <li>Cursos genéricos no cubren casos uso específicos</li>
+                <li>Tu equipo necesita upskilling continuo</li>
+                <li>New hires necesitan onboarding especializado</li>
+            </ul>
+            <h3><strong>Tipos de Formación</strong></h3>
+            <h4>👥 <strong>Workshops Especializados</strong></h4>
+            <ul>
+                <li><strong>MLSecOps Fundamentals</strong> - Equipos técnicos (2 días)</li>
+                <li><strong>AI Security Awareness</strong> - Directivos y managers (1 día)</li>
+                <li><strong>Custom LLMs Development</strong> - Hands-on training (3 días)</li>
+                <li><strong>Incident Response con IA</strong> - SOC teams (2 días)</li>
+            </ul>
+            <h4>🎯 <strong>Mentoring Personalizado</strong></h4>
+            <ul>
+                <li><strong>Career transition</strong> hacia IA Agéntica + Cybersecurity</li>
+                <li><strong>Technical upskilling</strong> programas personalizados</li>
+                <li><strong>Leadership development</strong> equipos técnicos</li>
+                <li><strong>Certification preparation</strong> CISSP, CEH, OSCP</li>
+            </ul>
+            <h4>📚 <strong>Programas Corporate</strong></h4>
+            <ul>
+                <li>Training programs customizados para tu empresa</li>
+                <li>Onboarding acelerado nuevos empleados security</li>
+                <li>Upskilling continuo equipos existentes</li>
+                <li>Knowledge transfer post-proyecto</li>
+            </ul>
+            <h3><strong>Metodología</strong></h3>
+            <ul>
+                <li>✅ <strong>70% práctica, 30% teoría</strong> - learn by doing</li>
+                <li>✅ <strong>Casos reales</strong> de tu industria</li>
+                <li>✅ <strong>Hands-on labs</strong> con herramientas actuales</li>
+                <li>✅ <strong>Post-training support</strong> para dudas</li>
+            </ul>
+            <h3><strong>Inversión & Tiempo</strong></h3>
+            <p>💰 <strong>Desde €2,000</strong> (workshops)<br>
+            💰 <strong>Desde €5,000</strong> (mentoring 3 meses)<br>
+            ⏱️ <strong>1-4 semanas</strong> típicamente</p>
+            <hr>
+            <h2>🤔 FAQ: Preguntas Frecuentes</h2>
+            <p><strong>¿Cuál es el proyecto mínimo que aceptas?</strong><br>
+            No hay mínimo fijo. He trabajado con startups y corporaciones. Si hay fit, hay proyecto.</p>
+            <p><strong>¿Trabajas solo o con un equipo?</strong><br>
+            Trabajo directamente en proyectos. Para proyectos grandes tengo red de especialistas de confianza.</p>
+            <p><strong>¿Ofreces contratos de retainer/soporte continuo?</strong><br>
+            Sí. Muchos clientes empiezan con proyecto y continúan con soporte mensual.</p>
+            <p><strong>¿Cuánto tiempo toma ver resultados?</strong><br>
+            Primeros resultados: 2-4 semanas. Resultados completos: 8-16 semanas típicamente.</p>
+            <p><strong>¿Puedo empezar con algo pequeño?</strong><br>
+            Absolutamente. Un assessment o proyecto piloto es excelente forma de empezar.</p>
+            <p><strong>¿Trabajas con NDAs?</strong><br>
+            Sí, por supuesto. Puedo firmar tu NDA sin problema.</p>
+            <p><strong>¿Y si mi industria es muy específica?</strong><br>
+            Mejor. Proyectos específicos son los más interesantes. He trabajado en manufactura, salud, fintech, educación, y más.</p>
+            <p><strong>¿Qué pasa si el proyecto no sale como esperado?</strong><br>
+            Jamás ha pasado (99.5% success rate), pero si hubiera problemas, trabajo hasta resolverlos. Tu éxito es mi éxito.</p>
+            <hr>
+            <h2>💼 Inversión & ROI</h2>
+            <h3><strong>Estructura de Precios</strong></h3>
+            <ul>
+                <li><strong>Consultoría Estratégica:</strong> €5K - €15K</li>
+                <li><strong>Custom LLMs + B2B Agents:</strong> €15K - €50K</li>
+                <li><strong>MLSecOps Enterprise:</strong> €25K - €60K</li>
+                <li><strong>ICS/OT Security:</strong> €20K - €60K</li>
+                <li><strong>Compliance Automation:</strong> €12K - €40K</li>
+                <li><strong>Pentesting:</strong> €8K - €30K</li>
+                <li><strong>Marketing IA:</strong> €6K - €25K</li>
+                <li><strong>Formación:</strong> €2K - €10K</li>
+            </ul>
+            <h3><strong>ROI Típico</strong></h3>
+            <ul>
+                <li><strong>MLSecOps:</strong> Evitas €500K+ en incidentes</li>
+                <li><strong>ICS/OT:</strong> Un downtime evitado = ROI completo</li>
+                <li><strong>Compliance:</strong> 70-80% ahorro vs. manual</li>
+                <li><strong>Marketing IA:</strong> 3-5x retorno en 6-12 meses</li>
+                <li><strong>Pentesting:</strong> Un breach evitado = 10x ROI</li>
+            </ul>
+            <h3><strong>Opciones de Pago</strong></h3>
+            <ul>
+                <li>✅ <strong>Precio fijo</strong> - Scope definido, sin sorpresas</li>
+                <li>✅ <strong>Milestones</strong> - Pago por hitos conseguidos</li>
+                <li>✅ <strong>Retainer mensual</strong> - Soporte continuo</li>
+                <li>✅ <strong>Híbrido</strong> - Proyecto + soporte ongoing</li>
+            </ul>
+            <hr>
+            <h2>🚀 ¿Listo Para Empezar?</h2>
+            <div class="cta-box">
+                <h3>El Siguiente Paso Es Simple</h3>
+                <p>1. Reserva 30 min de consulta gratuita<br>
+                2. Discutimos tu situación y objetivos<br>
+                3. Te envío propuesta detallada en 48h<br>
+                4. Decides si tiene sentido trabajar juntos</p>
+                <a href="/contacto/" class="btn-primary">📅 Reservar Consulta Gratuita</a>
+                <p class="text-sm">🔒 Sin compromiso. Sin presión de venta. Solo claridad.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Experience Timeline -->
+<section class="py-16 lg:py-24 bg-gradient-to-br from-slate-50 to-blue-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 animate-on-scroll">
+            <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                Metodología de Trabajo
+            </h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Un enfoque probado para entregar resultados medibles en semanas, no en años.
+            </p>
+        </div>
+        
+        <!-- Skills Grid -->
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+            <!-- Cybersecurity -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 card-hover animate-on-scroll">
+                <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+                    <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Diagnóstico y Estrategia</h3>
+                <ul class="space-y-2 text-gray-600">
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-blue-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        Análisis de la situación actual
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-blue-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        Definición de objetivos y KPIs
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-blue-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        Hoja de ruta y plan de acción
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- AI & ML -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 card-hover animate-on-scroll" style="animation-delay: 0.1s;">
+                <div class="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mb-6">
+                    <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Implementación y Desarrollo</h3>
+                <ul class="space-y-2 text-gray-600">
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-purple-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        Desarrollo de soluciones a medida
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-purple-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        Integración con sistemas existentes
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-purple-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        Pruebas y validación continua
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Industrial -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 card-hover animate-on-scroll" style="animation-delay: 0.2s;">
+                <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center mb-6">
+                    <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Entrega y Optimización</h3>
+                <ul class="space-y-2 text-gray-600">
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-orange-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        Entrega de resultados medibles
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-orange-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        Formación y transferencia de conocimiento
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-orange-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        Soporte y optimización continua
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 lg:py-24 bg-gradient-to-br from-blue-600 via-blue-500 to-purple-600">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="animate-on-scroll">
+            <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">
+                ¿Trabajamos Juntos?
+            </h2>
+            <p class="text-xl text-blue-100 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Si buscas un socio estratégico que entienda tanto de tecnología como de negocio, 
+                y que entregue resultados medibles en semanas, no en años...
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/contacto/" class="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 font-bold text-lg rounded-xl hover:bg-blue-50 transition-all duration-300 shadow-xl">
+                    <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                    </svg>
+                    Reservar Consulta Gratuita
+                </a>
+                <a href="/proyectos/" class="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-bold text-lg rounded-xl hover:bg-white/10 transition-all duration-300">
+                    Ver Casos de Éxito
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ end }}
