@@ -58,3 +58,45 @@
         transform: translateY(0);
     }
 }
+
+@keyframes gradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 3s ease infinite;
+}
+
+/* Navegación scroll state
+.nav-scroll.scrolled {
+  @apply bg-white/95 backdrop-blur-md shadow-xl;
+}
+
+.nav-scroll.scrolled .nav-link {
+  @apply text-gray-700;
+}
+
+.nav-scroll.scrolled .nav-link:hover {
+  @apply text-blue-600 bg-blue-50;
+}
+
+.nav-scroll.scrolled .nav-link.active {
+  @apply text-blue-600 bg-blue-50;
+}
+ */
+
+/* Textos del logo en scroll
+.nav-scroll.scrolled a span:first-of-type {
+  @apply text-slate-900;
+}
+
+.nav-scroll.scrolled a .text-slate-400 {
+  @apply text-slate-600;
+}
+*/
