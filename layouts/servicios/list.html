@@ -1,584 +1,1265 @@
 {{ define "main" }}
-
-<!-- Hero Section -->
-<section class="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-24 lg:py-32 overflow-hidden">
-    <!-- Decorative elements -->
-    <div class="absolute inset-0 cyber-grid-bg opacity-20"></div>
-    <div class="absolute top-0 right-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl opacity-20 animate-float"></div>
-    <div class="absolute bottom-0 left-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl opacity-20 animate-float" style="animation-delay: 2s;"></div>
+<div class="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
+  
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden bg-gradient-to-br from-blue-900/20 via-slate-900 to-purple-900/20 pt-20 pb-32">
+    <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-40"></div>
     
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div class="animate-slide-up">
-            <!-- Badge -->
-            <div class="inline-flex items-center px-4 py-2 bg-blue-500/20 backdrop-blur-sm rounded-full border border-blue-400/30 mb-6">
-                <svg class="w-5 h-5 text-blue-300 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                </svg>
-                <span class="text-blue-300 font-semibold">Resultados Medibles, No Solo Informes</span>
-            </div>
-            
-            <h1 class="text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                {{ .Title }}
-            </h1>
-            
-            <p class="text-xl lg:text-2xl text-blue-200 mb-10 max-w-4xl mx-auto leading-relaxed">
-                {{ .Description }}
-            </p>
-            
-            <!-- Key Metrics -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-                    <div class="text-3xl font-bold text-white mb-1">65%</div>
-                    <div class="text-sm text-slate-300">Reducción Falsos Positivos</div>
-                </div>
-                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-                    <div class="text-3xl font-bold text-white mb-1">99.95%</div>
-                    <div class="text-sm text-slate-300">Uptime Garantizado</div>
-                </div>
-                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-                    <div class="text-3xl font-bold text-white mb-1">350%</div>
-                    <div class="text-sm text-slate-300">Incremento ROI</div>
-                </div>
-                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-                    <div class="text-3xl font-bold text-white mb-1">50+</div>
-                    <div class="text-sm text-slate-300">Empresas Transformadas</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="py-16 lg:py-24 bg-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="prose prose-lg prose-primary max-w-none">
-            <h2>Servicios Que Transforman Seguridad en Resultados</h2>
-            <p>No vendo horas de consultoría. Vendo <strong>problemas resueltos</strong> y <strong>objetivos conseguidos</strong>.</p>
-            <p>Cada servicio está diseñado para entregar resultados medibles en semanas, no en años.</p>
-            <hr>
-            <h2>🤖 IA Agéntica & Custom LLMs</h2>
-            <h3><strong>¿Qué Es Esto en Realidad?</strong></h3>
-            <p>Imagina tener un equipo de analistas de seguridad trabajando 24/7 que:</p>
-            <ul>
-                <li>Nunca se cansan</li>
-                <li>Aprenden de cada amenaza</li>
-                <li>Responden en segundos, no en horas</li>
-                <li>No generan falsos positivos que te hacen perder tiempo</li>
-            </ul>
-            <p><strong>Eso es la IA Agéntica.</strong></p>
-            <h3><strong>¿Qué Incluye?</strong></h3>
-            <h4>🎯 <strong>Custom LLMs para Ciberseguridad</strong></h4>
-            <p>Modelos de IA entrenados específicamente para tu empresa que:</p>
-            <ul>
-                <li>Entienden tu contexto de negocio</li>
-                <li>Hablan tu idioma técnico</li>
-                <li>Se integran con tus sistemas existentes</li>
-                <li>Mejoran continuamente con uso</li>
-            </ul>
-            <p><strong>Ejemplo real:</strong> Un cliente redujo sus falsos positivos de SIEM del 95% al 30% en 6 semanas.</p>
-            <h4>🤝 <strong>B2B Agents Inteligentes</strong></h4>
-            <p>Asistentes virtuales que automatizan:</p>
-            <ul>
-                <li>Análisis de amenazas</li>
-                <li>Respuesta a incidentes</li>
-                <li>Generación de informes de compliance</li>
-                <li>Documentación de seguridad</li>
-            </ul>
-            <p><strong>Ejemplo real:</strong> Lo que antes tomaba 40 horas/semana ahora toma 5 horas.</p>
-            <h4>📊 <strong>RAG Systems (Retrieval-Augmented Generation)</strong></h4>
-            <p>Buscadores inteligentes que:</p>
-            <ul>
-                <li>Encuentran información crítica en segundos</li>
-                <li>Correlacionan amenazas automáticamente</li>
-                <li>Sugieren acciones basadas en tu histórico</li>
-                <li>Aprenden de tus decisiones</li>
-            </ul>
-            <p><strong>Ejemplo real:</strong> Tiempo de respuesta a incidentes reducido un 50%.</p>
-            <h3><strong>¿Para Quién Es Esto?</strong></h3>
-            <ul>
-                <li>✅ Empresas que procesan muchas alertas de seguridad</li>
-                <li>✅ Equipos de seguridad sobrecargados de trabajo</li>
-                <li>✅ Organizaciones que necesitan escalar sin contratar</li>
-                <li>✅ CTOs/CISOs que buscan ventaja competitiva</li>
-            </ul>
-            <h3><strong>Inversión & Tiempo</strong></h3>
-            <p>💰 <strong>Desde €15,000</strong><br>
-            ⏱️ <strong>6-12 semanas</strong> para ver resultados<br>
-            📈 <strong>ROI típico:</strong> Recuperación en 3-6 meses</p>
-            <hr>
-            <h2>🛡️ MLSecOps Enterprise</h2>
-            <h3><strong>¿Qué Es Esto Realmente?</strong></h3>
-            <p>Si estás usando o planeando usar IA en tu empresa, necesitas protegerla.</p>
-            <p><strong>MLSecOps</strong> = Seguridad para todo el ciclo de vida de la IA.</p>
-            <p>Desde que entrenas un modelo hasta que lo usas en producción.</p>
-            <h3><strong>¿Por Qué Lo Necesitas?</strong></h3>
-            <p>Los modelos de IA pueden ser:</p>
-            <ul>
-                <li><strong>Envenenados</strong> con datos maliciosos</li>
-                <li><strong>Engañados</strong> para dar respuestas incorrectas</li>
-                <li><strong>Robados</strong> por competidores</li>
-                <li><strong>Utilizados</strong> para violar regulaciones</li>
-            </ul>
-            <p><strong>El riesgo:</strong> Multas millonarias, pérdida de reputación, ventaja competitiva perdida.</p>
-            <h3><strong>¿Qué Incluye?</strong></h3>
-            <h4>🔒 <strong>Pipelines Seguros</strong></h4>
-            <ul>
-                <li>Protección desde el entrenamiento hasta el deployment</li>
-                <li>Validación automática de modelos</li>
-                <li>Testing de ataques adversariales</li>
-                <li>Monitoreo continuo de comportamiento</li>
-            </ul>
-            <h4>📋 <strong>Governance & Compliance</strong></h4>
-            <ul>
-                <li>NIST AI Risk Management Framework</li>
-                <li>Auditoría de modelos para fairness y bias</li>
-                <li>Documentación automática para auditorías</li>
-                <li>Trazabilidad completa</li>
-            </ul>
-            <h4>🗄️ <strong>Vector Databases & RAG</strong></h4>
-            <ul>
-                <li>Setup optimizado de Chroma, Pinecone, Weaviate</li>
-                <li>Estrategia de embeddings personalizada</li>
-                <li>Búsqueda semántica ajustada a tu negocio</li>
-                <li>Escalabilidad planificada</li>
-            </ul>
-            <h3><strong>¿Para Quién Es Esto?</strong></h3>
-            <ul>
-                <li>✅ Empresas implementando IA/ML en producción</li>
-                <li>✅ Startups deep tech que necesitan protección desde día 1</li>
-                <li>✅ Organizaciones con requisitos de compliance estrictos</li>
-                <li>✅ Equipos que ya tuvieron incidentes con modelos IA</li>
-            </ul>
-            <h3><strong>Inversión & Tiempo</strong></h3>
-            <p>💰 <strong>Desde €25,000</strong><br>
-            ⏱️ <strong>8-16 semanas</strong> para implementación completa<br>
-            📈 <strong>Valor:</strong> Evitas costes de incidentes (típicamente €500K+)</p>
-            <hr>
-            <h2>🏭 Seguridad Industrial (ICS/OT)</h2>
-            <h3><strong>¿Qué Es Esto en Términos Simples?</strong></h3>
-            <p>Si tu empresa fabrica cosas, gestiona infraestructuras o controla procesos industriales…</p>
-            <p><strong>Un ciberataque no solo roba datos. Para tu producción.</strong></p>
-            <p>Cada hora de producción parada = Decenas o cientos de miles de euros perdidos.</p>
-            <h3><strong>¿Qué Protegemos?</strong></h3>
-            <ul>
-                <li>Sistemas SCADA</li>
-                <li>Redes industriales</li>
-                <li>PLCs y HMIs</li>
-                <li>Sensores y actuadores IoT</li>
-                <li>Sistemas de control de procesos</li>
-            </ul>
-            <h3><strong>¿Qué Incluye?</strong></h3>
-            <h4>🔍 <strong>Assessment Completo</strong></h4>
-            <ul>
-                <li>Descubrimiento de todos tus dispositivos OT</li>
-                <li>Análisis de protocolos industriales (Modbus, DNP3, OPC-UA)</li>
-                <li>Evaluación de segmentación de red</li>
-                <li>Compliance ISA/IEC 62443</li>
-            </ul>
-            <h4>🛠️ <strong>Implementación</strong></h4>
-            <ul>
-                <li>Hardening de sistemas SCADA</li>
-                <li>Segmentación de redes OT/IT</li>
-                <li>Monitoreo 24/7 especializado</li>
-                <li>Procedimientos de respuesta a incidentes OT-específicos</li>
-            </ul>
-            <h4>📊 <strong>Herramientas Especializadas</strong></h4>
-            <ul>
-                <li>Claroty, Nozomi Networks</li>
-                <li>MITRE ATT&CK for ICS</li>
-                <li>Dashboards personalizados</li>
-                <li>Alertas tiempo real</li>
-            </ul>
-            <h3><strong>¿Para Quién Es Esto?</strong></h3>
-            <ul>
-                <li>✅ Plantas de manufactura</li>
-                <li>✅ Utilities (agua, energía, gas)</li>
-                <li>✅ Infraestructuras críticas</li>
-                <li>✅ Empresas con sistemas legacy industriales</li>
-            </ul>
-            <h3><strong>Resultados Típicos</strong></h3>
-            <ul>
-                <li><strong>99.95% uptime</strong> garantizado</li>
-                <li><strong>60% reducción</strong> de incidentes de seguridad</li>
-                <li><strong>40% optimización</strong> de costes operativos</li>
-                <li><strong>100% compliance</strong> en auditorías</li>
-            </ul>
-            <h3><strong>Inversión & Tiempo</strong></h3>
-            <p>💰 <strong>Desde €20,000</strong><br>
-            ⏱️ <strong>6-14 semanas</strong> para implementación<br>
-            📈 <strong>ROI:</strong> Un solo incidente evitado paga la inversión</p>
-            <hr>
-            <h2>📋 Compliance Automatizado</h2>
-            <h3><strong>¿El Problema?</strong></h3>
-            <p>Cumplir con ISO 27001, NIS2, GDPR, etc. es:</p>
-            <ul>
-                <li>Tedioso</li>
-                <li>Costoso en tiempo y recursos</li>
-                <li>Genera montañas de documentación</li>
-                <li>Requiere actualización constante</li>
-            </ul>
-            <h3><strong>¿La Solución?</strong></h3>
-            <p><strong>Automatización inteligente</strong> que:</p>
-            <ul>
-                <li>Genera documentación automáticamente</li>
-                <li>Mantiene evidencias actualizadas</li>
-                <li>Te avisa de gaps antes de auditorías</li>
-                <li>Ahorra el 80% del tiempo manual</li>
-            </ul>
-            <h3><strong>¿Qué Frameworks Cubro?</strong></h3>
-            <h4>🏆 <strong>ISO 27001</strong></h4>
-            <ul>
-                <li>Gap assessment automático</li>
-                <li>Documentación de políticas y procedimientos</li>
-                <li>Implementación de controles</li>
-                <li>Preparación de auditorías</li>
-            </ul>
-            <h4>🇪🇺 <strong>NIS2 Directive</strong></h4>
-            <ul>
-                <li>Mapping de requisitos específicos por sector</li>
-                <li>Sistemas de reporte de incidentes</li>
-                <li>Assessment de supply chain</li>
-                <li>Business continuity planning</li>
-            </ul>
-            <h4>🔐 <strong>GDPR + Privacy by Design</strong></h4>
-            <ul>
-                <li>Data mapping automático</li>
-                <li>Privacy Impact Assessments</li>
-                <li>Gestión de consentimientos</li>
-                <li>Workflows de breach notification</li>
-            </ul>
-            <h3><strong>¿Para Quién Es Esto?</strong></h3>
-            <ul>
-                <li>✅ Empresas que necesitan certificarse</li>
-                <li>✅ Organizaciones con auditorías pendientes</li>
-                <li>✅ Equipos pequeños que no pueden dedicar 100% a compliance</li>
-                <li>✅ Empresas que ya tienen compliance pero es un caos</li>
-            </ul>
-            <h3><strong>Inversión & Tiempo</strong></h3>
-            <p>💰 <strong>Desde €12,000</strong><br>
-            ⏱️ <strong>4-10 semanas</strong> hasta certificación<br>
-            📈 <strong>Ahorro típico:</strong> 70-80% vs. proceso manual</p>
-            <hr>
-            <h2>🔴 PENETRATION TESTING + RED TEAM</h2>
-            <h3><strong>¿Qué Es Realmente?</strong></h3>
-            <p>Contrato a alguien para que intente hackear tu empresa de todas las formas posibles. ¿Por qué? Para encontrar agujeros antes de que los encuentren los malos.</p>
-            <h3><strong>Tipos de Tests</strong></h3>
-            <h4>🌐 <strong>Web Application Security</strong></h4>
-            <ul>
-                <li>Testing profundo aplicaciones web, APIs, portales cliente</li>
-                <li>OWASP Top 10 + vulnerabilidades business logic</li>
-                <li>Testing autenticación/autorización avanzado</li>
-                <li>Code review + SAST/DAST integration</li>
-            </ul>
-            <h4>📱 <strong>Mobile App Penetration</strong></h4>
-            <ul>
-                <li>Testing apps iOS/Android completo</li>
-                <li>Reverse engineering + code obfuscation review</li>
-                <li>API móviles + almacenamiento local</li>
-                <li>Certificate pinning + jailbreak detection</li>
-            </ul>
-            <h4>☁️ <strong>Cloud Security Assessment</strong></h4>
-            <ul>
-                <li>AWS, Azure, GCP - configuración completa</li>
-                <li>IAM policies + misconfigurations</li>
-                <li>Storage buckets + databases exposure</li>
-                <li>Network security + serverless functions</li>
-            </ul>
-            <h4>🤖 <strong>AI-Enhanced Pentesting</strong></h4>
-            <ul>
-                <li>Reconocimiento automatizado con IA</li>
-                <li>Vulnerability discovery ML-powered</li>
-                <li>Exploit development asistido GPT</li>
-                <li>Living-off-the-Land automation</li>
-            </ul>
-            <h3><strong>¿Qué Recibes?</strong></h3>
-            <ul>
-                <li>📄 <strong>Executive Summary</strong> para C-level (lenguaje negocio)</li>
-                <li>📊 <strong>Technical Report</strong> detallado con remediation steps</li>
-                <li>🎯 <strong>Risk Scoring</strong> CVSS 3.1 + impacto empresarial real</li>
-                <li>🔁 <strong>Retest Included</strong> validación de fixes implementados</li>
-            </ul>
-            <h3><strong>¿Para Quién Es Esto?</strong></h3>
-            <ul>
-                <li>✅ Empresas que necesitan compliance (PCI DSS, ISO 27001)</li>
-                <li>✅ Antes de lanzar productos/servicios críticos</li>
-                <li>✅ Después de cambios importantes en infraestructura</li>
-                <li>✅ Auditorías anuales de seguridad</li>
-            </ul>
-            <h3><strong>Inversión & Tiempo</strong></h3>
-            <p>💰 <strong>Desde €8,000</strong><br>
-            ⏱️ <strong>2-6 semanas</strong> (assessment + remediation + retest)<br>
-            📈 <strong>Valor:</strong> Un solo breach evitado cubre 10x la inversión</p>
-            <hr>
-            <h2>📈 MARKETING DIGITAL IA-POTENCIADO</h2>
-            <h3><strong>¿Qué Problema Resuelve?</strong></h3>
-            <p>El marketing tradicional es:</p>
-            <ul>
-                <li>Caro (PPC costs subiendo constantemente)</li>
-                <li>Lento (contenido manual toma semanas)</li>
-                <li>Inexacto (targeting basado en suposiciones)</li>
-                <li>Difícil de escalar sin contratar masivamente</li>
-            </ul>
-            <p><strong>La IA lo cambia todo.</strong></p>
-            <h3><strong>¿Qué Incluye?</strong></h3>
-            <h4>🔍 <strong>SEO/SEM Automation</strong></h4>
-            <ul>
-                <li>Keyword research con IA predictiva avanzada</li>
-                <li>Content generation con Custom GPT models</li>
-                <li>Competitor analysis automatizado + intelligence gathering</li>
-                <li>Performance optimization continua ML-driven</li>
-            </ul>
-            <h4>👥 <strong>Customer Intelligence</strong></h4>
-            <ul>
-                <li>Vector-based profiling comportamiento cliente</li>
-                <li>Predictive analytics (lifetime value, churn prediction)</li>
-                <li>Personalization engines (content + ofertas dinámicas)</li>
-                <li>A/B testing automatizado con statistical significance</li>
-            </ul>
-            <h4>📊 <strong>Analytics Avanzado</strong></h4>
-            <ul>
-                <li>Dashboards predictivos en tiempo real</li>
-                <li>Attribution modeling multi-touch</li>
-                <li>Sentiment analysis automatizado</li>
-                <li>ROI tracking granular por canal/campaña</li>
-            </ul>
-            <h3><strong>Resultados Típicos</strong></h3>
-            <ul>
-                <li>✅ <strong>350% incremento ROI</strong> en campañas SEM/PPC</li>
-                <li>✅ <strong>85% más visibilidad</strong> orgánica (SEO)</li>
-                <li>✅ <strong>60% reducción</strong> tiempo generación contenido</li>
-                <li>✅ <strong>25% reducción</strong> customer churn con predictive intervention</li>
-            </ul>
-            <h3><strong>¿Para Quién Es Esto?</strong></h3>
-            <ul>
-                <li>✅ E-commerce buscando escalar sin aumentar costes proporcionalmente</li>
-                <li>✅ SaaS companies con high customer acquisition costs</li>
-                <li>✅ Empresas B2B con ciclos de venta largos</li>
-                <li>✅ Cualquier negocio con presencia digital significativa</li>
-            </ul>
-            <h3><strong>Inversión & Tiempo</strong></h3>
-            <p>💰 <strong>Desde €6,000</strong><br>
-            ⏱️ <strong>3-8 semanas</strong> para implementación + optimización<br>
-            📈 <strong>ROI típico:</strong> 3-5x en 6-12 meses</p>
-            <hr>
-            <h2>🎓 FORMACIÓN & MENTORING</h2>
-            <h3><strong>¿Por Qué Formación Especializada?</strong></h3>
-            <p>La ciberseguridad + IA cambia tan rápido que:</p>
-            <ul>
-                <li>Certificaciones tradicionales quedan obsoletas rápido</li>
-                <li>Cursos genéricos no cubren casos uso específicos</li>
-                <li>Tu equipo necesita upskilling continuo</li>
-                <li>New hires necesitan onboarding especializado</li>
-            </ul>
-            <h3><strong>Tipos de Formación</strong></h3>
-            <h4>👥 <strong>Workshops Especializados</strong></h4>
-            <ul>
-                <li><strong>MLSecOps Fundamentals</strong> - Equipos técnicos (2 días)</li>
-                <li><strong>AI Security Awareness</strong> - Directivos y managers (1 día)</li>
-                <li><strong>Custom LLMs Development</strong> - Hands-on training (3 días)</li>
-                <li><strong>Incident Response con IA</strong> - SOC teams (2 días)</li>
-            </ul>
-            <h4>🎯 <strong>Mentoring Personalizado</strong></h4>
-            <ul>
-                <li><strong>Career transition</strong> hacia IA Agéntica + Cybersecurity</li>
-                <li><strong>Technical upskilling</strong> programas personalizados</li>
-                <li><strong>Leadership development</strong> equipos técnicos</li>
-                <li><strong>Certification preparation</strong> CISSP, CEH, OSCP</li>
-            </ul>
-            <h4>📚 <strong>Programas Corporate</strong></h4>
-            <ul>
-                <li>Training programs customizados para tu empresa</li>
-                <li>Onboarding acelerado nuevos empleados security</li>
-                <li>Upskilling continuo equipos existentes</li>
-                <li>Knowledge transfer post-proyecto</li>
-            </ul>
-            <h3><strong>Metodología</strong></h3>
-            <ul>
-                <li>✅ <strong>70% práctica, 30% teoría</strong> - learn by doing</li>
-                <li>✅ <strong>Casos reales</strong> de tu industria</li>
-                <li>✅ <strong>Hands-on labs</strong> con herramientas actuales</li>
-                <li>✅ <strong>Post-training support</strong> para dudas</li>
-            </ul>
-            <h3><strong>Inversión & Tiempo</strong></h3>
-            <p>💰 <strong>Desde €2,000</strong> (workshops)<br>
-            💰 <strong>Desde €5,000</strong> (mentoring 3 meses)<br>
-            ⏱️ <strong>1-4 semanas</strong> típicamente</p>
-            <hr>
-            <h2>🤔 FAQ: Preguntas Frecuentes</h2>
-            <p><strong>¿Cuál es el proyecto mínimo que aceptas?</strong><br>
-            No hay mínimo fijo. He trabajado con startups y corporaciones. Si hay fit, hay proyecto.</p>
-            <p><strong>¿Trabajas solo o con un equipo?</strong><br>
-            Trabajo directamente en proyectos. Para proyectos grandes tengo red de especialistas de confianza.</p>
-            <p><strong>¿Ofreces contratos de retainer/soporte continuo?</strong><br>
-            Sí. Muchos clientes empiezan con proyecto y continúan con soporte mensual.</p>
-            <p><strong>¿Cuánto tiempo toma ver resultados?</strong><br>
-            Primeros resultados: 2-4 semanas. Resultados completos: 8-16 semanas típicamente.</p>
-            <p><strong>¿Puedo empezar con algo pequeño?</strong><br>
-            Absolutamente. Un assessment o proyecto piloto es excelente forma de empezar.</p>
-            <p><strong>¿Trabajas con NDAs?</strong><br>
-            Sí, por supuesto. Puedo firmar tu NDA sin problema.</p>
-            <p><strong>¿Y si mi industria es muy específica?</strong><br>
-            Mejor. Proyectos específicos son los más interesantes. He trabajado en manufactura, salud, fintech, educación, y más.</p>
-            <p><strong>¿Qué pasa si el proyecto no sale como esperado?</strong><br>
-            Jamás ha pasado (99.5% success rate), pero si hubiera problemas, trabajo hasta resolverlos. Tu éxito es mi éxito.</p>
-            <hr>
-            <h2>💼 Inversión & ROI</h2>
-            <h3><strong>Estructura de Precios</strong></h3>
-            <ul>
-                <li><strong>Consultoría Estratégica:</strong> €5K - €15K</li>
-                <li><strong>Custom LLMs + B2B Agents:</strong> €15K - €50K</li>
-                <li><strong>MLSecOps Enterprise:</strong> €25K - €60K</li>
-                <li><strong>ICS/OT Security:</strong> €20K - €60K</li>
-                <li><strong>Compliance Automation:</strong> €12K - €40K</li>
-                <li><strong>Pentesting:</strong> €8K - €30K</li>
-                <li><strong>Marketing IA:</strong> €6K - €25K</li>
-                <li><strong>Formación:</strong> €2K - €10K</li>
-            </ul>
-            <h3><strong>ROI Típico</strong></h3>
-            <ul>
-                <li><strong>MLSecOps:</strong> Evitas €500K+ en incidentes</li>
-                <li><strong>ICS/OT:</strong> Un downtime evitado = ROI completo</li>
-                <li><strong>Compliance:</strong> 70-80% ahorro vs. manual</li>
-                <li><strong>Marketing IA:</strong> 3-5x retorno en 6-12 meses</li>
-                <li><strong>Pentesting:</strong> Un breach evitado = 10x ROI</li>
-            </ul>
-            <h3><strong>Opciones de Pago</strong></h3>
-            <ul>
-                <li>✅ <strong>Precio fijo</strong> - Scope definido, sin sorpresas</li>
-                <li>✅ <strong>Milestones</strong> - Pago por hitos conseguidos</li>
-                <li>✅ <strong>Retainer mensual</strong> - Soporte continuo</li>
-                <li>✅ <strong>Híbrido</strong> - Proyecto + soporte ongoing</li>
-            </ul>
-            <hr>
-            <h2>🚀 ¿Listo Para Empezar?</h2>
-            <div class="cta-box">
-                <h3>El Siguiente Paso Es Simple</h3>
-                <p>1. Reserva 30 min de consulta gratuita<br>
-                2. Discutimos tu situación y objetivos<br>
-                3. Te envío propuesta detallada en 48h<br>
-                4. Decides si tiene sentido trabajar juntos</p>
-                <a href="/contacto/" class="btn-primary">📅 Reservar Consulta Gratuita</a>
-                <p class="text-sm">🔒 Sin compromiso. Sin presión de venta. Solo claridad.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Experience Timeline -->
-<section class="py-16 lg:py-24 bg-gradient-to-br from-slate-50 to-blue-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16 animate-on-scroll">
-            <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                Metodología de Trabajo
-            </h2>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                Un enfoque probado para entregar resultados medibles en semanas, no en años.
-            </p>
+    <div class="container mx-auto px-6 relative z-10">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-2 mb-6">
+          <span class="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
+          <span class="text-blue-400 text-sm font-medium">Soluciones Enterprise de Alto Impacto</span>
         </div>
         
-        <!-- Skills Grid -->
-        <div class="grid md:grid-cols-3 gap-8 mb-16">
-            <!-- Cybersecurity -->
-            <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 card-hover animate-on-scroll">
-                <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
-                    <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                    </svg>
-                </div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-4">Diagnóstico y Estrategia</h3>
-                <ul class="space-y-2 text-gray-600">
-                    <li class="flex items-start">
-                        <svg class="w-5 h-5 text-blue-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        Análisis de la situación actual
-                    </li>
-                    <li class="flex items-start">
-                        <svg class="w-5 h-5 text-blue-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        Definición de objetivos y KPIs
-                    </li>
-                    <li class="flex items-start">
-                        <svg class="w-5 h-5 text-blue-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        Hoja de ruta y plan de acción
-                    </li>
-                </ul>
-            </div>
-            
-            <!-- AI & ML -->
-            <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 card-hover animate-on-scroll" style="animation-delay: 0.1s;">
-                <div class="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mb-6">
-                    <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-                    </svg>
-                </div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-4">Implementación y Desarrollo</h3>
-                <ul class="space-y-2 text-gray-600">
-                    <li class="flex items-start">
-                        <svg class="w-5 h-5 text-purple-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        Desarrollo de soluciones a medida
-                    </li>
-                    <li class="flex items-start">
-                        <svg class="w-5 h-5 text-purple-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        Integración con sistemas existentes
-                    </li>
-                    <li class="flex items-start">
-                        <svg class="w-5 h-5 text-purple-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        Pruebas y validación continua
-                    </li>
-                </ul>
-            </div>
-            
-            <!-- Industrial -->
-            <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 card-hover animate-on-scroll" style="animation-delay: 0.2s;">
-                <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center mb-6">
-                    <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
-                    </svg>
-                </div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-4">Entrega y Optimización</h3>
-                <ul class="space-y-2 text-gray-600">
-                    <li class="flex items-start">
-                        <svg class="w-5 h-5 text-orange-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        Entrega de resultados medibles
-                    </li>
-                    <li class="flex items-start">
-                        <svg class="w-5 h-5 text-orange-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        Formación y transferencia de conocimiento
-                    </li>
-                    <li class="flex items-start">
-                        <svg class="w-5 h-5 text-orange-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        Soporte y optimización continua
-                    </li>
-                </ul>
-            </div>
+        <h1 class="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+          Servicios Que Transforman
+          <span class="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
+            Seguridad en Resultados
+          </span>
+        </h1>
+        
+        <p class="text-xl text-slate-300 mb-8 leading-relaxed">
+          No vendo horas de consultoría. Vendo <span class="text-blue-400 font-semibold">problemas resueltos</span> y <span class="text-cyan-400 font-semibold">objetivos conseguidos</span>.<br/>
+          Cada servicio está diseñado para entregar resultados medibles en semanas, no en años.
+        </p>
+        
+        <div class="flex flex-wrap gap-4 justify-center">
+          <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg px-6 py-3">
+            <div class="text-3xl font-bold text-blue-400">65%</div>
+            <div class="text-sm text-slate-400">Reducción falsos positivos</div>
+          </div>
+          <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg px-6 py-3">
+            <div class="text-3xl font-bold text-cyan-400">99.95%</div>
+            <div class="text-sm text-slate-400">Uptime garantizado</div>
+          </div>
+          <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg px-6 py-3">
+            <div class="text-3xl font-bold text-purple-400">350%</div>
+            <div class="text-sm text-slate-400">ROI promedio</div>
+          </div>
         </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- CTA Section -->
-<section class="py-16 lg:py-24 bg-gradient-to-br from-blue-600 via-blue-500 to-purple-600">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div class="animate-on-scroll">
-            <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">
-                ¿Trabajamos Juntos?
-            </h2>
-            <p class="text-xl text-blue-100 mb-10 max-w-2xl mx-auto leading-relaxed">
-                Si buscas un socio estratégico que entienda tanto de tecnología como de negocio, 
-                y que entregue resultados medibles en semanas, no en años...
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="/contacto/" class="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 font-bold text-lg rounded-xl hover:bg-blue-50 transition-all duration-300 shadow-xl">
-                    <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                    </svg>
-                    Reservar Consulta Gratuita
-                </a>
-                <a href="/proyectos/" class="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-bold text-lg rounded-xl hover:bg-white/10 transition-all duration-300">
-                    Ver Casos de Éxito
-                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                    </svg>
-                </a>
+  <!-- IA Agéntica & Custom LLMs -->
+  <section id="custom-llms" class="py-20">
+    <div class="container mx-auto px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="bg-gradient-to-br from-purple-900/30 to-slate-800/50 backdrop-blur-sm border-2 border-purple-500/30 rounded-2xl p-12 relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl"></div>
+          
+          <div class="relative z-10">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                </svg>
+              </div>
+              <div>
+                <h2 class="text-4xl font-bold text-white">IA Agéntica & Custom LLMs</h2>
+                <p class="text-purple-400 font-medium">Automatización inteligente 24/7</p>
+              </div>
             </div>
+
+            <p class="text-xl text-slate-300 mb-8 leading-relaxed">
+              Imagina tener un equipo de analistas de seguridad trabajando 24/7 que nunca se cansan, aprenden de cada amenaza, responden en segundos y no generan falsos positivos.
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-6 mb-8">
+              <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-6">
+                <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">
+                  <svg class="w-6 h-6 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3z"></path>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Custom LLMs</h3>
+                <p class="text-slate-400 text-sm mb-4">Modelos entrenados específicamente para tu contexto de negocio</p>
+                <div class="text-2xl font-bold text-purple-400">95% → 30%</div>
+                <div class="text-xs text-slate-500">Reducción falsos positivos</div>
+              </div>
+
+              <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-6">
+                <div class="w-12 h-12 bg-pink-500/20 rounded-lg flex items-center justify-center mb-4">
+                  <svg class="w-6 h-6 text-pink-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">B2B Agents</h3>
+                <p class="text-slate-400 text-sm mb-4">Asistentes virtuales que automatizan operaciones completas</p>
+                <div class="text-2xl font-bold text-pink-400">40h → 5h</div>
+                <div class="text-xs text-slate-500">Ahorro semanal típico</div>
+              </div>
+
+              <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-6">
+                <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">
+                  <svg class="w-6 h-6 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">RAG Systems</h3>
+                <p class="text-slate-400 text-sm mb-4">Búsqueda inteligente y correlación automática de amenazas</p>
+                <div class="text-2xl font-bold text-purple-400">50%</div>
+                <div class="text-xs text-slate-500">Reducción tiempo respuesta</div>
+              </div>
+            </div>
+
+            <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-6 mb-6">
+              <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                  <h4 class="text-white font-semibold mb-3">Para quién es esto:</h4>
+                  <ul class="space-y-2 text-slate-300 text-sm">
+                    <li class="flex items-start gap-2">
+                      <svg class="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                      </svg>
+                      <span>Empresas procesando muchas alertas de seguridad</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <svg class="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                      </svg>
+                      <span>Equipos de seguridad sobrecargados de trabajo</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <svg class="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                      </svg>
+                      <span>CTOs/CISOs buscando ventaja competitiva</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="text-white font-semibold mb-3">Inversión & Timeline:</h4>
+                  <div class="space-y-2 text-sm">
+                    <div class="flex justify-between items-center p-2 bg-slate-800/50 rounded">
+                      <span class="text-slate-400">Inversión:</span>
+                      <span class="text-purple-400 font-semibold">€15K - €50K</span>
+                    </div>
+                    <div class="flex justify-between items-center p-2 bg-slate-800/50 rounded">
+                      <span class="text-slate-400">Timeline:</span>
+                      <span class="text-purple-400 font-semibold">6-12 semanas</span>
+                    </div>
+                    <div class="flex justify-between items-center p-2 bg-slate-800/50 rounded">
+                      <span class="text-slate-400">ROI:</span>
+                      <span class="text-purple-400 font-semibold">3-6 meses</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <a href="/contacto" class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-lg transition-all transform hover:scale-105">
+                Solicitar Consulta
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                </svg>
+              </a>
+              <button class="px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white font-semibold rounded-lg transition-all border border-slate-600">
+                Ver Caso de Éxito
+              </button>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-</section>
+  </section>
+
+  <!-- MLSecOps Enterprise -->
+  <section id="mlsecops" class="py-20 bg-slate-900/50">
+    <div class="container mx-auto px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="bg-gradient-to-br from-cyan-900/30 to-slate-800/50 backdrop-blur-sm border-2 border-cyan-500/30 rounded-2xl p-12 relative overflow-hidden">
+          <div class="absolute bottom-0 left-0 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl"></div>
+          
+          <div class="relative z-10">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+              </div>
+              <div>
+                <h2 class="text-4xl font-bold text-white">MLSecOps Enterprise</h2>
+                <p class="text-cyan-400 font-medium">Seguridad para el ciclo de vida completo de IA</p>
+              </div>
+            </div>
+
+            <div class="bg-red-900/20 border border-red-500/30 rounded-lg p-6 mb-8">
+              <div class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-red-400 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path>
+                </svg>
+                <div>
+                  <h3 class="text-white font-semibold mb-2">¿Por qué lo necesitas?</h3>
+                  <p class="text-slate-300 text-sm">Los modelos de IA pueden ser envenenados, engañados, robados o utilizados para violar regulaciones. El riesgo: <span class="text-red-400 font-semibold">multas millonarias, pérdida de reputación y ventaja competitiva</span>.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 mb-8">
+              <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-6">
+                <div class="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
+                  <svg class="w-6 h-6 text-cyan-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Pipelines Seguros</h3>
+                <p class="text-slate-400 text-sm">Protección desde training hasta deployment con validación continua</p>
+              </div>
+
+              <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-6">
+                <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4">
+                  <svg class="w-6 h-6 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Governance & Compliance</h3>
+                <p class="text-slate-400 text-sm">NIST AI RMF, auditoría de fairness y documentación automática</p>
+              </div>
+
+              <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-6">
+                <div class="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
+                  <svg class="w-6 h-6 text-cyan-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M3 12v3c0 1.657 3.134 3 7 3s7-1.343 7-3v-3c0 1.657-3.134 3-7 3s-7-1.343-7-3z"></path>
+                    <path d="M3 7v3c0 1.657 3.134 3 7 3s7-1.343 7-3V7c0 1.657-3.134 3-7 3S3 8.657 3 7z"></path>
+                    <path d="M17 5c0 1.657-3.134 3-7 3S3 6.657 3 5s3.134-3 7-3 7 1.343 7 3z"></path>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Vector Databases</h3>
+                <p class="text-slate-400 text-sm">Setup optimizado de Chroma, Pinecone, Weaviate con RAG</p>
+              </div>
+            </div>
+
+            <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-6 mb-6">
+              <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                  <h4 class="text-white font-semibold mb-3">Para quién es esto:</h4>
+                  <ul class="space-y-2 text-slate-300 text-sm">
+                    <li class="flex items-start gap-2">
+                      <svg class="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                      </svg>
+                      <span>Empresas implementando IA/ML en producción</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <svg class="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                      </svg>
+                      <span>Startups deep tech con protección desde día 1</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <svg class="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                      </svg>
+                      <span>Compliance estrictos (fintech, salud, regulados)</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="text-white font-semibold mb-3">Inversión & Timeline:</h4>
+                  <div class="space-y-2 text-sm">
+                    <div class="flex justify-between items-center p-2 bg-slate-800/50 rounded">
+                      <span class="text-slate-400">Inversión:</span>
+                      <span class="text-cyan-400 font-semibold">€25K - €60K</span>
+                    </div>
+                    <div class="flex justify-between items-center p-2 bg-slate-800/50 rounded">
+                      <span class="text-slate-400">Timeline:</span>
+                      <span class="text-cyan-400 font-semibold">8-16 semanas</span>
+                    </div>
+                    <div class="flex justify-between items-center p-2 bg-slate-800/50 rounded">
+                      <span class="text-slate-400">Valor:</span>
+                      <span class="text-cyan-400 font-semibold">Evitas €500K+ incidentes</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <a href="/contacto" class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-semibold rounded-lg transition-all transform hover:scale-105">
+                Solicitar Consulta
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                </svg>
+              </a>
+              <button class="px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white font-semibold rounded-lg transition-all border border-slate-600">
+                Ver Caso de Éxito
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seguridad ICS/OT Industrial -->
+  <section id="ics-ot" class="py-20">
+    <div class="container mx-auto px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="bg-gradient-to-br from-orange-900/30 to-slate-800/50 backdrop-blur-sm border-2 border-orange-500/30 rounded-2xl p-12 relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-orange-500/10 rounded-full blur-3xl"></div>
+          
+          <div class="relative z-10">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                </svg>
+              </div>
+              <div>
+                <h2 class="text-4xl font-bold text-white">Seguridad ICS/OT Industrial</h2>
+                <p class="text-orange-400 font-medium">Protección de infraestructuras críticas</p>
+              </div>
+            </div>
+
+            <div class="bg-orange-900/20 border border-orange-500/30 rounded-lg p-6 mb-8">
+              <p class="text-xl text-slate-300 leading-relaxed">
+                Un ciberataque en entornos industriales no solo roba datos. <span class="text-orange-400 font-bold">Para tu producción</span>. Cada hora de producción parada = <span class="text-white font-bold">decenas o cientos de miles de euros perdidos</span>.
+              </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+              <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-6">
+                <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                  <svg class="w-6 h-6 text-orange-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                  </svg>
+                  Assessment Completo
+                </h3>
+                <ul class="space-y-2 text-slate-300 text-sm">
+                  <li class="flex items-start gap-2">
+                    <span class="text-orange-400">•</span>
+                    <span>Descubrimiento dispositivos OT</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-orange-400">•</span>
+                    <span>Análisis protocolos (Modbus, DNP3, OPC-UA)</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-orange-400">•</span>
+                    <span>Evaluación segmentación de red</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-orange-400">•</span>
+                    <span>Compliance ISA/IEC 62443</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-6">
+                <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                  <svg class="w-6 h-6 text-orange-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path>
+                  </svg>
+                  Implementación
+                </h3>
+                <ul class="space-y-2 text-slate-300 text-sm">
+                  <li class="flex items-start gap-2">
+                    <span class="text-orange-400">•</span>
+                    <span>Hardening sistemas SCADA</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-orange-400">•</span>
+                    <span>Segmentación redes OT/IT</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-orange-400">•</span>
+                    <span>Monitoreo 24/7 especializado</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-orange-400">•</span>
+                    <span>Respuesta a incidentes OT-específicos</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-4 mb-8">
+              <div class="bg-slate-900/50 border border-orange-500/30 rounded-lg p-4 text-center">
+                <div class="text-3xl font-bold text-orange-400 mb-1">99.95%</div>
+                <div class="text-xs text-slate-400">Uptime garantizado</div>
+              </div>
+              <div class="bg-slate-900/50 border border-orange-500/30 rounded-lg p-4 text-center">
+                <div class="text-3xl font-bold text-orange-400 mb-1">60%</div>
+                <div class="text-xs text-slate-400">Reducción incidentes</div>
+              </div>
+              <div class="bg-slate-900/50 border border-orange-500/30 rounded-lg p-4 text-center">
+                <div class="text-3xl font-bold text-orange-400 mb-1">40%</div>
+                <div class="text-xs text-slate-400">Optimización costes</div>
+              </div>
+              <div class="bg-slate-900/50 border border-orange-500/30 rounded-lg p-4 text-center">
+                <div class="text-3xl font-bold text-orange-400 mb-1">100%</div>
+                <div class="text-xs text-slate-400">Compliance auditorías</div>
+              </div>
+            </div>
+
+            <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-6 mb-6">
+              <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                  <h4 class="text-white font-semibold mb-3">Para quién es esto:</h4>
+                  <ul class="space-y-2 text-slate-300 text-sm">
+                    <li class="flex items-start gap-2">
+                      <svg class="w-5 h-5 text-orange-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                      </svg>
+                      <span>Plantas de manufactura y producción</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <svg class="w-5 h-5 text-orange-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                      </svg>
+                      <span>Utilities (agua, energía, gas)</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <svg class="w-5 h-5 text-orange-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                      </svg>
+                      <span>Infraestructuras críticas</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="text-white font-semibold mb-3">Inversión & Timeline:</h4>
+                  <div class="space-y-2 text-sm">
+                    <div class="flex justify-between items-center p-2 bg-slate-800/50 rounded">
+                      <span class="text-slate-400">Inversión:</span>
+                      <span class="text-orange-400 font-semibold">€20K - €60K</span>
+                    </div>
+                    <div class="flex justify-between items-center p-2 bg-slate-800/50 rounded">
+                      <span class="text-slate-400">Timeline:</span>
+                      <span class="text-orange-400 font-semibold">6-14 semanas</span>
+                    </div>
+                    <div class="flex justify-between items-center p-2 bg-slate-800/50 rounded">
+                      <span class="text-slate-400">ROI:</span>
+                      <span class="text-orange-400 font-semibold">1 incidente evitado paga todo</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <a href="/contacto" class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold rounded-lg transition-all transform hover:scale-105">
+                Solicitar Consulta
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                </svg>
+              </a>
+              <button class="px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white font-semibold rounded-lg transition-all border border-slate-600">
+                Ver Caso de Éxito
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ciberseguridad Tradicional -->
+  <section id="traditional-cybersec" class="py-20 bg-slate-900/50">
+    <div class="container mx-auto px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <div class="inline-flex items-center justify-center gap-3 mb-6">
+            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+              </svg>
+            </div>
+            <h2 class="text-4xl font-bold text-white">Ciberseguridad Tradicional</h2>
+          </div>
+          <p class="text-xl text-slate-300">Los fundamentos que siempre funcionan</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Pentesting & Red Team -->
+          <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 hover:border-red-500/50 transition-all">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-pink-500 rounded-lg flex items-center justify-center">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-white">Pentesting & Red Team</h3>
+            </div>
+            
+            <p class="text-slate-300 mb-6">Contrato a alguien para intentar hackear tu empresa de todas las formas posibles. Para encontrar agujeros antes de que los encuentren los malos.</p>
+            
+            <div class="space-y-3 mb-6">
+              <div class="flex items-start gap-2 text-sm">
+                <svg class="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-slate-300">Web Application Security (OWASP Top 10)</span>
+              </div>
+              <div class="flex items-start gap-2 text-sm">
+                <svg class="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-slate-300">Mobile App Penetration (iOS/Android)</span>
+              </div>
+              <div class="flex items-start gap-2 text-sm">
+                <svg class="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-slate-300">Cloud Security Assessment (AWS/Azure/GCP)</span>
+              </div>
+              <div class="flex items-start gap-2 text-sm">
+                <svg class="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-slate-300">AI-Enhanced Pentesting automatizado</span>
+              </div>
+            </div>
+
+            <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4 mb-6">
+              <div class="grid grid-cols-2 gap-4 text-sm">
+                <div>
+                  <div class="text-slate-400">Inversión:</div>
+                  <div class="text-red-400 font-semibold">€8K - €30K</div>
+                </div>
+                <div>
+                  <div class="text-slate-400">Timeline:</div>
+                  <div class="text-red-400 font-semibold">2-6 semanas</div>
+                </div>
+              </div>
+            </div>
+
+            <a href="/contacto" class="inline-flex items-center gap-2 text-red-400 hover:text-red-300 font-semibold">
+              Solicitar Assessment
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+              </svg>
+            </a>
+          </div>
+
+          <!-- SIEM & SOC -->
+          <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 hover:border-blue-500/50 transition-all">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-white">SIEM & SOC Operations</h3>
+            </div>
+            
+            <p class="text-slate-300 mb-6">Implementación y optimización de SIEM con correlación avanzada ML. Threat hunting proactivo y reducción drástica de falsos positivos.</p>
+            
+            <div class="space-y-3 mb-6">
+              <div class="flex items-start gap-2 text-sm">
+                <svg class="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-slate-300">Implementación Splunk/Elastic/QRadar</span>
+              </div>
+              <div class="flex items-start gap-2 text-sm">
+                <svg class="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-slate-300">Correlación avanzada con ML</span>
+              </div>
+              <div class="flex items-start gap-2 text-sm">
+                <svg class="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-slate-300">Threat Intelligence automatizada (MISP)</span>
+              </div>
+              <div class="flex items-start gap-2 text-sm">
+                <svg class="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-slate-300">Playbooks automatizados SOAR</span>
+              </div>
+            </div>
+
+            <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4 mb-6">
+              <div class="grid grid-cols-2 gap-4 text-sm">
+                <div>
+                  <div class="text-slate-400">Reducción:</div>
+                  <div class="text-blue-400 font-semibold">65% falsos positivos</div>
+                </div>
+                <div>
+                  <div class="text-slate-400">Timeline:</div>
+                  <div class="text-blue-400 font-semibold">4-10 semanas</div>
+                </div>
+              </div>
+            </div>
+
+            <a href="/contacto" class="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-semibold">
+              Solicitar Assessment
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Cloud Security -->
+          <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 hover:border-purple-500/50 transition-all">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-white">Cloud & Infrastructure Security</h3>
+            </div>
+            
+            <p class="text-slate-300 mb-6">Zero Trust architecture, hardening de sistemas, seguridad multi-cloud. Migración segura y compliance automatizado con uptime garantizado.</p>
+            
+            <div class="space-y-3 mb-6">
+              <div class="flex items-start gap-2 text-sm">
+                <svg class="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-slate-300">Zero Trust Architecture implementation</span>
+              </div>
+              <div class="flex items-start gap-2 text-sm">
+                <svg class="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-slate-300">AWS/Azure/GCP security hardening</span>
+              </div>
+              <div class="flex items-start gap-2 text-sm">
+                <svg class="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-slate-300">Kubernetes & container security</span>
+              </div>
+              <div class="flex items-start gap-2 text-sm">
+                <svg class="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-slate-300">Migración sin downtime</span>
+              </div>
+            </div>
+
+            <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4 mb-6">
+              <div class="grid grid-cols-2 gap-4 text-sm">
+                <div>
+                  <div class="text-slate-400">Uptime:</div>
+                  <div class="text-purple-400 font-semibold">99.95% garantizado</div>
+                </div>
+                <div>
+                  <div class="text-slate-400">Timeline:</div>
+                  <div class="text-purple-400 font-semibold">4-12 semanas</div>
+                </div>
+              </div>
+            </div>
+
+            <a href="/contacto" class="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-semibold">
+              Solicitar Implementación
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Compliance Automation -->
+          <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 hover:border-green-500/50 transition-all">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-white">Compliance Automatizado</h3>
+            </div>
+            
+            <p class="text-slate-300 mb-6">Automatización inteligente que genera documentación, mantiene evidencias actualizadas y te avisa de gaps antes de auditorías. Ahorra 70-80% del tiempo manual.</p>
+            
+            <div class="space-y-3 mb-6">
+              <div class="flex items-start gap-2 text-sm">
+                <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-slate-300">ISO 27001 gap assessment automático</span>
+              </div>
+              <div class="flex items-start gap-2 text-sm">
+                <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-slate-300">NIS2 Directive mapping por sector</span>
+              </div>
+              <div class="flex items-start gap-2 text-sm">
+                <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-slate-300">GDPR & Privacy by Design</span>
+              </div>
+              <div class="flex items-start gap-2 text-sm">
+                <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-slate-300">Documentación y evidencias automáticas</span>
+              </div>
+            </div>
+
+            <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4 mb-6">
+              <div class="grid grid-cols-2 gap-4 text-sm">
+                <div>
+                  <div class="text-slate-400">Ahorro:</div>
+                  <div class="text-green-400 font-semibold">70-80% tiempo</div>
+                </div>
+                <div>
+                  <div class="text-slate-400">Certificación:</div>
+                  <div class="text-green-400 font-semibold">4-10 semanas</div>
+                </div>
+              </div>
+            </div>
+
+            <a href="/contacto" class="inline-flex items-center gap-2 text-green-400 hover:text-green-300 font-semibold">
+              Solicitar Gap Assessment
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+              </svg>
+            </a>
+          </div>
+          </div></div></div>
+  </section>
+
+  <!-- DevSecOps -->
+  <section id="devsecops" class="py-20">
+    <div class="container mx-auto px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="bg-gradient-to-br from-green-900/30 to-slate-800/50 backdrop-blur-sm border-2 border-green-500/30 rounded-2xl p-12 relative overflow-hidden">
+          <div class="absolute bottom-0 right-0 w-64 h-64 bg-green-500/10 rounded-full blur-3xl"></div>
+          
+          <div class="relative z-10">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                </svg>
+              </div>
+              <div>
+                <h2 class="text-4xl font-bold text-white">DevSecOps & Secure SDLC</h2>
+                <p class="text-green-400 font-medium">Seguridad integrada desde el código</p>
+              </div>
+            </div>
+
+            <p class="text-xl text-slate-300 mb-8 leading-relaxed">
+              Integra seguridad en cada fase del desarrollo. Detecta vulnerabilidades antes de producción y automatiza la seguridad en tus pipelines CI/CD.
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-6 mb-8">
+              <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-6">
+                <div class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-4">
+                  <svg class="w-6 h-6 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">SAST/DAST Integration</h3>
+                <p class="text-slate-400 text-sm">Análisis estático y dinámico automático en CI/CD pipelines</p>
+              </div>
+
+              <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-6">
+                <div class="w-12 h-12 bg-emerald-500/20 rounded-lg flex items-center justify-center mb-4">
+                  <svg class="w-6 h-6 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Container Security</h3>
+                <p class="text-slate-400 text-sm">Escaneo de imágenes, runtime protection, Kubernetes hardening</p>
+              </div>
+
+              <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-6">
+                <div class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-4">
+                  <svg class="w-6 h-6 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Secrets Management</h3>
+                <p class="text-slate-400 text-sm">Vault implementation, rotación automática, zero-trust access</p>
+              </div>
+            </div>
+
+            <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-6 mb-6">
+              <h4 class="text-white font-semibold mb-4">¿Qué incluye?</h4>
+              <div class="grid md:grid-cols-2 gap-4 text-sm">
+                <div class="space-y-2">
+                  <div class="flex items-start gap-2">
+                    <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="text-slate-300">Security gates en pipelines CI/CD</span>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="text-slate-300">Dependency scanning automatizado</span>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="text-slate-300">IaC security scanning (Terraform/CloudFormation)</span>
+                  </div>
+                </div>
+                <div class="space-y-2">
+                  <div class="flex items-start gap-2">
+                    <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="text-slate-300">Code review automatizado con IA</span>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="text-slate-300">Vulnerability management integrado</span>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="text-slate-300">Training developers en secure coding</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+              <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-6">
+                <h4 class="text-white font-semibold mb-3">Para quién es esto:</h4>
+                <ul class="space-y-2 text-slate-300 text-sm">
+                  <li class="flex items-start gap-2">
+                    <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span>Equipos de desarrollo ágiles</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span>Startups tech/SaaS escalando rápido</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span>Empresas con deployments frecuentes</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="text-white font-semibold mb-3">Inversión & Timeline:</h4>
+                <div class="space-y-2 text-sm">
+                  <div class="flex justify-between items-center p-2 bg-slate-800/50 rounded">
+                    <span class="text-slate-400">Inversión:</span>
+                    <span class="text-green-400 font-semibold">€18K - €45K</span>
+                  </div>
+                  <div class="flex justify-between items-center p-2 bg-slate-800/50 rounded">
+                    <span class="text-slate-400">Timeline:</span>
+                    <span class="text-green-400 font-semibold">6-12 semanas</span>
+                  </div>
+                  <div class="flex justify-between items-center p-2 bg-slate-800/50 rounded">
+                    <span class="text-slate-400">Resultado:</span>
+                    <span class="text-green-400 font-semibold">80% menos vulns en prod</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <a href="/contacto" class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-semibold rounded-lg transition-all transform hover:scale-105">
+                Solicitar Consulta
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                </svg>
+              </a>
+              <button class="px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white font-semibold rounded-lg transition-all border border-slate-600">
+                Ver Caso de Éxito
+              </button>
+              
+              Solicitar Implementación
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Cloud Security -->
+          <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 hover:border-purple-500/50 transition-all">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-white">Cloud & Infrastructure Security</h3>
+            </div>
+            
+            <p class="text-slate-300 mb-6">Zero Trust architecture, hardening de sistemas, seguridad multi-cloud. Migración segura y compliance automatizado con uptime garantizado.</p>
+            
+            <div class="space-y-3 mb-6">
+              <div class="flex items-start gap-2 text-sm">
+                <svg class="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-slate-300">Zero Trust Architecture implementation</span>
+              </div>
+              <div class="flex items-start gap-2 text-sm">
+                <svg class="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-slate-300">AWS/Azure/GCP security hardening</span>
+              </div>
+              <div class="flex items-start gap-2 text-sm">
+                <svg class="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-slate-300">Kubernetes & container security</span>
+              </div>
+              <div class="flex items-start gap-2 text-sm">
+                <svg class="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-slate-300">Migración sin downtime</span>
+              </div>
+            </div>
+
+            <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4 mb-6">
+              <div class="grid grid-cols-2 gap-4 text-sm">
+                <div>
+                  <div class="text-slate-400">Uptime:</div>
+                  <div class="text-purple-400 font-semibold">99.95% garantizado</div>
+                </div>
+                <div>
+                  <div class="text-slate-400">Timeline:</div>
+                  <div class="text-purple-400 font-semibold">4-12 semanas</div>
+                </div>
+              </div>
+            </div>
+
+            <a href="/contacto" class="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-semibold">
+              Solicitar Assessment
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Compliance Automation -->
+          <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 hover:border-green-500/50 transition-all">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-white">Compliance Automatizado</h3>
+            </div>
+            
+            <p class="text-slate-300 mb-6">Automatización inteligente que genera documentación, mantiene evidencias actualizadas y te avisa de gaps antes de auditorías. Ahorra 70-80% del tiempo manual.</p>
+            
+            <div class="space-y-3 mb-6">
+              <div class="flex items-start gap-2 text-sm">
+                <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-slate-300">ISO 27001 gap assessment automático</span>
+              </div>
+              <div class="flex items-start gap-2 text-sm">
+                <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-slate-300">NIS2 Directive mapping por sector</span>
+              </div>
+              <div class="flex items-start gap-2 text-sm">
+                <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-slate-300">GDPR & Privacy by Design</span>
+              </div>
+              <div class="flex items-start gap-2 text-sm">
+                <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-slate-300">Documentación y evidencias automáticas</span>
+              </div>
+            </div>
+
+            <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4 mb-6">
+              <div class="grid grid-cols-2 gap-4 text-sm">
+                <div>
+                  <div class="text-slate-400">Ahorro:</div>
+                  <div class="text-green-400 font-semibold">70-80% tiempo</div>
+                </div>
+                <div>
+                  <div class="text-slate-400">Certificación:</div>
+                  <div class="text-green-400 font-semibold">4-10 semanas</div>
+                </div>
+              </div>
+            </div>
+
+            <a href="/contacto" class="inline-flex items-center gap-2 text-green-400 hover:text-green-300 font-semibold">
+              Solicitar Gap Assessment
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <!-- Metodología de Trabajo -->
+    <section class="py-20 bg-slate-900/50">
+    <div class="container mx-auto px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-white mb-4">Metodología de Trabajo</h2>
+          <p class="text-xl text-slate-300">Un enfoque probado para entregar resultados medibles en semanas, no en años</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 hover:border-blue-500/50 transition-all">
+            <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6">
+              <div class="text-3xl font-bold text-white">1</div>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-4">Diagnóstico y Estrategia</h3>
+            <ul class="space-y-3 text-slate-300">
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Análisis situación actual</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Definición objetivos y KPIs</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Hoja de ruta y plan acción</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 hover:border-purple-500/50 transition-all">
+            <div class="w-14 h-14 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6">
+              <div class="text-3xl font-bold text-white">2</div>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-4">Implementación y Desarrollo</h3>
+            <ul class="space-y-3 text-slate-300">
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Desarrollo soluciones a medida</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Integración sistemas existentes</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Pruebas y validación continua</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 hover:border-green-500/50 transition-all">
+            <div class="w-14 h-14 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-6">
+              <div class="text-3xl font-bold text-white">3</div>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-4">Entrega y Optimización</h3>
+            <ul class="space-y-3 text-slate-300">
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Entrega resultados medibles</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Formación y transfer conocimiento</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Soporte y optimización continua</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+
+  <!-- FAQ Section -->
+  <section class="py-20">
+    <div class="container mx-auto px-6">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-white mb-4">Preguntas Frecuentes</h2>
+          <p class="text-xl text-slate-300">Respuestas a las dudas más comunes</p>
+        </div>
+
+        <div class="space-y-4">
+          <details class="group bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all">
+            <summary class="flex items-center justify-between p-6 cursor-pointer">
+              <h3 class="text-lg font-semibold text-white">¿Cuál es el proyecto mínimo que aceptas?</h3>
+              <svg class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </summary>
+            <div class="px-6 pb-6 text-slate-300">
+              No hay mínimo fijo. He trabajado con startups y corporaciones. Si hay fit, hay proyecto. Un assessment o proyecto piloto es excelente forma de empezar.
+            </div>
+          </details>
+
+          <details class="group bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all">
+            <summary class="flex items-center justify-between p-6 cursor-pointer">
+              <h3 class="text-lg font-semibold text-white">¿Trabajas solo o con un equipo?</h3>
+              <svg class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </summary>
+            <div class="px-6 pb-6 text-slate-300">
+              Trabajo directamente en proyectos. Para proyectos grandes tengo red de especialistas de confianza con los que colaboro cuando es necesario.
+            </div>
+          </details>
+
+          <details class="group bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all">
+            <summary class="flex items-center justify-between p-6 cursor-pointer">
+              <h3 class="text-lg font-semibold text-white">¿Cuánto tiempo toma ver resultados?</h3>
+              <svg class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </summary>
+            <div class="px-6 pb-6 text-slate-300">
+              Primeros resultados: 2-4 semanas. Resultados completos: 8-16 semanas típicamente, dependiendo del alcance del proyecto.
+            </div>
+          </details>
+
+          <details class="group bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all">
+            <summary class="flex items-center justify-between p-6 cursor-pointer">
+              <h3 class="text-lg font-semibold text-white">¿Ofreces contratos de retainer/soporte continuo?</h3>
+              <svg class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </summary>
+            <div class="px-6 pb-6 text-slate-300">
+              Sí. Muchos clientes empiezan con un proyecto específico y continúan con soporte mensual para mantenimiento, optimización y mejora continua.
+            </div>
+          </details>
+
+          <details class="group bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all">
+            <summary class="flex items-center justify-between p-6 cursor-pointer">
+              <h3 class="text-lg font-semibold text-white">¿Trabajas con NDAs?</h3>
+              <svg class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </summary>
+            <div class="px-6 pb-6 text-slate-300">
+              Por supuesto. Puedo firmar tu NDA sin problema. La confidencialidad es fundamental en todos mis proyectos.
+            </div>
+          </details>
+
+          <details class="group bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all">
+            <summary class="flex items-center justify-between p-6 cursor-pointer">
+              <h3 class="text-lg font-semibold text-white">¿Y si mi industria es muy específica?</h3>
+              <svg class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </summary>
+            <div class="px-6 pb-6 text-slate-300">
+              Mejor. Proyectos específicos son los más interesantes. He trabajado en manufactura, salud, fintech, educación, y más. La especialización de industria es una ventaja.
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-br from-blue-900/30 via-purple-900/30 to-cyan-900/30 relative overflow-hidden">
+    <div class="absolute inset-0 bg-slate-900"></div>
+    <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-40"></div>
+    <div class="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+    
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <div class="bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm border-2 border-blue-500/30 rounded-2xl p-12">
+        <h2 class="text-4xl font-bold text-white mb-6">
+          ¿Listo Para Empezar?
+        </h2>
+        
+        <p class="text-xl text-slate-300 mb-8 leading-relaxed">
+          Si buscas un socio estratégico que entienda tanto de tecnología como de negocio, y que entregue resultados medibles en semanas, no en años...
+        </p>
+
+        <div class="bg-slate-900/50 border border-slate-700 rounded-xl p-6 mb-8">
+          <h3 class="text-white font-semibold mb-4">El Siguiente Paso Es Simple:</h3>
+          <div class="grid md:grid-cols-4 gap-4 text-sm">
+            <div class="text-center">
+              <div class="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-2">
+                <span class="text-blue-400 font-bold">1</span>
+              </div>
+              <p class="text-slate-300">Reserva 30 min consulta gratuita</p>
+            </div>
+            <div class="text-center">
+              <div class="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-2">
+                <span class="text-purple-400 font-bold">2</span>
+              </div>
+              <p class="text-slate-300">Discutimos tu situación y objetivos</p>
+            </div>
+            <div class="text-center">
+              <div class="w-12 h-12 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-2">
+                <span class="text-cyan-400 font-bold">3</span>
+              </div>
+              <p class="text-slate-300">Propuesta detallada en 48h</p>
+            </div>
+            <div class="text-center">
+              <div class="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-2">
+                <span class="text-green-400 font-bold">4</span>
+              </div>
+              <p class="text-slate-300">Decides si trabajamos juntos</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contacto" class="inline-flex items-center justify-center px-10 py-5 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-bold text-lg rounded-xl transition-all duration-300 shadow-xl shadow-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/60 transform hover:scale-105">
+            <svg class="mr-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+            Reservar Consulta Gratuita
+          </a>
+          <a href="/proyectos" class="inline-flex items-center justify-center px-10 py-5 bg-slate-700 hover:bg-slate-600 text-white font-bold text-lg rounded-xl transition-all border border-slate-600">
+            Ver Casos de Éxito
+            <svg class="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+            </svg>
+          </a>
+        </div>
+
+        <p class="text-slate-400 text-sm mt-6">
+          Sin compromiso. Sin presión de venta. Solo claridad.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</div>
 
 {{ end }}
