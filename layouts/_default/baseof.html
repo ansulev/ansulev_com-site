@@ -277,6 +277,129 @@
     <!-- Footer -->
     {{ partial "footer.html" . }}
     
+    <!-- Cookie Consent Banner - Añadir antes del cierre de </body> en baseof.html -->
+<div id="cookie-banner" class="hidden fixed bottom-0 left-0 right-0 z-50 p-4 sm:p-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="bg-slate-800/95 backdrop-blur-md border-2 border-slate-700 rounded-xl shadow-2xl p-6">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+          <!-- Icono y Texto -->
+          <div class="flex items-start gap-4 flex-1">
+            <div class="flex-shrink-0 w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center">
+              <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            
+            <div class="flex-1">
+              <h3 class="text-white font-semibold mb-2">Uso de Cookies</h3>
+              <p class="text-slate-300 text-sm leading-relaxed">
+                Utilizamos cookies esenciales para el funcionamiento del sitio y cookies analíticas para mejorar tu experiencia. 
+                <a href="/privacidad" class="text-blue-400 hover:text-blue-300 underline">Más información</a>
+              </p>
+            </div>
+          </div>
+  
+          <!-- Botones -->
+          <div class="flex flex-wrap gap-3 md:flex-shrink-0">
+            <button 
+              id="cookie-settings" 
+              class="px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white font-medium rounded-lg transition-all border border-slate-600 text-sm"
+            >
+              Configurar
+            </button>
+            <button 
+              id="cookie-reject" 
+              class="px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white font-medium rounded-lg transition-all border border-slate-600 text-sm"
+            >
+              Rechazar
+            </button>
+            <button 
+              id="cookie-accept" 
+              class="px-6 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold rounded-lg transition-all shadow-lg text-sm"
+            >
+              Aceptar Todas
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+  
+  <!-- Modal de Configuración de Cookies -->
+  <div id="cookie-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
+    <div class="bg-slate-800 rounded-2xl border-2 border-slate-700 max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+      <div class="p-6">
+        <!-- Header -->
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="text-2xl font-bold text-white">Configuración de Cookies</h2>
+          <button id="cookie-modal-close" class="text-slate-400 hover:text-white transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+  
+        <!-- Cookie Categories -->
+        <div class="space-y-4 mb-6">
+          <!-- Cookies Esenciales -->
+          <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="text-white font-semibold">Cookies Esenciales</h3>
+              <span class="px-3 py-1 bg-green-500/20 border border-green-500/30 text-green-400 text-xs rounded-full">Siempre Activas</span>
+            </div>
+            <p class="text-slate-400 text-sm">
+              Necesarias para el funcionamiento básico del sitio web. No se pueden desactivar.
+            </p>
+          </div>
+  
+          <!-- Cookies Analíticas -->
+          <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="text-white font-semibold">Cookies Analíticas</h3>
+              <label class="relative inline-flex items-center cursor-pointer">
+                <input type="checkbox" id="analytics-toggle" class="sr-only peer" checked>
+                <div class="w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+              </label>
+            </div>
+            <p class="text-slate-400 text-sm">
+              Nos ayudan a entender cómo los visitantes interactúan con el sitio web (Google Analytics).
+            </p>
+          </div>
+  
+          <!-- Cookies de Marketing (opcional) -->
+          <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="text-white font-semibold">Cookies de Marketing</h3>
+              <label class="relative inline-flex items-center cursor-pointer">
+                <input type="checkbox" id="marketing-toggle" class="sr-only peer">
+                <div class="w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+              </label>
+            </div>
+            <p class="text-slate-400 text-sm">
+              Utilizadas para personalizar anuncios y medir la efectividad de campañas publicitarias.
+            </p>
+          </div>
+        </div>
+  
+        <!-- Botones del Modal -->
+        <div class="flex gap-3">
+          <button 
+            id="save-preferences" 
+            class="flex-1 px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold rounded-lg transition-all"
+          >
+            Guardar Preferencias
+          </button>
+          <button 
+            id="accept-all-modal" 
+            class="flex-1 px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white font-semibold rounded-lg transition-all border border-slate-600"
+          >
+            Aceptar Todas
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
     <!-- JavaScript -->
     <script>
         // Mobile menu toggle
@@ -411,5 +534,116 @@
             document.body.style.transition = 'opacity 0.3s ease-in';
         });
     </script>
+
+  
+  <script>
+  // Cookie Banner Logic
+  (function() {
+    const banner = document.getElementById('cookie-banner');
+    const modal = document.getElementById('cookie-modal');
+    const cookieAccept = document.getElementById('cookie-accept');
+    const cookieReject = document.getElementById('cookie-reject');
+    const cookieSettings = document.getElementById('cookie-settings');
+    const modalClose = document.getElementById('cookie-modal-close');
+    const savePreferences = document.getElementById('save-preferences');
+    const acceptAllModal = document.getElementById('accept-all-modal');
+    const analyticsToggle = document.getElementById('analytics-toggle');
+    const marketingToggle = document.getElementById('marketing-toggle');
+  
+    // Check if user has already made a choice
+    const cookieConsent = localStorage.getItem('cookieConsent');
+    
+    if (!cookieConsent) {
+      banner.classList.remove('hidden');
+    } else {
+      // Load saved preferences
+      const preferences = JSON.parse(cookieConsent);
+      loadCookiePreferences(preferences);
+    }
+  
+    // Accept all cookies
+    cookieAccept.addEventListener('click', () => {
+      const preferences = {
+        essential: true,
+        analytics: true,
+        marketing: true
+      };
+      saveCookiePreferences(preferences);
+      banner.classList.add('hidden');
+    });
+  
+    // Reject non-essential cookies
+    cookieReject.addEventListener('click', () => {
+      const preferences = {
+        essential: true,
+        analytics: false,
+        marketing: false
+      };
+      saveCookiePreferences(preferences);
+      banner.classList.add('hidden');
+    });
+  
+    // Open settings modal
+    cookieSettings.addEventListener('click', () => {
+      banner.classList.add('hidden');
+      modal.classList.remove('hidden');
+    });
+  
+    // Close modal
+    modalClose.addEventListener('click', () => {
+      modal.classList.add('hidden');
+    });
+  
+    // Save custom preferences
+    savePreferences.addEventListener('click', () => {
+      const preferences = {
+        essential: true,
+        analytics: analyticsToggle.checked,
+        marketing: marketingToggle.checked
+      };
+      saveCookiePreferences(preferences);
+      modal.classList.add('hidden');
+    });
+  
+    // Accept all from modal
+    acceptAllModal.addEventListener('click', () => {
+      const preferences = {
+        essential: true,
+        analytics: true,
+        marketing: true
+      };
+      saveCookiePreferences(preferences);
+      modal.classList.add('hidden');
+    });
+  
+    // Save preferences to localStorage
+    function saveCookiePreferences(preferences) {
+      localStorage.setItem('cookieConsent', JSON.stringify(preferences));
+      loadCookiePreferences(preferences);
+    }
+  
+    // Load cookie preferences and initialize analytics if accepted
+    function loadCookiePreferences(preferences) {
+      if (preferences.analytics) {
+        // Initialize Google Analytics or your analytics tool
+        // Example: gtag('consent', 'update', { 'analytics_storage': 'granted' });
+        console.log('Analytics cookies enabled');
+      }
+      
+      if (preferences.marketing) {
+        // Initialize marketing cookies
+        console.log('Marketing cookies enabled');
+      }
+    }
+  
+    // Close modal when clicking outside
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+      }
+    });
+  })();
+  </script>
+
 </body>
 </html>

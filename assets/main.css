@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ... al final del fichero ... */
+
+.prose ul > li::before {
+  /* Reemplaza el punto negro por un icono de color primario */
+  content: '✓';
+  color: #64ffda; /* Este es tu color 'dark-primary' */
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.prose ul > li {
+  padding-left: 0 !important; /* Reseteamos el padding para alinear el icono */
+}
