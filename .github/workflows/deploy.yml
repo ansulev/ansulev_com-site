@@ -1,0 +1,35 @@
+name: Deploy Hugo site to Kinsta
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Deploy to Kinsta
+        uses: kinsta/actions@main
+        with:
+          site_id: ${{ secrets.KINSTA_SITE_ID }}
+          api_key: ${{ secrets.KINSTA_API_KEY }}
+          build_dir: public/
+          
+# e2cdb828a668d38a3178d7d65a875e85bc5df1b7e58fd3df1586462154e5276c
