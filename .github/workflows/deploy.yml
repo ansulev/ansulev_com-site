@@ -1,4 +1,4 @@
-name: Deploy Hugo site to Kinsta
+name: Deploy Hugo site to GitHub Pages
 
 on:
   push:
@@ -27,16 +27,9 @@ jobs:
       - name: Build
         run: hugo --minify
 
-      - name: Check public directory
-        run: |
-          echo "Checking if public directory exists..."
-          ls -la public/
-          echo "Public directory contents:"
-          ls -la public/ | head -10
-
-      - name: Deploy to Kinsta
-        uses: kinsta/actions@main
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
         with:
-          site_id: ${{ secrets.KINSTA_SITE_ID }}
-          api_key: ${{ secrets.KINSTA_API_KEY }}
-          build_dir: public/
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public

@@ -96,8 +96,14 @@ title = 'Angel Georgiev Sulev | Ciberseguridad + IA Agéntica'
 # Configuración de construcción
 [build]
   writeStats = true
+  noJSConfigInAssets = true
 
-# Minificación
+# Asset pipeline optimization
+[asset]
+  [asset.scss]
+    variables = false
+
+# Minificación avanzada
 [minify]
   [minify.tdewolff]
     [minify.tdewolff.html]
@@ -105,4 +111,8 @@ title = 'Angel Georgiev Sulev | Ciberseguridad + IA Agéntica'
       keepDocumentWhitespace = false
       keepEndTags = true
       keepQuotes = false
+    [minify.tdewolff.css]
+      keepCSS2 = false
+    [minify.tdewolff.js]
+      keepVarNames = false
 
