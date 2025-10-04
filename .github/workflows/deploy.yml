@@ -15,6 +15,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          submodules: true
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -25,11 +27,16 @@ jobs:
       - name: Build
         run: hugo --minify
 
+      - name: Check public directory
+        run: |
+          echo "Checking if public directory exists..."
+          ls -la public/
+          echo "Public directory contents:"
+          ls -la public/ | head -10
+
       - name: Deploy to Kinsta
         uses: kinsta/actions@main
         with:
           site_id: ${{ secrets.KINSTA_SITE_ID }}
           api_key: ${{ secrets.KINSTA_API_KEY }}
           build_dir: public/
-          
-# e2cdb828a668d38a3178d7d65a875e85bc5df1b7e58fd3df1586462154e5276c
