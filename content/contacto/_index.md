@@ -49,13 +49,13 @@ sitemap:
 ## 📧 Información de Contacto
 
 ### **Email**
-**angel.sulev@gmail.com**
+**angel@ansulev.com**
 
 📬 Respuesta garantizada en menos de 24h (días laborables)  
 ⚡ Consultas urgentes: respuesta en menos de 2 horas  
 
 ### **Teléfono / WhatsApp**
-**+34 633 600 515**
+**+34 624 676 696**
 
 📞 L-V: 9:00-18:00 CET  
 🚨 Emergencias 24/7 para clientes activos  
@@ -324,7 +324,7 @@ Mejor. Los proyectos específicos son los más interesantes. He trabajado en man
     <a href="https://calendly.com/angelsulev/consulta-estrategica" class="btn-primary" target="_blank">
       📅 Reservar Consulta Gratuita
     </a>
-    <a href="mailto:angel.sulev@gmail.com" class="btn-secondary">
+    <a href="mailto:angel@ansulev.com" class="btn-secondary">
       📧 Enviar Email
     </a>
     <a href="https://wa.me/34633600515" class="btn-secondary" target="_blank">
@@ -348,7 +348,7 @@ Mejor. Los proyectos específicos son los más interesantes. He trabajado en man
     "name": "Angel Georgiev Sulev",
     "jobTitle": "Senior Cybersecurity Specialist + Agentic AI",
     "telephone": "+34633600515",
-    "email": "angel.sulev@gmail.com",
+    "email": "angel@ansulev.com",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Lleida",

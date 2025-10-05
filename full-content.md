@@ -66,7 +66,7 @@ sitemap:
   "jobTitle": "Senior Cybersecurity Specialist + Agentic AI",
   "description": "30+ años transformando ciberseguridad en ventaja competitiva con IA Agéntica, Custom LLMs y MLSecOps",
   "url": "https://ansulev.com",
-  "email": "angel.sulev@gmail.com",
+  "email": "angel@ansulev.com",
   "telephone": "+34633600515",
   "address": {
     "@type": "PostalAddress",
@@ -453,7 +453,7 @@ Si buscas:
   "jobTitle": "Senior Cybersecurity Specialist + Agentic AI",
   "description": "30+ años transformando ciberseguridad. Especialista en IA Agéntica, Custom LLMs, MLSecOps e ICS/OT Security.",
   "url": "https://ansulev.com",
-  "email": "angel.sulev@gmail.com",
+  "email": "angel@ansulev.com",
   "telephone": "+34633600515",
   "address": {
     "@type": "PostalAddress",
@@ -1015,7 +1015,7 @@ Jamás ha pasado (99.5% success rate), pero si hubiera problemas, trabajo hasta 
   "provider": {
     "@type": "Person",
     "name": "Angel Georgiev Sulev",
-    "email": "angel.sulev@gmail.com",
+    "email": "angel@ansulev.com",
     "telephone": "+34633600515"
   },
   "areaServed": "España, Europa, Internacional",
@@ -1115,13 +1115,13 @@ sitemap:
 ## 📧 Información de Contacto
 
 ### **Email**
-**angel.sulev@gmail.com**
+**angel@ansulev.com**
 
 📬 Respuesta garantizada en menos de 24h (días laborables)  
 ⚡ Consultas urgentes: respuesta en menos de 2 horas  
 
 ### **Teléfono / WhatsApp**
-**+34 633 600 515**
+**+34 624 676 696**
 
 📞 L-V: 9:00-18:00 CET  
 🚨 Emergencias 24/7 para clientes activos  
@@ -1390,7 +1390,7 @@ Mejor. Los proyectos específicos son los más interesantes. He trabajado en man
     <a href="https://calendly.com/angelsulev/consulta-estrategica" class="btn-primary" target="_blank">
       📅 Reservar Consulta Gratuita
     </a>
-    <a href="mailto:angel.sulev@gmail.com" class="btn-secondary">
+    <a href="mailto:angel@ansulev.com" class="btn-secondary">
       📧 Enviar Email
     </a>
     <a href="https://wa.me/34633600515" class="btn-secondary" target="_blank">
@@ -1414,7 +1414,7 @@ Mejor. Los proyectos específicos son los más interesantes. He trabajado en man
     "name": "Angel Georgiev Sulev",
     "jobTitle": "Senior Cybersecurity Specialist + Agentic AI",
     "telephone": "+34633600515",
-    "email": "angel.sulev@gmail.com",
+    "email": "angel@ansulev.com",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Lleida",

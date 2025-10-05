@@ -4,6 +4,19 @@ languageCode = 'es'
 defaultContentLanguage = 'es'
 title = 'Angel Georgiev Sulev | Ciberseguridad + IA Agéntica'
 
+# Información personal y contacto
+[params]
+author = 'Angel Georgiev Sulev'
+email = 'angel@ansulev.com'
+phone = '+34 624 676 696'
+location = 'Barcelona, España'
+
+# Redes sociales
+[social]
+  linkedin = 'https://linkedin.com/in/angelsulev'
+  github = 'https://github.com/ansulev'
+  twitter = 'https://twitter.com/ansulev'
+
 # Configuración multiidioma
 [languages]
   [languages.es]

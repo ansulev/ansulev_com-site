@@ -180,3 +180,4 @@ i18n/
 **Idiomas**: ES, EN, CA
 **Traducciones**: 240+ elementos totales
 **Language Switcher**: Responsive y funcional
+

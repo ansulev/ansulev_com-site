@@ -28,7 +28,7 @@ sitemap:
   "jobTitle": "Senior Cybersecurity Specialist + Agentic AI",
   "description": "30+ años transformando ciberseguridad en ventaja competitiva con IA Agéntica, Custom LLMs y MLSecOps",
   "url": "https://ansulev.com",
-  "email": "angel.sulev@gmail.com",
+  "email": "angel@ansulev.com",
   "telephone": "+34633600515",
   "address": {
     "@type": "PostalAddress",
