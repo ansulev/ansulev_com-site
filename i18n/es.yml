@@ -1,3 +1,32 @@
+# Navegación
+- id: home
+  translation: "Inicio"
+- id: about
+  translation: "Sobre Mí"
+- id: services
+  translation: "Servicios"
+- id: projects
+  translation: "Proyectos"
+- id: blog
+  translation: "Blog"
+- id: contact
+  translation: "Contacto"
+
+# Descripciones de navegación
+- id: homeDesc
+  translation: "Página principal"
+- id: aboutDesc
+  translation: "Información profesional"
+- id: servicesDesc
+  translation: "Servicios de ciberseguridad e IA"
+- id: projectsDesc
+  translation: "Casos de éxito y proyectos"
+- id: blogDesc
+  translation: "Artículos técnicos"
+- id: contactDesc
+  translation: "Contacta para consulta"
+
+# Shortcuts de la página principal
 - id: servicesShortcut
   translation: "Servicios"
 - id: servicesShortcutDesc
@@ -11,3 +40,118 @@
 - id: blogShortcutDesc
   translation: "Últimos artículos técnicos"
 
+# Breadcrumbs
+- id: breadcrumbHome
+  translation: "Inicio"
+- id: breadcrumbAbout
+  translation: "Sobre Mí"
+- id: breadcrumbServices
+  translation: "Servicios"
+- id: breadcrumbProjects
+  translation: "Proyectos"
+- id: breadcrumbBlog
+  translation: "Blog"
+- id: breadcrumbContact
+  translation: "Contacto"
+
+# Botones y acciones
+- id: readMore
+  translation: "Leer más"
+- id: learnMore
+  translation: "Saber más"
+- id: getInTouch
+  translation: "Ponerse en contacto"
+- id: freeConsultation
+  translation: "Consulta Gratuita"
+- id: viewProjects
+  translation: "Ver Proyectos"
+- id: contactNow
+  translation: "Contactar Ahora"
+
+# Formularios
+- id: name
+  translation: "Angel Sulev"
+- id: email
+  translation: "Correo electrónico"
+- id: phone
+  translation: "Teléfono"
+- id: company
+  translation: "Empresa"
+- id: message
+  translation: "Mensaje"
+- id: send
+  translation: "Enviar"
+- id: required
+  translation: "Obligatorio"
+
+# Servicios
+- id: cybersecurity
+  translation: "Ciberseguridad"
+- id: aiAgentic
+  translation: "IA Agéntica"
+- id: penetrationTesting
+  translation: "Tests de Penetración"
+- id: siemThreatDetection
+  translation: "SIEM y Detección de Amenazas"
+- id: cloudSecurity
+  translation: "Seguridad en la Nube"
+- id: customLLMs
+  translation: "LLMs Personalizados"
+- id: mlSecOps
+  translation: "MLSecOps"
+- id: industrialSecurity
+  translation: "Seguridad Industrial"
+
+# Footer
+- id: footerQuickLinks
+  translation: "Enlaces Rápidos"
+- id: footerServices
+  translation: "Servicios"
+- id: footerContact
+  translation: "Contacto"
+- id: footerRights
+  translation: "Todos los derechos reservados"
+- id: footerPrivacy
+  translation: "Política de Privacidad"
+- id: footerTerms
+  translation: "Términos de Uso"
+- id: footerSitemap
+  translation: "Mapa del sitio"
+
+# Cookies
+- id: cookieBannerTitle
+  translation: "Uso de Cookies"
+- id: cookieBannerText
+  translation: "Utilizamos cookies esenciales para el funcionamiento del sitio y cookies analíticas para mejorar tu experiencia."
+- id: cookieMoreInfo
+  translation: "Más información"
+- id: cookieAccept
+  translation: "Okay Todas"
+- id: cookieReject
+  translation: "Rechazar"
+- id: cookieSettings
+  translation: "Configurar"
+- id: cookieModalTitle
+  translation: "Configuración de Cookies"
+- id: cookieEssential
+  translation: "Cookies Esenciales"
+- id: cookieAnalytics
+  translation: "Cookies Analíticas"
+- id: cookieMarketing
+  translation: "Cookies de Marketing"
+- id: cookieSavePreferences
+  translation: "Guardar Preferencias"
+- id: cookieAcceptAll
+  translation: "Okay Todas"
+
+# Language Switcher
+- id: selectLanguage
+  translation: "Seleccionar idioma"
+- id: currentLanguage
+  translation: "Idioma actual"
+
+# Metadatos
+- id: metaDescription
+  translation: "Especialista senior en ciberseguridad e IA Agéntica con 30+ años transformando seguridad en ventaja competitiva"
+- id: metaKeywords
+  translation: "ciberseguridad, IA agéntica, LLMs personalizados, MLSecOps, fine-tuning, seguridad ICS/OT"

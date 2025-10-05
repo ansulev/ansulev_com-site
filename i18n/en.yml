@@ -1,3 +1,32 @@
+# Navigation
+- id: home
+  translation: "Home"
+- id: about
+  translation: "About Me"
+- id: services
+  translation: "Services"
+- id: projects
+  translation: "Projects"
+- id: blog
+  translation: "Blog"
+- id: contact
+  translation: "Contact"
+
+# Navigation descriptions
+- id: homeDesc
+  translation: "Main page"
+- id: aboutDesc
+  translation: "Professional information"
+- id: servicesDesc
+  translation: "Cybersecurity and AI services"
+- id: projectsDesc
+  translation: "Success cases and projects"
+- id: blogDesc
+  translation: "Technical articles"
+- id: contactDesc
+  translation: "Contact for consultation"
+
+# Homepage shortcuts
 - id: servicesShortcut
   translation: "Services"
 - id: servicesShortcutDesc
@@ -11,3 +40,118 @@
 - id: blogShortcutDesc
   translation: "Latest technical articles"
 
+# Breadcrumbs
+- id: breadcrumbHome
+  translation: "Home"
+- id: breadcrumbAbout
+  translation: "About Me"
+- id: breadcrumbServices
+  translation: "Services"
+- id: breadcrumbProjects
+  translation: "Projects"
+- id: breadcrumbBlog
+  translation: "Blog"
+- id: breadcrumbContact
+  translation: "Contact"
+
+# Buttons and actions
+- id: readMore
+  translation: "Read more"
+- id: learnMore
+  translation: "Learn more"
+- id: getInTouch
+  translation: "Get in touch"
+- id: freeConsultation
+  translation: "Free Consultation"
+- id: viewProjects
+  translation: "View Projects"
+- id: contactNow
+  translation: "Contact Now"
+
+# Forms
+- id: name
+  translation: "Name"
+- id: email
+  translation: "Email"
+- id: phone
+  translation: "Phone"
+- id: company
+  translation: "Company"
+- id: message
+  translation: "Message"
+- id: send
+  translation: "Send"
+- id: required
+  translation: "Required"
+
+# Services
+- id: cybersecurity
+  translation: "Cybersecurity"
+- id: aiAgentic
+  translation: "Agentic AI"
+- id: penetrationTesting
+  translation: "Penetration Testing"
+- id: siemThreatDetection
+  translation: "SIEM and Threat Detection"
+- id: cloudSecurity
+  translation: "Cloud Security"
+- id: customLLMs
+  translation: "Custom LLMs"
+- id: mlSecOps
+  translation: "MLSecOps"
+- id: industrialSecurity
+  translation: "Industrial Security"
+
+# Footer
+- id: footerQuickLinks
+  translation: "Quick Links"
+- id: footerServices
+  translation: "Services"
+- id: footerContact
+  translation: "Contact"
+- id: footerRights
+  translation: "All rights reserved"
+- id: footerPrivacy
+  translation: "Privacy Policy"
+- id: footerTerms
+  translation: "Terms of Use"
+- id: footerSitemap
+  translation: "Sitemap"
+
+# Cookies
+- id: cookieBannerTitle
+  translation: "Cookie Usage"
+- id: cookieBannerText
+  translation: "We use essential cookies for site functionality and analytics cookies to improve your experience."
+- id: cookieMoreInfo
+  translation: "More information"
+- id: cookieAccept
+  translation: "Accept All"
+- id: cookieReject
+  translation: "Reject"
+- id: cookieSettings
+  translation: "Configure"
+- id: cookieModalTitle
+  translation: "Cookie Settings"
+- id: cookieEssential
+  translation: "Essential Cookies"
+- id: cookieAnalytics
+  translation: "Analytics Cookies"
+- id: cookieMarketing
+  translation: "Marketing Cookies"
+- id: cookieSavePreferences
+  translation: "Save Preferences"
+- id: cookieAcceptAll
+  translation: "Accept All"
+
+# Language Switcher
+- id: selectLanguage
+  translation: "Select language"
+- id: currentLanguage
+  translation: "Current language"
+
+# Metadata
+- id: metaDescription
+  translation: "senior cybersecurity specialist + Agentic AI with 30+ years transforming security into competitive advantage"
+- id: metaKeywords
+  translation: "cybersecurity, agentic AI, custom LLMs, MLSecOps, fine-tuning, ICS/OT security"

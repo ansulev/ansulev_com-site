@@ -1,0 +1,26 @@
+/* Breadcrumbs Components */
+@layer components {
+  .breadcrumb {
+    @apply flex mb-8 animate-fade-in;
+  }
+  
+  .breadcrumb ol {
+    @apply inline-flex items-center space-x-1 md:space-x-3;
+  }
+  
+  .breadcrumb-item {
+    @apply inline-flex items-center;
+  }
+  
+  .breadcrumb-link {
+    @apply text-gray-600 hover:text-primary-600 inline-flex items-center text-sm font-medium transition-colors duration-200;
+  }
+  
+  .breadcrumb-separator {
+    @apply w-6 h-6 text-gray-400;
+  }
+  
+  .breadcrumb-current {
+    @apply ml-1 text-sm font-medium text-gray-700 md:ml-2;
+  }
+}

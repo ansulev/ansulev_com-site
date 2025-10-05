@@ -1,0 +1,159 @@
+# Traducciones en Català
+
+# Navegación
+- id: home
+  translation: "Inici"
+- id: about
+  translation: "Sobre Mi"
+- id: services
+  translation: "Serveis"
+- id: projects
+  translation: "Projectes"
+- id: blog
+  translation: "Blog"
+- id: contact
+  translation: "Contacte"
+
+# Descripciones de navegación
+- id: homeDesc
+  translation: "Pàgina principal"
+- id: aboutDesc
+  translation: "Informació professional"
+- id: servicesDesc
+  translation: "Serveis de ciberseguretat i IA"
+- id: projectsDesc
+  translation: "Casos d'èxit i projectes"
+- id: blogDesc
+  translation: "Articles tècnics"
+- id: contactDesc
+  translation: "Contacta per consulta"
+
+# Shortcuts de la página principal
+- id: servicesShortcut
+  translation: "Serveis"
+- id: servicesShortcutDesc
+  translation: "Serveis de ciberseguretat i IA Agèntica"
+- id: contactShortcut
+  translation: "Contacte"
+- id: contactShortcutDesc
+  translation: "Contacta per consulta gratuïta"
+- id: blogShortcut
+  translation: "Blog"
+- id: blogShortcutDesc
+  translation: "Últims articles tècnics"
+
+# Breadcrumbs
+- id: breadcrumbHome
+  translation: "Inici"
+- id: breadcrumbAbout
+  translation: "Sobre Mi"
+- id: breadcrumbServices
+  translation: "Serveis"
+- id: breadcrumbProjects
+  translation: "Projectes"
+- id: breadcrumbBlog
+  translation: "Blog"
+- id: breadcrumbContact
+  translation: "Contacte"
+
+# Botones y acciones
+- id: readMore
+  translation: "Llegir més"
+- id: learnMore
+  translation: "Saber més"
+- id: getInTouch
+  translation: "Posar-se en contacte"
+- id: freeConsultation
+  translation: "Consulta Gratuïta"
+- id: viewProjects
+  translation: "Veure Projectes"
+- id: contactNow
+  translation: "Contactar Ara"
+
+# Formularios
+- id: name
+  translation: "Nom"
+- id: email
+  translation: "Correu electrònic"
+- id: phone
+  translation: "Telèfon"
+- id: company
+  translation: "Empresa"
+- id: message
+  translation: "Missatge"
+- id: send
+  translation: "Enviar"
+- id: required
+  translation: "Obligatori"
+
+# Servicios
+- id: cybersecurity
+  translation: "Ciberseguretat"
+- id: aiAgentic
+  translation: "IA Agèntica"
+- id: penetrationTesting
+  translation: "Tests de Penetració"
+- id: siemThreatDetection
+  translation: "SIEM i Detecció d'Amenaces"
+- id: cloudSecurity
+  translation: "Seguretat en el Núvol"
+- id: customLLMs
+  translation: "LLMs Personalitzats"
+- id: mlSecOps
+  translation: "MLSecOps"
+- id: industrialSecurity
+  translation: "Seguretat Industrial"
+
+# Footer
+- id: footerQuickLinks
+  translation: "Enllaços Ràpids"
+- id: footerServices
+  translation: "Serveis"
+- id: footerContact
+  translation: "Contacte"
+- id: footerRights
+  translation: "Tots els drets reservats"
+- id: footerPrivacy
+  translation: "Política de Privacitat"
+- id: footerTerms
+  translation: "Termes d'Ús"
+- id: footerSitemap
+  translation: "Mapa del lloc"
+
+# Cookies
+- id: cookieBannerTitle
+  translation: "Ús de Cookies"
+- id: cookieBannerText
+  translation: "Utilitzem cookies essencials per al funcionament del lloc i cookies analítiques per millorar la teva experiència."
+- id: cookieMoreInfo
+  translation: "Més informació"
+- id: cookieAccept
+  translation: "Acceptar Totes"
+- id: cookieReject
+  translation: "Rebutjar"
+- id: cookieSettings
+  translation: "Configurar"
+- id: cookieModalTitle
+  translation: "Configuració de Cookies"
+- id: cookieEssential
+  translation: "Cookies Essencials"
+- id: cookieAnalytics
+  translation: "Cookies Analítiques"
+- id: cookieMarketing
+  translation: "Cookies de Màrqueting"
+- id: cookieSavePreferences
+  translation: "Desar Preferències"
+- id: cookieAcceptAll
+  translation: "Acceptar Totes"
+
+# Language Switcher
+- id: selectLanguage
+  translation: "Seleccionar idioma"
+- id: currentLanguage
+  translation: "Idioma actual"
+
+# Metadatos
+- id: metaDescription
+  translation: "Especialista senior en ciberseguretat i IA Agèntica amb 30+ anys transformant seguretat en avantatge competitiu"
+- id: metaKeywords
+  translation: "ciberseguretat, IA agèntica, LLMs personalitzats, MLSecOps, fine-tuning, seguretat ICS/OT"

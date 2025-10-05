@@ -2,101 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Import component styles */
+@import './components/navigation.css';
+@import './components/breadcrumbs.css';
+@import './components/animations.css';
+@import './components/forms.css';
+
 @layer base {
     body {
         @apply bg-white text-gray-900 antialiased;
     }
 }
-
-@layer components {
-    .glass-effect {
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-    
-    .cyber-grid-bg {
-        background-image: 
-            linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
-        background-size: 50px 50px;
-    }
-    
-    .text-glow {
-        text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
-    }
-    
-    .card-hover {
-        @apply transition-all duration-300;
-    }
-    
-    .card-hover:hover {
-        @apply -translate-y-2 shadow-2xl;
-    }
-    
-    .gradient-border {
-        position: relative;
-        background: linear-gradient(45deg, #3b82f6, #8b5cf6, #06b6d4);
-        padding: 2px;
-        border-radius: 12px;
-    }
-    
-    .gradient-border-inner {
-        @apply bg-white rounded-[10px] p-6;
-    }
-}
-
-@layer utilities {
-    .animate-on-scroll {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: all 0.8s ease-out;
-    }
-    
-    .animate-on-scroll.in-view {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes gradient {
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
-.animate-gradient {
-  background-size: 200% 200%;
-  animation: gradient 3s ease infinite;
-}
-
-/* Navegación scroll state
-.nav-scroll.scrolled {
-  @apply bg-white/95 backdrop-blur-md shadow-xl;
-}
-
-.nav-scroll.scrolled .nav-link {
-  @apply text-gray-700;
-}
-
-.nav-scroll.scrolled .nav-link:hover {
-  @apply text-blue-600 bg-blue-50;
-}
-
-.nav-scroll.scrolled .nav-link.active {
-  @apply text-blue-600 bg-blue-50;
-}
- */
-
-/* Textos del logo en scroll
-.nav-scroll.scrolled a span:first-of-type {
-  @apply text-slate-900;
-}
-
-.nav-scroll.scrolled a .text-slate-400 {
-  @apply text-slate-600;
-}
-*/

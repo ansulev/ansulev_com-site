@@ -8,7 +8,7 @@
     <title>{{ if .Title }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}</title>
     <meta name="title" content="{{ if .Title }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}">
     <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-    <meta name="keywords" content="{{ if .Params.keywords }}{{ delimit .Params.keywords ", " }}{{ else }}{{ delimit .Site.Params.keywords ", " }}{{ end }}">
+    <meta name="keywords" content="{{ if .Params.keywords }}{{ delimit .Params.keywords ", " }}{{ else if .Site.Params.keywords }}{{ delimit .Site.Params.keywords ", " }}{{ else }}{{ .Site.Title }}{{ end }}">
     <meta name="author" content="{{ .Site.Params.author }}">
     
     <!-- Open Graph / Facebook -->
@@ -42,175 +42,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     
     <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'primary': {
-                            50: '#eff6ff',
-                            100: '#dbeafe',
-                            200: '#bfdbfe',
-                            300: '#93c5fd',
-                            400: '#60a5fa',
-                            500: '#3b82f6',
-                            600: '#2563eb',
-                            700: '#1d4ed8',
-                            800: '#1e40af',
-                            900: '#1e3a8a'
-                        },
-                        'secondary': {
-                            50: '#f8fafc',
-                            100: '#f1f5f9',
-                            200: '#e2e8f0',
-                            300: '#cbd5e1',
-                            400: '#94a3b8',
-                            500: '#64748b',
-                            600: '#475569',
-                            700: '#334155',
-                            800: '#1e293b',
-                            900: '#0f172a'
-                        },
-                        'accent': {
-                            50: '#fdf4ff',
-                            100: '#fae8ff',
-                            200: '#f5d0fe',
-                            300: '#f0abfc',
-                            400: '#e879f9',
-                            500: '#d946ef',
-                            600: '#c026d3',
-                            700: '#a21caf',
-                            800: '#86198f',
-                            900: '#701a75'
-                        },
-                        'success': {
-                            50: '#f0fdf4',
-                            100: '#dcfce7',
-                            500: '#22c55e',
-                            600: '#16a34a',
-                            700: '#15803d'
-                        },
-                        'warning': {
-                            50: '#fffbeb',
-                            100: '#fef3c7',
-                            500: '#f59e0b',
-                            600: '#d97706'
-                        },
-                        'danger': {
-                            50: '#fef2f2',
-                            100: '#fee2e2',
-                            500: '#ef4444',
-                            600: '#dc2626',
-                            700: '#b91c1c'
-                        }
-                    },
-                    fontFamily: {
-                        'sans': ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-                        'mono': ['JetBrains Mono', 'SF Mono', 'Monaco', 'Inconsolata', 'monospace'],
-                    },
-                    animation: {
-                        'fade-in': 'fadeIn 0.8s ease-out forwards',
-                        'slide-up': 'slideUp 1s ease-out forwards',
-                        'slide-down': 'slideDown 0.6s ease-out forwards',
-                        'scale-in': 'scaleIn 0.6s ease-out forwards',
-                        'glow': 'glow 2s ease-in-out infinite alternate',
-                        'float': 'float 6s ease-in-out infinite',
-                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite'
-                    },
-                    keyframes: {
-                        fadeIn: {
-                            '0%': { opacity: '0', transform: 'translateY(20px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' }
-                        },
-                        slideUp: {
-                            '0%': { opacity: '0', transform: 'translateY(40px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' }
-                        },
-                        slideDown: {
-                            '0%': { opacity: '0', transform: 'translateY(-20px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' }
-                        },
-                        scaleIn: {
-                            '0%': { opacity: '0', transform: 'scale(0.9)' },
-                            '100%': { opacity: '1', transform: 'scale(1)' }
-                        },
-                        glow: {
-                            '0%': { 'box-shadow': '0 0 20px rgba(59, 130, 246, 0.5)' },
-                            '100%': { 'box-shadow': '0 0 40px rgba(59, 130, 246, 0.8)' }
-                        },
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-10px)' }
-                        }
-                    },
-                    backgroundImage: {
-                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-                        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-                        'cyber-grid': 'linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px)'
-                    },
-                    backdropBlur: {
-                        xs: '2px'
-                    }
-                }
-            }
-        }
-    </script>
+    {{ $styles := resources.Get "css/input.css" | css.PostCSS | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}">
     
-    <!-- Custom CSS for advanced effects -->
-    <style>
-        .glass-effect {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        .cyber-grid-bg {
-            background-image: 
-                linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
-            background-size: 50px 50px;
-        }
-        
-        .text-glow {
-            text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
-        }
-        
-        .card-hover {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-        }
-        
-        .gradient-border {
-            position: relative;
-            background: linear-gradient(45deg, #3b82f6, #8b5cf6, #06b6d4);
-            padding: 2px;
-            border-radius: 12px;
-        }
-        
-        .gradient-border-inner {
-            background: white;
-            border-radius: 10px;
-            padding: 1.5rem;
-        }
-        
-        @media (prefers-reduced-motion: no-preference) {
-            .animate-on-scroll {
-                opacity: 0;
-                transform: translateY(30px);
-                transition: all 0.8s ease-out;
-            }
-            
-            .animate-on-scroll.in-view {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -254,16 +88,15 @@
     
     <!-- Analytics (si está configurado) -->
     {{ if .Site.Params.googleAnalytics }}
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.googleAnalytics }}"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '{{ .Site.Params.googleAnalytics }}');
-    </script>
+    <meta name="ga-id" content="{{ .Site.Params.googleAnalytics }}">
     {{ end }}
-    {{ $style := resources.Get "css/custom.css" | resources.Minify | resources.Fingerprint }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}">
+    
+    <!-- Alpine.js for interactivity -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <!-- JavaScript Modules -->
+    {{ $js := resources.Get "js/main.js" | js.Build | resources.Minify | resources.Fingerprint }}
+    <script type="module" src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
 </head>
 <body class="bg-white text-gray-900 font-sans">
     <!-- Navigation -->
@@ -277,373 +110,72 @@
     <!-- Footer -->
     {{ partial "footer.html" . }}
     
-    <!-- Cookie Consent Banner - Añadir antes del cierre de </body> en baseof.html -->
-<div id="cookie-banner" class="hidden fixed bottom-0 left-0 right-0 z-50 p-4 sm:p-6">
-    <div class="max-w-7xl mx-auto">
-      <div class="bg-slate-800/95 backdrop-blur-md border-2 border-slate-700 rounded-xl shadow-2xl p-6">
-        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-          <!-- Icono y Texto -->
-          <div class="flex items-start gap-4 flex-1">
-            <div class="flex-shrink-0 w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center">
-              <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-              </svg>
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner" class="hidden fixed bottom-0 left-0 right-0 z-50 p-4 sm:p-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="bg-slate-800/95 backdrop-blur-md border-2 border-slate-700 rounded-xl shadow-2xl p-6">
+                <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+                    <div class="flex items-start gap-4 flex-1">
+                        <div class="flex-shrink-0 w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-white font-semibold mb-2">Uso de Cookies</h3>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Utilizamos cookies esenciales para el funcionamiento del sitio y cookies analíticas para mejorar tu experiencia.
+                                <a href="/privacidad" class="text-blue-400 hover:text-blue-300 underline">Más información</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-3 md:flex-shrink-0">
+                        <button id="cookie-settings" class="px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white font-medium rounded-lg transition-all border border-slate-600 text-sm">Configurar</button>
+                        <button id="cookie-reject" class="px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white font-medium rounded-lg transition-all border border-slate-600 text-sm">Rechazar</button>
+                        <button id="cookie-accept" class="px-6 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold rounded-lg transition-all shadow-lg text-sm">Aceptar Todas</button>
+                    </div>
+                </div>
             </div>
-            
-            <div class="flex-1">
-              <h3 class="text-white font-semibold mb-2">Uso de Cookies</h3>
-              <p class="text-slate-300 text-sm leading-relaxed">
-                Utilizamos cookies esenciales para el funcionamiento del sitio y cookies analíticas para mejorar tu experiencia. 
-                <a href="/privacidad" class="text-blue-400 hover:text-blue-300 underline">Más información</a>
-              </p>
-            </div>
-          </div>
-  
-          <!-- Botones -->
-          <div class="flex flex-wrap gap-3 md:flex-shrink-0">
-            <button 
-              id="cookie-settings" 
-              class="px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white font-medium rounded-lg transition-all border border-slate-600 text-sm"
-            >
-              Configurar
-            </button>
-            <button 
-              id="cookie-reject" 
-              class="px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white font-medium rounded-lg transition-all border border-slate-600 text-sm"
-            >
-              Rechazar
-            </button>
-            <button 
-              id="cookie-accept" 
-              class="px-6 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold rounded-lg transition-all shadow-lg text-sm"
-            >
-              Aceptar Todas
-            </button>
-          </div>
         </div>
-      </div>
     </div>
-</div>
-  
-  <!-- Modal de Configuración de Cookies -->
-  <div id="cookie-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
-    <div class="bg-slate-800 rounded-2xl border-2 border-slate-700 max-w-2xl w-full max-h-[90vh] overflow-y-auto">
-      <div class="p-6">
-        <!-- Header -->
-        <div class="flex items-center justify-between mb-6">
-          <h2 class="text-2xl font-bold text-white">Configuración de Cookies</h2>
-          <button id="cookie-modal-close" class="text-slate-400 hover:text-white transition-colors">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-          </button>
-        </div>
-  
-        <!-- Cookie Categories -->
-        <div class="space-y-4 mb-6">
-          <!-- Cookies Esenciales -->
-          <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4">
-            <div class="flex items-center justify-between mb-2">
-              <h3 class="text-white font-semibold">Cookies Esenciales</h3>
-              <span class="px-3 py-1 bg-green-500/20 border border-green-500/30 text-green-400 text-xs rounded-full">Siempre Activas</span>
+
+    <!-- Cookie Settings Modal -->
+    <div id="cookie-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
+        <div class="bg-slate-800 rounded-2xl border-2 border-slate-700 max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-2xl font-bold text-white">Configuración de Cookies</h2>
+                    <button id="cookie-modal-close" class="text-slate-400 hover:text-white transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="space-y-4 mb-6">
+                    <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-white font-semibold">Cookies Esenciales</h3>
+                            <span class="px-3 py-1 bg-green-500/20 border border-green-500/30 text-green-400 text-xs rounded-full">Siempre Activas</span>
+                        </div>
+                        <p class="text-slate-400 text-sm">Necesarias para el funcionamiento básico del sitio web. No se pueden desactivar.</p>
+                    </div>
+                    <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-white font-semibold">Cookies Analíticas</h3>
+                            <label class="relative inline-flex items-center cursor-pointer">
+                                <input type="checkbox" id="analytics-toggle" class="sr-only peer" checked>
+                                <div class="w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                            </label>
+                        </div>
+                        <p class="text-slate-400 text-sm">Nos ayudan a entender cómo los visitantes interactúan con el sitio web (Google Analytics).</p>
+                    </div>
+                </div>
+                <div class="flex gap-3">
+                    <button id="save-preferences" class="flex-1 px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold rounded-lg transition-all">Guardar Preferencias</button>
+                    <button id="accept-all-modal" class="flex-1 px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white font-semibold rounded-lg transition-all border border-slate-600">Aceptar Todas</button>
+                </div>
             </div>
-            <p class="text-slate-400 text-sm">
-              Necesarias para el funcionamiento básico del sitio web. No se pueden desactivar.
-            </p>
-          </div>
-  
-          <!-- Cookies Analíticas -->
-          <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4">
-            <div class="flex items-center justify-between mb-2">
-              <h3 class="text-white font-semibold">Cookies Analíticas</h3>
-              <label class="relative inline-flex items-center cursor-pointer">
-                <input type="checkbox" id="analytics-toggle" class="sr-only peer" checked>
-                <div class="w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
-              </label>
-            </div>
-            <p class="text-slate-400 text-sm">
-              Nos ayudan a entender cómo los visitantes interactúan con el sitio web (Google Analytics).
-            </p>
-          </div>
-  
-          <!-- Cookies de Marketing (opcional) -->
-          <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4">
-            <div class="flex items-center justify-between mb-2">
-              <h3 class="text-white font-semibold">Cookies de Marketing</h3>
-              <label class="relative inline-flex items-center cursor-pointer">
-                <input type="checkbox" id="marketing-toggle" class="sr-only peer">
-                <div class="w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
-              </label>
-            </div>
-            <p class="text-slate-400 text-sm">
-              Utilizadas para personalizar anuncios y medir la efectividad de campañas publicitarias.
-            </p>
-          </div>
         </div>
-  
-        <!-- Botones del Modal -->
-        <div class="flex gap-3">
-          <button 
-            id="save-preferences" 
-            class="flex-1 px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold rounded-lg transition-all"
-          >
-            Guardar Preferencias
-          </button>
-          <button 
-            id="accept-all-modal" 
-            class="flex-1 px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white font-semibold rounded-lg transition-all border border-slate-600"
-          >
-            Aceptar Todas
-          </button>
-        </div>
-      </div>
     </div>
-  </div>
-
-    <!-- JavaScript -->
-    <script>
-        // Mobile menu toggle
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuButton = document.querySelector('[data-mobile-menu-toggle]');
-            const mobileMenu = document.querySelector('[data-mobile-menu]');
-            
-            if (mobileMenuButton && mobileMenu) {
-                mobileMenuButton.addEventListener('click', function() {
-                    const isHidden = mobileMenu.classList.contains('hidden');
-                    mobileMenu.classList.toggle('hidden', !isHidden);
-                    
-                    // Update button icon with smooth transition
-                    const icon = this.querySelector('svg');
-                    icon.style.transform = 'rotate(90deg)';
-                    setTimeout(() => {
-                        if (isHidden) {
-                            icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />';
-                        } else {
-                            icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
-                        }
-                        icon.style.transform = 'rotate(0deg)';
-                    }, 150);
-                });
-            }
-            
-            // Smooth scroll for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-            
-            // Intersection Observer for scroll animations
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('in-view');
-                    }
-                });
-            }, observerOptions);
-            
-            // Observe all elements with animate-on-scroll class
-            document.querySelectorAll('.animate-on-scroll').forEach(el => {
-                observer.observe(el);
-            });
-            
-            // Parallax effect for hero section
-            window.addEventListener('scroll', () => {
-                const scrolled = window.pageYOffset;
-                const parallaxElements = document.querySelectorAll('.parallax');
-                const speed = 0.5;
-                
-                parallaxElements.forEach(element => {
-                    element.style.transform = `translateY(${scrolled * speed}px)`;
-                });
-            });
-            
-            // Navbar background change on scroll
-            const navbar = document.querySelector('nav');
-            let lastScrollY = window.scrollY;
-            
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 100) {
-                    navbar.classList.add('backdrop-blur-md', 'bg-blue-900', 'shadow-lg');
-                    navbar.classList.remove('bg-white');
-                } else {
-                    navbar.classList.remove('backdrop-blur-md', 'bg-blue-900', 'shadow-lg');
-                    navbar.classList.add('bg-slate-900');
-                }
-                
-                // Hide/show navbar on scroll
-                if (window.scrollY > lastScrollY && window.scrollY > 200) {
-                    navbar.style.transform = 'translateY(-100%)';
-                } else {
-                    navbar.style.transform = 'translateY(0)';
-                }
-                lastScrollY = window.scrollY;
-            });
-            
-            // Dynamic cursor effect (only on desktop)
-            if (window.innerWidth > 768) {
-                const cursor = document.createElement('div');
-                cursor.classList.add('fixed', 'w-4', 'h-4', 'bg-primary-500/30', 'rounded-full', 'pointer-events-none', 'z-50', 'transition-transform', 'duration-150', 'ease-out');
-                cursor.style.mixBlendMode = 'difference';
-                document.body.appendChild(cursor);
-                
-                document.addEventListener('mousemove', (e) => {
-                    cursor.style.left = e.clientX - 8 + 'px';
-                    cursor.style.top = e.clientY - 8 + 'px';
-                });
-                
-                document.querySelectorAll('a, button').forEach(el => {
-                    el.addEventListener('mouseenter', () => {
-                        cursor.style.transform = 'scale(2)';
-                    });
-                    el.addEventListener('mouseleave', () => {
-                        cursor.style.transform = 'scale(1)';
-                    });
-                });
-            }
-            
-            // Loading animation for page transitions
-            const pageLinks = document.querySelectorAll('a[href^="/"]');
-            pageLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    if (this.hostname === window.location.hostname) {
-                        document.body.style.opacity = '0';
-                        setTimeout(() => {
-                            window.location.href = this.href;
-                        }, 200);
-                    }
-                });
-            });
-        });
-        
-        // Page load animation
-        window.addEventListener('load', function() {
-            document.body.style.opacity = '1';
-            document.body.style.transition = 'opacity 0.3s ease-in';
-        });
-    </script>
-
-  
-  <script>
-  // Cookie Banner Logic
-  (function() {
-    const banner = document.getElementById('cookie-banner');
-    const modal = document.getElementById('cookie-modal');
-    const cookieAccept = document.getElementById('cookie-accept');
-    const cookieReject = document.getElementById('cookie-reject');
-    const cookieSettings = document.getElementById('cookie-settings');
-    const modalClose = document.getElementById('cookie-modal-close');
-    const savePreferences = document.getElementById('save-preferences');
-    const acceptAllModal = document.getElementById('accept-all-modal');
-    const analyticsToggle = document.getElementById('analytics-toggle');
-    const marketingToggle = document.getElementById('marketing-toggle');
-  
-    // Check if user has already made a choice
-    const cookieConsent = localStorage.getItem('cookieConsent');
-    
-    if (!cookieConsent) {
-      banner.classList.remove('hidden');
-    } else {
-      // Load saved preferences
-      const preferences = JSON.parse(cookieConsent);
-      loadCookiePreferences(preferences);
-    }
-  
-    // Accept all cookies
-    cookieAccept.addEventListener('click', () => {
-      const preferences = {
-        essential: true,
-        analytics: true,
-        marketing: true
-      };
-      saveCookiePreferences(preferences);
-      banner.classList.add('hidden');
-    });
-  
-    // Reject non-essential cookies
-    cookieReject.addEventListener('click', () => {
-      const preferences = {
-        essential: true,
-        analytics: false,
-        marketing: false
-      };
-      saveCookiePreferences(preferences);
-      banner.classList.add('hidden');
-    });
-  
-    // Open settings modal
-    cookieSettings.addEventListener('click', () => {
-      banner.classList.add('hidden');
-      modal.classList.remove('hidden');
-    });
-  
-    // Close modal
-    modalClose.addEventListener('click', () => {
-      modal.classList.add('hidden');
-    });
-  
-    // Save custom preferences
-    savePreferences.addEventListener('click', () => {
-      const preferences = {
-        essential: true,
-        analytics: analyticsToggle.checked,
-        marketing: marketingToggle.checked
-      };
-      saveCookiePreferences(preferences);
-      modal.classList.add('hidden');
-    });
-  
-    // Accept all from modal
-    acceptAllModal.addEventListener('click', () => {
-      const preferences = {
-        essential: true,
-        analytics: true,
-        marketing: true
-      };
-      saveCookiePreferences(preferences);
-      modal.classList.add('hidden');
-    });
-  
-    // Save preferences to localStorage
-    function saveCookiePreferences(preferences) {
-      localStorage.setItem('cookieConsent', JSON.stringify(preferences));
-      loadCookiePreferences(preferences);
-    }
-  
-    // Load cookie preferences and initialize analytics if accepted
-    function loadCookiePreferences(preferences) {
-      if (preferences.analytics) {
-        // Initialize Google Analytics or your analytics tool
-        // Example: gtag('consent', 'update', { 'analytics_storage': 'granted' });
-        console.log('Analytics cookies enabled');
-      }
-      
-      if (preferences.marketing) {
-        // Initialize marketing cookies
-        console.log('Marketing cookies enabled');
-      }
-    }
-  
-    // Close modal when clicking outside
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        modal.classList.add('hidden');
-      }
-    });
-  })();
-  </script>
-
 </body>
 </html>

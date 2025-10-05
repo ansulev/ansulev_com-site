@@ -2,46 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://ansulev.com/en/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <loc>http://localhost:1313/en/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://ansulev.com/"
+                href="http://localhost:1313/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="http://localhost:1313/ca/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://ansulev.com/en/"
+                href="http://localhost:1313/en/"
                 />
   </url><url>
-    <loc>https://ansulev.com/en/categories/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <loc>http://localhost:1313/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://ansulev.com/categories/"
+                href="http://localhost:1313/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="http://localhost:1313/ca/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://ansulev.com/en/categories/"
+                href="http://localhost:1313/en/categories/"
                 />
   </url><url>
-    <loc>https://ansulev.com/en/tags/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <loc>http://localhost:1313/en/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://ansulev.com/tags/"
+                href="http://localhost:1313/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="http://localhost:1313/ca/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://ansulev.com/en/tags/"
+                href="http://localhost:1313/en/tags/"
                 />
   </url>
 </urlset>

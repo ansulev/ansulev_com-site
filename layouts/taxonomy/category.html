@@ -1,0 +1,273 @@
+{{ define "main" }}
+<div class="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
+  
+  <!-- Breadcrumb -->
+  <section class="pt-8 pb-4 bg-slate-900/50">
+    <div class="container mx-auto px-6">
+      <div class="max-w-7xl mx-auto">
+        <nav class="flex items-center gap-2 text-sm text-slate-400">
+          <a href="/" class="hover:text-white transition-colors">Inicio</a>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+          <a href="/blog" class="hover:text-white transition-colors">Blog</a>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+          <span class="text-white">{{ .Title }}</span>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <!-- Category Header -->
+  <section class="py-16 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-slate-900 to-blue-900/20"></div>
+    <div class="container mx-auto px-6 relative z-10">
+      <div class="max-w-7xl mx-auto text-center">
+        <!-- Category Icon -->
+        <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl mb-6">
+          <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+          </svg>
+        </div>
+        
+        <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">
+          {{ .Title }}
+        </h1>
+        
+        <p class="text-xl text-slate-300 mb-6 max-w-3xl mx-auto">
+          {{ with .Params.description }}
+            {{ . }}
+          {{ else }}
+            Explora todos los artículos relacionados con {{ .Title }}
+          {{ end }}
+        </p>
+        
+        <div class="flex items-center justify-center gap-4 text-slate-400">
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            <span class="font-semibold">{{ len .Pages }} artículos</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-12">
+    <div class="container mx-auto px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-3 gap-8">
+          
+          <!-- Articles List -->
+          <div class="lg:col-span-2">
+            
+            <!-- Filter & Sort -->
+            <div class="flex flex-wrap items-center justify-between gap-4 mb-8 p-4 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl">
+              <div class="flex items-center gap-2 text-slate-300">
+                <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"></path>
+                </svg>
+                <span class="font-semibold">{{ len .Pages }} resultados</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-slate-400 text-sm">Ordenar por:</span>
+                <select class="px-3 py-2 bg-slate-900 border border-slate-700 rounded-lg text-white text-sm focus:outline-none focus:border-purple-500 transition-colors">
+                  <option>Más Reciente</option>
+                  <option>Más Antiguo</option>
+                  <option>Más Popular</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Articles Grid -->
+            <div class="space-y-6">
+              {{ range .Pages }}
+              <article class="group bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl overflow-hidden hover:border-purple-500/50 transition-all hover:transform hover:scale-[1.02]">
+                <div class="md:flex">
+                  <!-- Image -->
+                  <div class="md:w-64 flex-shrink-0">
+                    {{ with .Params.image }}
+                    <img src="{{ . }}" alt="{{ $.Title }}" class="w-full h-64 md:h-full object-cover">
+                    {{ else }}
+                    <div class="w-full h-64 md:h-full bg-gradient-to-br from-purple-500 via-pink-500 to-blue-500 flex items-center justify-center">
+                      <svg class="w-16 h-16 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                      </svg>
+                    </div>
+                    {{ end }}
+                  </div>
+
+                  <!-- Content -->
+                  <div class="flex-1 p-6">
+                    <!-- Meta -->
+                    <div class="flex items-center gap-3 mb-3">
+                      {{ with .Params.category }}
+                      <span class="px-2 py-1 bg-purple-500/20 border border-purple-500/30 rounded text-purple-400 text-xs font-medium">
+                        {{ . }}
+                      </span>
+                      {{ end }}
+                      <div class="flex items-center gap-2 text-slate-500 text-xs">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+                      </div>
+                      <div class="flex items-center gap-1 text-slate-500 text-xs">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span>{{ .ReadingTime }} min</span>
+                      </div>
+                    </div>
+
+                    <!-- Title -->
+                    <h2 class="text-2xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
+                      <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    </h2>
+
+                    <!-- Summary -->
+                    <p class="text-slate-400 mb-4 line-clamp-2">
+                      {{ .Summary | truncate 150 }}
+                    </p>
+
+                    <!-- Tags -->
+                    {{ with .Params.tags }}
+                    <div class="flex flex-wrap gap-2 mb-4">
+                      {{ range first 3 . }}
+                      <a href="/blog/tag/{{ . | urlize }}" class="px-2 py-1 bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs rounded hover:bg-blue-500/20 transition-colors">
+                        #{{ . }}
+                      </a>
+                      {{ end }}
+                    </div>
+                    {{ end }}
+
+                    <!-- Read More -->
+                    <a href="{{ .Permalink }}" class="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-semibold group/link">
+                      Leer más
+                      <svg class="w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+              {{ end }}
+            </div>
+
+            <!-- Pagination -->
+            {{ if gt .Paginator.TotalPages 1 }}
+            <div class="mt-12">
+              <nav class="flex items-center justify-center gap-2">
+                {{ if .Paginator.HasPrev }}
+                <a href="{{ .Paginator.Prev.URL }}" class="px-4 py-2 bg-slate-800 hover:bg-purple-500/20 border border-slate-700 hover:border-purple-500/30 text-white rounded-lg transition-all">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                  </svg>
+                </a>
+                {{ end }}
+
+                {{ range .Paginator.Pagers }}
+                <a href="{{ .URL }}" class="px-4 py-2 {{ if eq . $.Paginator }}bg-purple-500 border-purple-500{{ else }}bg-slate-800 hover:bg-slate-700 border-slate-700{{ end }} border text-white rounded-lg transition-all">
+                  {{ .PageNumber }}
+                </a>
+                {{ end }}
+
+                {{ if .Paginator.HasNext }}
+                <a href="{{ .Paginator.Next.URL }}" class="px-4 py-2 bg-slate-800 hover:bg-purple-500/20 border border-slate-700 hover:border-purple-500/30 text-white rounded-lg transition-all">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </a>
+                {{ end }}
+              </nav>
+            </div>
+            {{ end }}
+          </div>
+
+          <!-- Sidebar -->
+          <aside class="lg:col-span-1">
+            <div class="sticky top-8 space-y-8">
+              
+              <!-- All Categories -->
+              <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6">
+                <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                  <svg class="w-5 h-5 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+                  </svg>
+                  Todas las Categorías
+                </h3>
+                <div class="space-y-2">
+                  {{ range .Site.Taxonomies.categories }}
+                  <a href="{{ .Page.Permalink }}" class="flex items-center justify-between p-3 bg-slate-900/50 hover:bg-purple-500/20 border border-slate-700 hover:border-purple-500/30 rounded-lg transition-all group {{ if eq $.Title .Page.Title }}bg-purple-500/20 border-purple-500/30{{ end }}">
+                    <span class="text-slate-300 group-hover:text-purple-400 {{ if eq $.Title .Page.Title }}text-purple-400{{ end }}">
+                      {{ .Page.Title }}
+                    </span>
+                    <span class="text-slate-500 text-sm">{{ .Count }}</span>
+                  </a>
+                  {{ end }}
+                </div>
+              </div>
+
+              <!-- Search -->
+              <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6">
+                <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                  <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                  </svg>
+                  Buscar
+                </h3>
+                <form action="/blog/search" method="get">
+                  <input type="text" name="q" placeholder="Buscar artículos..." class="w-full px-4 py-2 bg-slate-900 border border-slate-700 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 transition-colors">
+                </form>
+              </div>
+
+              <!-- Popular Tags -->
+              <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6">
+                <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                  <svg class="w-5 h-5 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
+                  </svg>
+                  Tags Populares
+                </h3>
+                <div class="flex flex-wrap gap-2">
+                  {{ range first 10 .Site.Taxonomies.tags.ByCount }}
+                  <a href="{{ .Page.Permalink }}" class="px-3 py-1 bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs rounded-full hover:bg-blue-500/20 transition-colors">
+                    #{{ .Page.Title }} ({{ .Count }})
+                  </a>
+                  {{ end }}
+                </div>
+              </div>
+
+              <!-- Newsletter -->
+              <div class="bg-gradient-to-br from-purple-900/30 to-slate-800/50 backdrop-blur-sm border-2 border-purple-500/30 rounded-xl p-6">
+                <h3 class="text-xl font-bold text-white mb-3">Suscríbete al Blog</h3>
+                <p class="text-slate-300 text-sm mb-4">Recibe los últimos artículos directamente en tu email. Máx. 1/semana.</p>
+                <form class="space-y-3">
+                  <input type="email" placeholder="tu@email.com" class="w-full px-4 py-2 bg-slate-900 border border-slate-700 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-purple-500 transition-colors">
+                  <button type="submit" class="w-full px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-lg transition-all">
+                    Suscribirse
+                  </button>
+                </form>
+              </div>
+
+              <!-- CTA -->
+              <div class="bg-gradient-to-br from-blue-900/30 to-slate-800/50 backdrop-blur-sm border-2 border-blue-500/30 rounded-xl p-6">
+                <h3 class="text-xl font-bold text-white mb-3">¿Necesitas Ayuda?</h3>
+                <p class="text-slate-300 text-sm mb-4">Consulta gratuita de 30 minutos para discutir tu proyecto.</p>
+                <a href="/contacto" class="block w-full px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold rounded-lg transition-all text-center">
+                  Contactar
+                </a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+{{ end }}

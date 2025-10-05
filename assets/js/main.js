@@ -1,26 +1,20 @@
-// assets/js/main.js
+/**
+ * Main JavaScript Entry Point
+ * Imports and initializes all modules
+ */
 
+// Import modules
+import Navigation from './modules/navigation.js';
+import CookieManager from './modules/cookies.js';
+import Analytics from './modules/analytics.js';
+import BackToTop from './modules/back-to-top.js';
+
+// Initialize all modules when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
+    // All modules are self-initializing
+    console.log('🚀 All JavaScript modules loaded successfully');
+});
 
-    // Lógica para el menú móvil
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-  
-    if (mobileMenuButton && mobileMenu) {
-      mobileMenuButton.addEventListener('click', () => {
-        // Alterna la visibilidad del menú
-        mobileMenu.classList.toggle('hidden');
-        
-        // Cambia el icono del botón (hamburguesa/cruz)
-        const iconOpen = mobileMenuButton.querySelector('.icon-open');
-        const iconClose = mobileMenuButton.querySelector('.icon-close');
-        iconOpen.classList.toggle('hidden');
-        iconClose.classList.toggle('hidden');
-      });
-    }
-  
-    // Futura lógica para el Dark Mode podría ir aquí
-    // ...
-  
-  });
+// Export modules for potential external use
+export { Navigation, CookieManager, Analytics, BackToTop };
   

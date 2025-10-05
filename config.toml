@@ -1,3 +1,4 @@
+# Configuración básica del sitio
 baseURL = 'https://ansulev.com'
 languageCode = 'es'
 defaultContentLanguage = 'es'
@@ -9,35 +10,25 @@ title = 'Angel Georgiev Sulev | Ciberseguridad + IA Agéntica'
     languageName = 'Español'
     weight = 1
     title = 'Angel Georgiev Sulev | Ciberseguridad + IA Agéntica'
+    languageCode = 'es'
     [languages.es.params]
       description = 'Especialista senior ciberseguridad e IA Agéntica. 30+ años transformando seguridad en ventaja competitiva.'
-  
+
   [languages.en]
     languageName = 'English'
     weight = 2
     title = 'Angel Georgiev Sulev | Cybersecurity + Agentic AI'
+    languageCode = 'en'
     [languages.en.params]
       description = 'Senior cybersecurity specialist + Agentic AI. 30+ years transforming security into competitive advantage.'
 
-# Parámetros globales
-[params]
-  author = 'Angel Georgiev Sulev'
-  description = 'Especialista senior en ciberseguridad e IA Agéntica con 30+ años de experiencia'
-  keywords = ['ciberseguridad', 'IA agéntica', 'custom LLMs', 'MLSecOps', 'fine-tuning', 'ICS/OT security']
-  
-  # Información de contacto
-  email = 'angel.sulev@gmail.com'
-  phone = '+34 633 600 515'
-  location = 'Lleida, España'
-  
-  # Redes sociales
-  [params.social]
-    linkedin = 'https://linkedin.com/in/ansulev'
-    github = 'https://github.com/ansulev'
-    twitter = 'https://twitter.com/ansulev'
-  
-  # Analytics (configurar después)
-  googleAnalytics = ''
+  [languages.ca]
+    languageName = 'Català'
+    weight = 3
+    title = 'Angel Georgiev Sulev | Ciberseguretat + IA Agèntica'
+    languageCode = 'ca'
+    [languages.ca.params]
+      description = 'Especialista senior en ciberseguretat i IA Agèntica. 30+ anys transformant seguretat en avantatge competitiu.'
 
 # Menú de navegación
 [[menu.main]]
@@ -69,50 +60,3 @@ title = 'Angel Georgiev Sulev | Ciberseguridad + IA Agéntica'
   name = 'Contacto'
   url = '/contacto/'
   weight = 60
-
-# Configuración de markup y SEO
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
-  [markup.highlight]
-    style = 'github'
-    lineNos = true
-
-# Sitemap
-[sitemap]
-  changefreq = 'weekly'
-  priority = 0.5
-  filename = 'sitemap.xml'
-
-# Outputs
-[outputs]
-  home = ['HTML', 'RSS']
-  page = ['HTML']
-  section = ['HTML', 'RSS']
-  taxonomy = ['HTML', 'RSS']
-  term = ['HTML', 'RSS']
-
-# Configuración de construcción
-[build]
-  writeStats = true
-  noJSConfigInAssets = true
-
-# Asset pipeline optimization
-[asset]
-  [asset.scss]
-    variables = false
-
-# Minificación avanzada
-[minify]
-  [minify.tdewolff]
-    [minify.tdewolff.html]
-      keepDefaultAttrVals = false
-      keepDocumentWhitespace = false
-      keepEndTags = true
-      keepQuotes = false
-    [minify.tdewolff.css]
-      keepCSS2 = false
-    [minify.tdewolff.js]
-      keepVarNames = false
-

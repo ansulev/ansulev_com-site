@@ -1,0 +1,140 @@
+{{ define "main" }}
+<div class="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
+  
+  <!-- Breadcrumb -->
+  <section class="pt-8 pb-4 bg-slate-900/50">
+    <div class="container mx-auto px-6">
+      <div class="max-w-7xl mx-auto">
+        <nav class="flex items-center gap-2 text-sm text-slate-400">
+          <a href="/" class="hover:text-white transition-colors">Inicio</a>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+          <a href="/blog" class="hover:text-white transition-colors">Blog</a>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+          <span class="text-white">Categorías</span>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <!-- Header -->
+  <section class="py-16 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-slate-900 to-pink-900/20"></div>
+    <div class="container mx-auto px-6 relative z-10">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl mb-6">
+          <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+          </svg>
+        </div>
+        
+        <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">
+          Explorar Categorías
+        </h1>
+        
+        <p class="text-xl text-slate-300 mb-6">
+          Descubre artículos organizados por temas y especialidades en ciberseguridad e IA Agéntica
+        </p>
+        
+        <div class="flex items-center justify-center gap-4 text-slate-400">
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+            </svg>
+            <span class="font-semibold">{{ len .Site.Taxonomies.categories }} categorías</span>
+          </div>
+          <span>•</span>
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            <span class="font-semibold">{{ len .Site.RegularPages }} artículos</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Grid -->
+  <section class="py-12">
+    <div class="container mx-auto px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {{ range .Site.Taxonomies.categories.ByCount }}
+          <article class="group bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl overflow-hidden hover:border-purple-500/50 transition-all hover:transform hover:scale-105">
+            <a href="{{ .Page.Permalink }}" class="block">
+              <!-- Category Header -->
+              <div class="relative h-32 bg-gradient-to-br from-purple-600 via-pink-600 to-blue-600 p-6">
+                <div class="absolute inset-0 bg-black/20"></div>
+                <div class="relative z-10">
+                  <div class="inline-flex items-center justify-center w-12 h-12 bg-white/20 backdrop-blur-sm rounded-lg mb-2">
+                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+                    </svg>
+                  </div>
+                  <h2 class="text-2xl font-bold text-white">{{ .Page.Title }}</h2>
+                </div>
+              </div>
+
+              <!-- Category Content -->
+              <div class="p-6">
+                <p class="text-slate-400 text-sm mb-4 line-clamp-2">
+                  {{ with .Page.Params.description }}
+                    {{ . }}
+                  {{ else }}
+                    Explora artículos sobre {{ .Page.Title }}
+                  {{ end }}
+                </p>
+
+                <!-- Stats -->
+                <div class="flex items-center justify-between mb-4">
+                  <div class="flex items-center gap-2 text-slate-400 text-sm">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    </svg>
+                    <span class="font-semibold text-white">{{ .Count }}</span>
+                    <span>artículos</span>
+                  </div>
+                  <svg class="w-5 h-5 text-purple-400 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                  </svg>
+                </div>
+
+                <!-- Latest Posts Preview -->
+                <div class="space-y-2">
+                  {{ range first 2 .Pages }}
+                  <div class="text-xs text-slate-500 truncate">
+                    • {{ .Title }}
+                  </div>
+                  {{ end }}
+                </div>
+              </div>
+            </a>
+          </article>
+          {{ end }}
+        </div>
+
+        <!-- CTA Section -->
+        <div class="mt-16 bg-gradient-to-br from-purple-900/30 to-slate-800/50 backdrop-blur-sm border-2 border-purple-500/30 rounded-xl p-8 text-center">
+          <h3 class="text-3xl font-bold text-white mb-4">¿No encuentras lo que buscas?</h3>
+          <p class="text-slate-300 mb-6 max-w-2xl mx-auto">
+            Explora todos nuestros artículos o usa la búsqueda para encontrar contenido específico
+          </p>
+          <div class="flex flex-wrap items-center justify-center gap-4">
+            <a href="/blog" class="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-lg transition-all">
+              Ver Todos los Artículos
+            </a>
+            <a href="/blog/tags" class="px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-semibold rounded-lg transition-all">
+              Explorar Tags
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+{{ end }}

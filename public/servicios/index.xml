@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Servicios on Angel Georgiev Sulev | Ciberseguridad &#43; IA Agéntica</title>
-    <link>https://ansulev.com/servicios/</link>
+    <link>http://localhost:1313/servicios/</link>
     <description>Recent content in Servicios on Angel Georgiev Sulev | Ciberseguridad &#43; IA Agéntica</description>
     <generator>Hugo</generator>
     <language>es</language>
-    <atom:link href="https://ansulev.com/servicios/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/servicios/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
