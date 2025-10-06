@@ -47,4 +47,13 @@
   .nav-scroll.scrolled a .text-slate-400 {
     @apply text-slate-600;
   }
+
+  /* Back to top button */
+  #back-to-top {
+    @apply opacity-0 pointer-events-none;
+  }
+
+  #back-to-top.visible {
+    @apply opacity-100 pointer-events-auto;
+  }
 }

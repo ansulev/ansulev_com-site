@@ -17,6 +17,8 @@ class Navigation {
         this.setupNavbarScrollHide();
         this.setupDynamicCursor();
         this.setupPageTransitions();
+        this.setupBackToTop();
+        this.setupCopyLink();
     }
 
     setupMobileMenu() {
@@ -175,11 +177,46 @@ class Navigation {
             });
         });
     }
+
+    setupBackToTop() {
+        // Back to top button functionality
+        const backToTopBtn = document.getElementById('back-to-top');
+
+        if (backToTopBtn) {
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 300) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+            });
+
+            backToTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+    }
+
+    setupCopyLink() {
+        // Copy link functionality
+        document.querySelectorAll('[data-copy-link]').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const link = this.getAttribute('data-copy-link');
+                navigator.clipboard.writeText(link).then(() => {
+                    // Optional: Show feedback
+                    console.log('Link copied to clipboard');
+                }).catch(err => {
+                    console.error('Failed to copy link: ', err);
+                });
+            });
+        });
+    }
 }
 
 // Initialize navigation when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     new Navigation();
 });
-
-export default Navigation;

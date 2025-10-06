@@ -1,0 +1,119 @@
+/* Blog-specific styles */
+
+/* Prose Styles for Article Content */
+.prose-invert {
+  color: #cbd5e1;
+}
+
+.prose-invert h2 {
+  color: #ffffff;
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.prose-invert h3 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose-invert h4 {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose-invert p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose-invert a {
+  color: #60a5fa;
+  text-decoration: underline;
+}
+
+.prose-invert a:hover {
+  color: #93c5fd;
+}
+
+.prose-invert strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.prose-invert code {
+  background-color: #1e293b;
+  color: #60a5fa;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.prose-invert pre {
+  background-color: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.prose-invert pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+.prose-invert ul, .prose-invert ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+.prose-invert li {
+  margin-bottom: 0.5rem;
+}
+
+.prose-invert blockquote {
+  border-left: 4px solid #3b82f6;
+  padding-left: 1rem;
+  font-style: italic;
+  color: #94a3b8;
+  margin: 1.5rem 0;
+}
+
+.prose-invert img {
+  border-radius: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+.prose-invert table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+.prose-invert th {
+  background-color: #1e293b;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.75rem;
+  text-align: left;
+  border: 1px solid #334155;
+}
+
+.prose-invert td {
+  padding: 0.75rem;
+  border: 1px solid #334155;
+}
+
+.prose-invert hr {
+  border: 0;
+  border-top: 2px solid #334155;
+  margin: 2rem 0;
+}

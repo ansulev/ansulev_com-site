@@ -32,7 +32,7 @@
     
     
     
-    <link rel="alternate" hreflang="es" href="http://localhost:1313/sobre-mi/">
+    <link rel="alternate" hreflang="en" href="http://localhost:1313/sobre-mi/">
     
     
     
@@ -43,7 +43,7 @@
     
     
     
-    <link rel="stylesheet" href="http://localhost:1313/css/input.min.8860ea167347e1f206fadbcebc9c55c46720f033abb05c66b64fb26ddd2c0566.css" integrity="sha256-iGDqFnNH4fIG&#43;tvOvJxVxGcg8DOrsFxmtk&#43;ybd0sBWY=">
+    <link rel="stylesheet" href="http://localhost:1313/css/input.min.5940a1b37b10bf7e42498fcbd18b38270a4c180bbb3bcb76e54708ad5a2db1dd.css" integrity="sha256-WUChs3sQv35CSY/L0Ys4JwpMGAu7O8t25UcIrVotsd0=">
     
     
     
@@ -66,8 +66,228 @@
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     
     
-    
-    <script type="module" src="http://localhost:1313/js/main.min.b9f4f716c9de22c41a9f37c8e71491c3756e2beb9388b0a6ba8401af7d7c21dd.js" integrity="sha256-ufT3FsneIsQanzfI5xSRw3VuK&#43;uTiLCmuoQBr318Id0="></script>
+    <script>
+
+
+
+class Navigation {
+    constructor() {
+        this.init();
+    }
+
+    init() {
+        this.setupMobileMenu();
+        this.setupScrollBehavior();
+        this.setupSmoothScroll();
+        this.setupIntersectionObserver();
+        this.setupParallaxEffect();
+        this.setupNavbarScrollHide();
+        this.setupDynamicCursor();
+        this.setupPageTransitions();
+        this.setupBackToTop();
+        this.setupCopyLink();
+    }
+
+    setupMobileMenu() {
+        const mobileMenuButton = document.querySelector('[data-mobile-menu-toggle]');
+        const mobileMenu = document.querySelector('[data-mobile-menu]');
+        
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                const isHidden = mobileMenu.classList.contains('hidden');
+                mobileMenu.classList.toggle('hidden', !isHidden);
+                
+                
+                const icon = mobileMenuButton.querySelector('svg');
+                icon.style.transform = 'rotate(90deg)';
+                setTimeout(() => {
+                    if (isHidden) {
+                        icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />';
+                    } else {
+                        icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
+                    }
+                    icon.style.transform = 'rotate(0deg)';
+                }, 150);
+            });
+        }
+    }
+
+    setupScrollBehavior() {
+        
+        const navbar = document.querySelector('nav');
+        let lastScrollY = window.scrollY;
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('backdrop-blur-md', 'bg-blue-900', 'shadow-lg');
+                navbar.classList.remove('bg-white');
+            } else {
+                navbar.classList.remove('backdrop-blur-md', 'bg-blue-900', 'shadow-lg');
+                navbar.classList.add('bg-slate-900');
+            }
+            
+            
+            if (window.scrollY > lastScrollY && window.scrollY > 200) {
+                navbar.style.transform = 'translateY(-100%)';
+            } else {
+                navbar.style.transform = 'translateY(0)';
+            }
+            lastScrollY = window.scrollY;
+        });
+    }
+
+    setupSmoothScroll() {
+        
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    }
+
+    setupIntersectionObserver() {
+        
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                }
+            });
+        }, observerOptions);
+        
+        
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+    }
+
+    setupParallaxEffect() {
+        
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.parallax');
+            const speed = 0.5;
+            
+            parallaxElements.forEach(element => {
+                element.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+    }
+
+    setupNavbarScrollHide() {
+        
+        let lastScrollY = window.scrollY;
+        const nav = document.querySelector('.nav-scroll');
+
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+
+            if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                
+                nav?.classList.add('hidden');
+            } else {
+                
+                nav?.classList.remove('hidden');
+            }
+
+            lastScrollY = currentScrollY;
+        });
+    }
+
+    setupDynamicCursor() {
+        
+        if (window.innerWidth > 768) {
+            const cursor = document.createElement('div');
+            cursor.classList.add('fixed', 'w-6', 'h-6', 'bg-cyan-400/60', 'rounded-full', 'pointer-events-none', 'z-50', 'transition-transform', 'duration-150', 'ease-out', 'blur-sm');
+            cursor.style.mixBlendMode = 'difference';
+            document.body.appendChild(cursor);
+
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX - 12 + 'px';
+                cursor.style.top = e.clientY - 12 + 'px';
+            });
+
+            document.querySelectorAll('a, button').forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    cursor.style.transform = 'scale(1.8)';
+                });
+                el.addEventListener('mouseleave', () => {
+                    cursor.style.transform = 'scale(1)';
+                });
+            });
+        }
+    }
+
+    setupPageTransitions() {
+        
+        const pageLinks = document.querySelectorAll('a[href^="/"]');
+        pageLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                if (this.hostname === window.location.hostname) {
+                    document.body.style.opacity = '0';
+                    setTimeout(() => {
+                        window.location.href = this.href;
+                    }, 200);
+                }
+            });
+        });
+    }
+
+    setupBackToTop() {
+        
+        const backToTopBtn = document.getElementById('back-to-top');
+
+        if (backToTopBtn) {
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 300) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+            });
+
+            backToTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+    }
+
+    setupCopyLink() {
+        
+        document.querySelectorAll('[data-copy-link]').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const link = this.getAttribute('data-copy-link');
+                navigator.clipboard.writeText(link).then(() => {
+                    
+                    console.log('Link copied to clipboard');
+                }).catch(err => {
+                    console.error('Failed to copy link: ', err);
+                });
+            });
+        });
+    }
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    new Navigation();
+});
+    </script>
     
 </head>
 <body class="bg-white text-gray-900 font-sans">
@@ -100,7 +320,7 @@
                    class="relative px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 group nav-link
                           
                             text-slate-300 hover:text-white hover:bg-slate-800
-                            
+
                           ">
                     Inicio
                     
@@ -110,7 +330,7 @@
                    class="relative px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 group nav-link
                           
                             text-slate-300 hover:text-white hover:bg-slate-800
-                            
+
                           ">
                     Sobre Mí
                     
@@ -120,7 +340,7 @@
                    class="relative px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 group nav-link
                           
                             text-slate-300 hover:text-white hover:bg-slate-800
-                            
+
                           ">
                     Servicios
                     
@@ -130,7 +350,7 @@
                    class="relative px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 group nav-link
                           
                             text-slate-300 hover:text-white hover:bg-slate-800
-                            
+
                           ">
                     Proyectos
                     
@@ -140,7 +360,7 @@
                    class="relative px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 group nav-link
                           
                             text-slate-300 hover:text-white hover:bg-slate-800
-                            
+
                           ">
                     Blog
                     
@@ -150,7 +370,7 @@
                    class="relative px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 group nav-link
                           
                             text-slate-300 hover:text-white hover:bg-slate-800
-                            
+
                           ">
                     Contacto
                     
@@ -159,116 +379,7 @@
             </div>
 
             
-            <div class="hidden md:flex items-center space-x-4">
-                
-                
-<div class="language-switcher relative" x-data="{ open: false }">
-    
-    <div class="hidden md:block">
-        <button @click="open = !open" 
-                class="flex items-center gap-2 px-3 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg transition-all duration-200">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>
-            </svg>
-            <span class="uppercase font-semibold">es</span>
-            <svg class="w-4 h-4 transition-transform duration-200" :class="{ 'rotate-180': open }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-            </svg>
-        </button>
-        
-        
-        <div x-show="open" 
-             @click.away="open = false"
-             x-transition:enter="transition ease-out duration-100"
-             x-transition:enter-start="transform opacity-0 scale-95"
-             x-transition:enter-end="transform opacity-100 scale-100"
-             x-transition:leave="transition ease-in duration-75"
-             x-transition:leave-start="transform opacity-100 scale-100"
-             x-transition:leave-end="transform opacity-0 scale-95"
-             class="absolute top-full right-0 mt-2 w-48 bg-slate-800 border border-slate-700 rounded-xl shadow-xl z-50 overflow-hidden">
-            
-                <a href="/es" 
-                   class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:text-white hover:bg-slate-700 transition-colors duration-200 bg-slate-700 text-white">
-                    <span class="w-6 h-4 text-xs font-bold uppercase text-center">es</span>
-                    <span>Español</span>
-                    
-                        <svg class="w-4 h-4 ml-auto text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                        </svg>
-                    
-                </a>
-            
-                <a href="/en" 
-                   class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:text-white hover:bg-slate-700 transition-colors duration-200 ">
-                    <span class="w-6 h-4 text-xs font-bold uppercase text-center">en</span>
-                    <span>English</span>
-                    
-                </a>
-            
-                <a href="/ca" 
-                   class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:text-white hover:bg-slate-700 transition-colors duration-200 ">
-                    <span class="w-6 h-4 text-xs font-bold uppercase text-center">ca</span>
-                    <span>Català</span>
-                    
-                </a>
-            
-        </div>
-    </div>
-    
-    
-    <div class="md:hidden">
-        <button @click="open = !open" 
-                class="flex items-center gap-2 w-full px-4 py-3 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg transition-all duration-200">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>
-            </svg>
-            <span class="flex-1 text-left">Seleccionar idioma</span>
-            <svg class="w-4 h-4 transition-transform duration-200" :class="{ 'rotate-180': open }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-            </svg>
-        </button>
-        
-        
-        <div x-show="open" 
-             x-transition:enter="transition ease-out duration-100"
-             x-transition:enter-start="transform opacity-0 scale-95"
-             x-transition:enter-end="transform opacity-100 scale-100"
-             x-transition:leave="transition ease-in duration-75"
-             x-transition:leave-start="transform opacity-100 scale-100"
-             x-transition:leave-end="transform opacity-0 scale-95"
-             class="mt-2 bg-slate-800 border border-slate-700 rounded-lg shadow-lg overflow-hidden">
-            
-                <a href="/es" 
-                   class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:text-white hover:bg-slate-700 transition-colors duration-200 bg-slate-700 text-white">
-                    <span class="w-6 h-4 text-xs font-bold uppercase text-center">es</span>
-                    <span class="flex-1">Español</span>
-                    
-                        <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                        </svg>
-                    
-                </a>
-            
-                <a href="/en" 
-                   class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:text-white hover:bg-slate-700 transition-colors duration-200 ">
-                    <span class="w-6 h-4 text-xs font-bold uppercase text-center">en</span>
-                    <span class="flex-1">English</span>
-                    
-                </a>
-            
-                <a href="/ca" 
-                   class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:text-white hover:bg-slate-700 transition-colors duration-200 ">
-                    <span class="w-6 h-4 text-xs font-bold uppercase text-center">ca</span>
-                    <span class="flex-1">Català</span>
-                    
-                </a>
-            
-        </div>
-    </div>
-</div>
-
-
-
+            <div class="hidden md:flex items-center">
                 
                 <a href="/contacto/"
                    class="relative inline-flex items-center px-6 py-3 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 hover:from-blue-700 hover:via-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 group overflow-hidden transform hover:scale-105">
@@ -284,7 +395,7 @@
 
             
             <div class="md:hidden">
-                <button type="button" class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-all duration-200">
+                <button type="button" data-mobile-menu-toggle class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-all duration-200">
                     <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
@@ -293,7 +404,7 @@
         </div>
 
         
-        <div class="mobile-menu hidden md:hidden pb-4">
+        <div data-mobile-menu class="mobile-menu hidden md:hidden pb-4">
             <div class="space-y-1">
                 
                 <a href="/"
@@ -326,116 +437,6 @@
                     Contacto
                 </a>
                 
-                
-                <div class="px-4 py-3">
-                    
-<div class="language-switcher relative" x-data="{ open: false }">
-    
-    <div class="hidden md:block">
-        <button @click="open = !open" 
-                class="flex items-center gap-2 px-3 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg transition-all duration-200">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>
-            </svg>
-            <span class="uppercase font-semibold">es</span>
-            <svg class="w-4 h-4 transition-transform duration-200" :class="{ 'rotate-180': open }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-            </svg>
-        </button>
-        
-        
-        <div x-show="open" 
-             @click.away="open = false"
-             x-transition:enter="transition ease-out duration-100"
-             x-transition:enter-start="transform opacity-0 scale-95"
-             x-transition:enter-end="transform opacity-100 scale-100"
-             x-transition:leave="transition ease-in duration-75"
-             x-transition:leave-start="transform opacity-100 scale-100"
-             x-transition:leave-end="transform opacity-0 scale-95"
-             class="absolute top-full right-0 mt-2 w-48 bg-slate-800 border border-slate-700 rounded-xl shadow-xl z-50 overflow-hidden">
-            
-                <a href="/es" 
-                   class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:text-white hover:bg-slate-700 transition-colors duration-200 bg-slate-700 text-white">
-                    <span class="w-6 h-4 text-xs font-bold uppercase text-center">es</span>
-                    <span>Español</span>
-                    
-                        <svg class="w-4 h-4 ml-auto text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                        </svg>
-                    
-                </a>
-            
-                <a href="/en" 
-                   class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:text-white hover:bg-slate-700 transition-colors duration-200 ">
-                    <span class="w-6 h-4 text-xs font-bold uppercase text-center">en</span>
-                    <span>English</span>
-                    
-                </a>
-            
-                <a href="/ca" 
-                   class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:text-white hover:bg-slate-700 transition-colors duration-200 ">
-                    <span class="w-6 h-4 text-xs font-bold uppercase text-center">ca</span>
-                    <span>Català</span>
-                    
-                </a>
-            
-        </div>
-    </div>
-    
-    
-    <div class="md:hidden">
-        <button @click="open = !open" 
-                class="flex items-center gap-2 w-full px-4 py-3 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg transition-all duration-200">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>
-            </svg>
-            <span class="flex-1 text-left">Seleccionar idioma</span>
-            <svg class="w-4 h-4 transition-transform duration-200" :class="{ 'rotate-180': open }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-            </svg>
-        </button>
-        
-        
-        <div x-show="open" 
-             x-transition:enter="transition ease-out duration-100"
-             x-transition:enter-start="transform opacity-0 scale-95"
-             x-transition:enter-end="transform opacity-100 scale-100"
-             x-transition:leave="transition ease-in duration-75"
-             x-transition:leave-start="transform opacity-100 scale-100"
-             x-transition:leave-end="transform opacity-0 scale-95"
-             class="mt-2 bg-slate-800 border border-slate-700 rounded-lg shadow-lg overflow-hidden">
-            
-                <a href="/es" 
-                   class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:text-white hover:bg-slate-700 transition-colors duration-200 bg-slate-700 text-white">
-                    <span class="w-6 h-4 text-xs font-bold uppercase text-center">es</span>
-                    <span class="flex-1">Español</span>
-                    
-                        <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                        </svg>
-                    
-                </a>
-            
-                <a href="/en" 
-                   class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:text-white hover:bg-slate-700 transition-colors duration-200 ">
-                    <span class="w-6 h-4 text-xs font-bold uppercase text-center">en</span>
-                    <span class="flex-1">English</span>
-                    
-                </a>
-            
-                <a href="/ca" 
-                   class="flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:text-white hover:bg-slate-700 transition-colors duration-200 ">
-                    <span class="w-6 h-4 text-xs font-bold uppercase text-center">ca</span>
-                    <span class="flex-1">Català</span>
-                    
-                </a>
-            
-        </div>
-    </div>
-</div>
-
-
-                </div>
 
                 <a href="/contacto/"
                    class="block px-4 py-3 mt-2 bg-gradient-to-r from-blue-600 to-cyan-500 text-white text-center font-bold rounded-lg hover:from-blue-700 hover:to-cyan-600 transition-all shadow-lg">
@@ -454,72 +455,13 @@
 
 <div class="h-20"></div>
 
-<style>
- 
-.nav-scroll {
-    transform: translateY(0);
-    transition: transform 0.3s ease-in-out;
-}
-.nav-scroll.hidden {
-    transform: translateY(-100%);
-}</style>
-
-<script>
-
-let lastScrollY = window.scrollY;
-
-window.addEventListener('scroll', function() {
-    const nav = document.querySelector('.nav-scroll');
-    const currentScrollY = window.scrollY;
-
-    if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        
-        nav.classList.add('hidden');
-    } else {
-        
-        nav.classList.remove('hidden');
-    }
-
-    lastScrollY = currentScrollY;
-});
-
-
-document.querySelector('.mobile-menu-button')?.addEventListener('click', function() {
-    document.querySelector('.mobile-menu')?.classList.toggle('hidden');
-});</script>
-
 
 <button id="back-to-top"
-        class="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 opacity-0 pointer-events-none z-50"
-        style="opacity: 0; pointer-events: none;">
+        class="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 z-50">
     <svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
     </svg>
 </button>
-
-<script>
-
-document.addEventListener('DOMContentLoaded', function() {
-    const backToTopBtn = document.getElementById('back-to-top');
-
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 300) {
-            backToTopBtn.style.opacity = '1';
-            backToTopBtn.style.pointerEvents = 'auto';
-        } else {
-            backToTopBtn.style.opacity = '0';
-            backToTopBtn.style.pointerEvents = 'none';
-        }
-    });
-
-    
-    backToTopBtn.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-});</script>
 
     
     

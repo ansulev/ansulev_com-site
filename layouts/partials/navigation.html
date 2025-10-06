@@ -4,7 +4,7 @@
 
             <!-- Logo con gradiente -->
             <div class="flex-shrink-0">
-                <a href="{{ "/" | relLangURL }}" class="flex items-center group">
+                <a href="/" class="flex items-center group">
                     <div class="relative">
                         <div class="w-12 h-12 bg-gradient-to-br from-blue-500 via-blue-600 to-cyan-500 rounded-xl flex items-center justify-center mr-3 shadow-lg shadow-blue-500/20 group-hover:shadow-blue-500/40 transition-all duration-300 group-hover:scale-105">
                             <span class="text-white font-bold text-2xl">AS</span>
@@ -12,8 +12,8 @@
                         <div class="absolute -inset-1 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-xl opacity-0 group-hover:opacity-30 blur transition-opacity duration-300"></div>
                     </div>
                     <div class="hidden sm:block">
-                        <span class="text-xl font-bold text-white group-hover:text-blue-300 transition-colors">{{ i18n "name" }}</span>
-                        <div class="text-xs text-slate-400 font-medium">{{ i18n "tagline" }}</div>
+                        <span class="text-xl font-bold text-white group-hover:text-blue-300 transition-colors">Angel Sulev</span>
+                        <div class="text-xs text-slate-400 font-medium"></div>
                     </div>
                 </a>
             </div>
@@ -22,13 +22,13 @@
             <div class="hidden md:flex items-center space-x-1">
                 {{ $currentPage := . }}
                 {{ range .Site.Menus.main }}
-                <a href="{{ .URL | relLangURL }}"
+                <a href="{{ .URL }}"
                    class="relative px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 group nav-link
                           {{ if $currentPage.IsMenuCurrent "main" . }}
                             text-white bg-slate-800
                           {{ else }}
                             text-slate-300 hover:text-white hover:bg-slate-800
-                            
+
                           {{ end }}">
                     {{ .Name }}
                     {{ if $currentPage.IsMenuCurrent "main" . }}
@@ -38,19 +38,16 @@
                 {{ end }}
             </div>
 
-            <!-- Language Switcher y CTA Button -->
-            <div class="hidden md:flex items-center space-x-4">
-                <!-- Language Switcher -->
-                {{ partial "language-switcher.html" . }}
-
+            <!-- CTA Button -->
+            <div class="hidden md:flex items-center">
                 <!-- CTA Button con animación -->
-                <a href="{{ "/contacto/" | relLangURL }}"
+                <a href="/contacto/"
                    class="relative inline-flex items-center px-6 py-3 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 hover:from-blue-700 hover:via-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 group overflow-hidden transform hover:scale-105">
                     <span class="relative z-10 flex items-center">
                         <svg class="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                         </svg>
-                        {{ i18n "freeConsultation" }}
+                        Consulta Gratuita
                     </span>
                     <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 translate-x-full group-hover:translate-x-[-200%] transition-transform duration-700"></div>
                 </a>
@@ -58,7 +55,7 @@
 
             <!-- Mobile menu button -->
             <div class="md:hidden">
-                <button type="button" class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-all duration-200">
+                <button type="button" data-mobile-menu-toggle class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-all duration-200">
                     <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
@@ -67,26 +64,22 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div class="mobile-menu hidden md:hidden pb-4">
+        <div data-mobile-menu class="mobile-menu hidden md:hidden pb-4">
             <div class="space-y-1">
                 {{ range .Site.Menus.main }}
-                <a href="{{ .URL | relLangURL }}"
+                <a href="{{ .URL }}"
                    class="block px-4 py-3 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition-all {{ if $.IsMenuCurrent "main" . }}text-white bg-slate-800{{ end }}">
                     {{ .Name }}
                 </a>
                 {{ end }}
-                <!-- Language Switcher Mobile -->
-                <div class="px-4 py-3">
-                    {{ partial "language-switcher.html" . }}
-                </div>
 
-                <a href="{{ "/contacto/" | relLangURL }}"
+                <a href="/contacto/"
                    class="block px-4 py-3 mt-2 bg-gradient-to-r from-blue-600 to-cyan-500 text-white text-center font-bold rounded-lg hover:from-blue-700 hover:to-cyan-600 transition-all shadow-lg">
                     <span class="flex items-center justify-center">
                         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                         </svg>
-                        {{ i18n "freeConsultation" }}
+                        Consulta Gratuita
                     </span>
                 </a>
             </div>
@@ -97,69 +90,10 @@
 <!-- Spacer -->
 <div class="h-20"></div>
 
-<style>
-/* Navegación fija - se oculta al hacer scroll hacia abajo */
-.nav-scroll {
-    transform: translateY(0);
-    transition: transform 0.3s ease-in-out;
-}
-.nav-scroll.hidden {
-    transform: translateY(-100%);
-}</style>
-
-<script>
-// Ocultar navbar al hacer scroll hacia abajo
-let lastScrollY = window.scrollY;
-
-window.addEventListener('scroll', function() {
-    const nav = document.querySelector('.nav-scroll');
-    const currentScrollY = window.scrollY;
-
-    if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        // Usuario está haciendo scroll hacia abajo
-        nav.classList.add('hidden');
-    } else {
-        // Usuario está haciendo scroll hacia arriba
-        nav.classList.remove('hidden');
-    }
-
-    lastScrollY = currentScrollY;
-});
-
-// Mobile menu toggle
-document.querySelector('.mobile-menu-button')?.addEventListener('click', function() {
-    document.querySelector('.mobile-menu')?.classList.toggle('hidden');
-});</script>
-
 <!-- Back to Top Button -->
 <button id="back-to-top"
-        class="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 opacity-0 pointer-events-none z-50"
-        style="opacity: 0; pointer-events: none;">
+        class="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 z-50">
     <svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
     </svg>
 </button>
-
-<script>
-// Mostrar/ocultar botón back to top
-document.addEventListener('DOMContentLoaded', function() {
-    const backToTopBtn = document.getElementById('back-to-top');
-
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 300) {
-            backToTopBtn.style.opacity = '1';
-            backToTopBtn.style.pointerEvents = 'auto';
-        } else {
-            backToTopBtn.style.opacity = '0';
-            backToTopBtn.style.pointerEvents = 'none';
-        }
-    });
-
-    // Función para volver arriba suavemente
-    backToTopBtn.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-});</script>

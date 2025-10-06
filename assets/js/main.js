@@ -4,7 +4,7 @@
  */
 
 // Import modules
-import Navigation from './modules/navigation.js';
+import './modules/navigation.js';
 import CookieManager from './modules/cookies.js';
 import Analytics from './modules/analytics.js';
 import BackToTop from './modules/back-to-top.js';
@@ -16,5 +16,5 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Export modules for potential external use
-export { Navigation, CookieManager, Analytics, BackToTop };
+export { CookieManager, Analytics, BackToTop };
   

@@ -1,8 +1,17 @@
 # Configuración básica del sitio
 baseURL = 'https://ansulev.com'
 languageCode = 'es'
-defaultContentLanguage = 'es'
 title = 'Angel Georgiev Sulev | Ciberseguridad + IA Agéntica'
+
+# Configuración de markup
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false
+
+ignoreLogs = ['warning-goldmark-raw-html']
 
 # Información personal y contacto
 [params]
@@ -10,38 +19,13 @@ author = 'Angel Georgiev Sulev'
 email = 'angel@ansulev.com'
 phone = '+34 624 676 696'
 location = 'Barcelona, España'
+description = 'Especialista senior ciberseguridad e IA Agéntica. 30+ años transformando seguridad en ventaja competitiva.'
 
 # Redes sociales
 [social]
   linkedin = 'https://linkedin.com/in/angelsulev'
   github = 'https://github.com/ansulev'
   twitter = 'https://twitter.com/ansulev'
-
-# Configuración multiidioma
-[languages]
-  [languages.es]
-    languageName = 'Español'
-    weight = 1
-    title = 'Angel Georgiev Sulev | Ciberseguridad + IA Agéntica'
-    languageCode = 'es'
-    [languages.es.params]
-      description = 'Especialista senior ciberseguridad e IA Agéntica. 30+ años transformando seguridad en ventaja competitiva.'
-
-  [languages.en]
-    languageName = 'English'
-    weight = 2
-    title = 'Angel Georgiev Sulev | Cybersecurity + Agentic AI'
-    languageCode = 'en'
-    [languages.en.params]
-      description = 'Senior cybersecurity specialist + Agentic AI. 30+ years transforming security into competitive advantage.'
-
-  [languages.ca]
-    languageName = 'Català'
-    weight = 3
-    title = 'Angel Georgiev Sulev | Ciberseguretat + IA Agèntica'
-    languageCode = 'ca'
-    [languages.ca.params]
-      description = 'Especialista senior en ciberseguretat i IA Agèntica. 30+ anys transformant seguretat en avantatge competitiu.'
 
 # Menú de navegación
 [[menu.main]]
