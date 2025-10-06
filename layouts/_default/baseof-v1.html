@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}" class="scroll-smooth">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    {{ partial "seo.html" . }}
+    {{ partial "favicons.html" . }}
+    
+    {{/* SOLUCIÓN DEFINITIVA: 
+      Enlazamos directamente al CSS que Tailwind genera en la carpeta 'static'.
+      Esto elimina a Hugo Pipes como fuente de error para conseguir un build limpio.
+    */}}
+    <link rel="stylesheet" href="/css/styles.css">
+    
+    {{ partial "analytics.html" . }}
+</head>
+<body class="bg-white dark:bg-secondary-900 text-secondary-700 dark:text-secondary-300 font-sans antialiased transition-colors duration-500">
+    
+    {{ partial "navigation.html" . }}
+    
+    <main id="main-content">
+        {{ block "main" . }}{{ end }}
+    </main>
+    
+    {{ partial "footer.html" . }}
+
+    {{/* Dejamos el JS fuera por ahora para simplificar al máximo */}}
+</body>
+</html>

@@ -1,0 +1,60 @@
+# robots.txt generado para ansulev.com
+User-agent: *
+Allow: /
+
+# Sitemaps - URLs absolutas correctas
+Sitemap: https://ansulev.com/sitemap.xml
+{{ if .Site.IsMultiLingual }}
+{{ range .Site.Languages }}
+Sitemap: https://ansulev.com/{{ .Lang }}/sitemap.xml
+{{ end }}
+{{ end }}
+
+# Crawl-delay para respetar recursos del servidor
+Crawl-delay: 1
+
+# Directorios a bloquear
+Disallow: /admin/
+Disallow: /search/
+Disallow: *.json$
+Disallow: /api/
+Disallow: /private/
+Disallow: /tmp/
+
+# Archivos específicos a bloquear
+Disallow: /README.md
+Disallow: /LICENSE
+Disallow: /package.json
+Disallow: /tailwind.config.js
+
+# Parámetros de URL a evitar
+Disallow: /*?*
+Disallow: /*&*
+
+# Permitir bots importantes
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: LinkedInBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Twitterbot
+Allow: /
+Crawl-delay: 2
+
+# Bloquear bots problemáticos
+User-agent: MJ12bot
+Crawl-delay: 5
+
+User-agent: AhrefsBot
+Crawl-delay: 5
+
+User-agent: SemrushBot
+Crawl-delay: 5
+

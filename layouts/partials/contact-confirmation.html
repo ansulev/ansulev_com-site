@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">  <!-- Dinámico según idioma -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ if eq .Site.LanguageCode "es" }}Confirmación de Contacto{{ else }}Contact Confirmation{{ end }} - Angel Georgiev Sulev</title>
+</head>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
+    
+    <!-- Header -->
+    <div style="background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); color: white; padding: 30px; text-align: center; border-radius: 10px 10px 0 0;">
+        <h1 style="margin: 0; font-size: 24px;">
+            {{ if eq .Site.LanguageCode "es" }}¡Gracias por Contactarme!{{ else }}Thank You for Contacting Me!{{ end }}
+        </h1>
+        <p style="margin: 10px 0 0; font-size: 16px; opacity: 0.9;">
+            {{ if eq .Site.LanguageCode "es" }}Tu consulta ha sido recibida correctamente{{ else }}Your inquiry has been received successfully{{ end }}
+        </p>
+    </div>
+    
+    <!-- Content -->
+    <div style="background: #ffffff; padding: 30px; border: 1px solid #e2e8f0; border-top: none; border-radius: 0 0 10px 10px;">
+        
+        <p>{{ if eq .Site.LanguageCode "es" }}Hola{{ else }}Hello{{ end }} <strong>{{ .Name }}</strong>,</p>
+        
+        <p>
+            {{ if eq .Site.LanguageCode "es" }}
+            He recibido tu solicitud de consulta sobre <strong>{{ .ProjectType }}</strong> 
+            y me pondré en contacto contigo dentro de las próximas <strong>24 horas</strong>.
+            {{ else }}
+            I have received your inquiry about <strong>{{ .ProjectType }}</strong> 
+            and will contact you within the next <strong>24 hours</strong>.
+            {{ end }}
+        </p>
+        
+        <div style="background: #f8fafc; padding: 20px; border-radius: 8px; margin: 20px 0;">
+            <h3 style="margin-top: 0; color: #1e293b;">
+                {{ if eq .Site.LanguageCode "es" }}Resumen de tu Consulta:{{ else }}Inquiry Summary:{{ end }}
+            </h3>
+            <ul style="margin: 10px 0;">
+                <li><strong>{{ if eq .Site.LanguageCode "es" }}Tipo de Proyecto:{{ else }}Project Type:{{ end }}</strong> {{ .ProjectType }}</li>
+                <li><strong>{{ if eq .Site.LanguageCode "es" }}Empresa:{{ else }}Company:{{ end }}</strong> {{ .Company }}</li>
+                <li><strong>{{ if eq .Site.LanguageCode "es" }}Presupuesto:{{ else }}Budget:{{ end }}</strong> {{ .Budget }}</li>
+                <li><strong>{{ if eq .Site.LanguageCode "es" }}Timeline:{{ else }}Timeline:{{ end }}</strong> {{ .Timeline }}</li>
+            </ul>
+        </div>
+        
+        <!-- Resto del contenido similar con condicionales multilingües -->
+        
+        <p style="margin-bottom: 30px;">
+            {{ if eq .Site.LanguageCode "es" }}Saludos{{ else }}Best regards{{ end }},<br>
+            <strong>Angel Georgiev Sulev</strong><br>
+            <em>{{ if eq .Site.LanguageCode "es" }}Especialista Senior Ciberseguridad + IA Agéntica{{ else }}Senior Cybersecurity + Agentic AI Specialist{{ end }}</em>
+        </p>
+    </div>
+    
+    <!-- Footer actualizado con email profesional -->
+    <div style="text-align: center; padding: 20px; color: #6b7280; font-size: 14px;">
+        <p>
+            <strong>Angel Georgiev Sulev</strong><br>
+            {{ .Site.Params.location }} | 
+            <a href="mailto:{{ .Site.Params.email }}" style="color: #2563eb;">{{ .Site.Params.email }}</a> | 
+            <a href="tel:{{ .Site.Params.phone }}" style="color: #2563eb;">{{ .Site.Params.phone }}</a>
+        </p>
+        <!-- ... resto del footer similar -->
+    </div>
+</body>
+</html>
