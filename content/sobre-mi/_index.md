@@ -202,7 +202,7 @@ Si buscas:
   "description": "30+ años transformando ciberseguridad. Especialista en IA Agéntica, Custom LLMs, MLSecOps e ICS/OT Security.",
   "url": "https://ansulev.com",
   "email": "angel@ansulev.com",
-  "telephone": "+34633600515",
+  "telephone": "+34624676696",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Lleida",

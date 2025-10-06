@@ -327,7 +327,7 @@ Mejor. Los proyectos específicos son los más interesantes. He trabajado en man
     <a href="mailto:angel@ansulev.com" class="btn-secondary">
       📧 Enviar Email
     </a>
-    <a href="https://wa.me/34633600515" class="btn-secondary" target="_blank">
+    <a href="https://wa.me/34624676696" class="btn-secondary" target="_blank">
       💬 WhatsApp
     </a>
   </div>
@@ -347,7 +347,7 @@ Mejor. Los proyectos específicos son los más interesantes. He trabajado en man
     "@type": "Person",
     "name": "Angel Georgiev Sulev",
     "jobTitle": "Senior Cybersecurity Specialist + Agentic AI",
-    "telephone": "+34633600515",
+    "telephone": "+34624676696",
     "email": "angel@ansulev.com",
     "address": {
       "@type": "PostalAddress",

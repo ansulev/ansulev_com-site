@@ -29,7 +29,7 @@ sitemap:
   "description": "30+ años transformando ciberseguridad en ventaja competitiva con IA Agéntica, Custom LLMs y MLSecOps",
   "url": "https://ansulev.com",
   "email": "angel@ansulev.com",
-  "telephone": "+34633600515",
+  "telephone": "+34624676696",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Lleida",
